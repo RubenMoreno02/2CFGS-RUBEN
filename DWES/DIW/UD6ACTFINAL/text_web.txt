@@ -1,0 +1,71 @@
+2onDAW-DI
+Serveis Assistència API Comunitat Xat
+Creem dissenys divertits
+Aquesta página web té molts elements. En ella podem veure des de gradients amb fons, icones, transicions, mescles de color, tipografies i moltes coses més!
+Plug-ins
+
+Amplia la funcionalitat del teu Visual Studio Code mitjançant noves formes personals i la utilització de generadors automàtics de codi per a fer plantilles web apropiades al nivell d'un alumne de 2on de DAW.
+
+ 
+
+VEURE DOCUMENTACIÓ
+Assistència
+
+Molts alumnes han passat pels mateixos dubtes que has tingut tu. Mira abans en el fòrum si algú ho ha resolt abans. O si saps la resposta a algun dubte d'un company soluciona-li'l en el lloc apropiat del formulari.
+
+ 
+
+VEURE DOCUMENTACIÓ
+Format del fitxer
+
+Pots utilitzar el mateix Visual Studio per codificar els teus anexos.
+APP
+
+Integra el teu codi daw:// en el repositori de GitHub.
+API
+
+Pots usar JSON per a interactuar amb la nostra plataforma.
+Arranquem
+Maquetem la web
+
+En primer lloc has d'obrir l'entorn de desenvolupament preferit (Visual Studio, Php Storm o el que siga). Després has d'obrir un nou fitxer i emmagatzemar-lo com a html. El codi de baix mostra com fer la maquetació del primer "Hola món" 
+
+    Obri l'editor
+    Crea un nou fitxer html. En Visual Studio Code és amb les tecles ctrl + n
+    Copia i pega el codi de baix
+    Obri la pàgina en un navegador
+
+                                
+
+                                    
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+        Hola món!
+        </div>
+    </div>
+</div>
+                                    
+                                
+
+                            
+
+Publicar la web
+Per publicar a la web és relativament senzill. Has d'utilitzar un client ftp com el filezilla i configurar-lo per accedir al teu hosting. Una vegada configurat només has de pujar els fitxers i ja està!!!
+Veus alguna cosa incorrecta o incompleta en aquesta pàgina? Ajuda'ns a millorar.
+No desenvolupes planes web? Dona'ns idees
+Si no tens molta destresa programant deixa'ns una suggerència per millorar la nostra formació.
+Fes una ullada a la nostra llista de coses que ja hem desenvolupat.
+Estem per ajudar-te
+Comunitat
+
+Uneix-te a la nostra comunitat i comenta els teus dubtes.
+Exemples
+
+Mira els exemples que han realitzat altres estudiants.
+Xat
+
+Contacta amb el nostre xat i et donarem suport instantani.
+© 2021 Disseny interfícies web
+GitHub Facebook Twiter

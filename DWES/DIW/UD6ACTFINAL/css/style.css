@@ -1,0 +1,250 @@
+*, ::after, ::before {
+    box-sizing: border-box;    
+    font-family: Ubuntu, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.sense-separacio {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.sense-separacio .col {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.sense-separacio [class*="col"] {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.row {
+    margin-right: 68px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.col-1 {
+    flex: 0 0 auto;
+    width: 8.3333333333%;
+}
+
+.col-2 {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+}
+
+.col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+}
+
+.col-5 {
+    flex: 0 0 auto;
+    width: 41.6666666667%;
+}
+
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.col-7 {
+    flex: 0 0 auto;
+    width: 58.3333333333%;
+}
+
+.col-8 {
+    flex: 0 0 auto;
+    width: 66.6666666667%;
+}
+
+.col-9 {
+    flex: 0 0 auto;
+    width: 75%;
+}
+
+.col-10 {
+    flex: 0 0 auto;
+    width: 83.3333333333%;
+}
+
+.col-11 {
+    flex: 0 0 auto;
+    width: 91.6666666667%;
+}
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+[class*="col"] {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+/* Estilos específicos para el header */
+#main-header {
+    background-color: #000000;
+    border-bottom: 1px solid #e9ecef;
+    padding: 8px 0;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.fotoLogo {
+    float: left;
+    height: 35px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin-left: 64px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav a:hover {
+    color: orangered;
+}
+
+
+/* Secció hero amb gradient morat */
+#hero {
+    background-image: 
+    url('/img/confeti.svg'),
+    radial-gradient(80vw circle at 50% 10%, #3a2099 17%, #480c59 100%);
+    background-repeat: no-repeat;
+   
+  
+    font-family: Arial, sans-serif;    
+    color: white;
+    width: 100%;
+    height: 980px;
+    text-align: center;
+}
+
+#hero h1 {
+    padding-top: 100px;
+    padding-left: 70px;
+    font-size: 63px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 25px;
+    
+    margin: 0 auto;
+    padding-left: 70px;
+    padding-right: 70px;
+    line-height: 1.5;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+
+
+
+/** apartat responsive */
+
+@media only screen and (max-width: 767px) {
+    /* For mobile phones: */
+    .row {
+    flex-direction: column;
+    }
+    .container {
+    width: 100%;
+    }
+    [class*="col-"] {
+    width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For tablets and */
+    .container {
+    width: 738px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .container {
+    width: 739px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+    width: 960px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+    width: 100%;
+    }
+}
