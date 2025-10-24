@@ -125,8 +125,7 @@ body {
 
 /* Estilos específicos para el header */
 #main-header {
-    background-color: #000000;
-    border-bottom: 1px solid #e9ecef;
+    background-color: #151617;
     padding: 8px 0;
     color: white;
 }
@@ -145,7 +144,8 @@ body {
 
 .logo {
     font-weight: bold;
-    font-size: 16px;
+    margin-top: -5px;
+    font-size: 15px;
 }
 
 nav ul {
@@ -188,23 +188,21 @@ nav a:hover {
 }
 
 #hero h1 {
-    padding-top: 100px;
-    padding-left: 70px;
-    font-size: 63px;
+    padding-top: 82px;
+    padding-left: 65px;
+    font-size: 62px;
     margin-bottom: 20px;
-    font-weight: bold;
 }
 
 .textP p{
-    font-size: 25px;    
+    font-size: 27px;    
     margin: 0 auto;
     line-height: 1.5;
     font-weight: normal;
-    font-weight: bold;
 }
 .textP{
-    margin-top: 32px;
-    margin-left: 52px;
+    margin-top: 35px;
+    margin-left: 75px;
 }
 
 
@@ -213,18 +211,18 @@ nav a:hover {
 
 /* Estils per a les caixes de funcionalitats */
 #funcionalitats {
-    padding: 10px;
+    padding: 12px;
 }
 
 .caixa-funcionalitat {
-    background-color: rgb(236, 88, 3);
+    background-color: #F05827;
     margin-left: 3%;
     border-radius: 12px;
-    padding: 75px 30px;
+    padding: 80px 38px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
-    width: 540px;
+    width: 545px;
     display: flex;
     flex-direction: column;
     color: #d6d6d6;
@@ -239,13 +237,13 @@ nav a:hover {
 .caixa-funcionalitat2 {
     margin-left: 30px;
     margin-right: 70px;
-    background-color: rgb(92, 3, 236);
+    background-color: #AA64FC;
     border-radius: 12px;
-    padding: 75px 30px;
+    padding: 80px 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
-    width: 540px;
+    width: 545px;
     display: flex;
     flex-direction: column;
     color: #d6d6d6;
@@ -261,33 +259,39 @@ nav a:hover {
     width: 80px;
     display: flex;
     align-items: center; 
-    margin-top: -18px;   
-    margin-left: 7px;
+    margin-top: -28px;
+}
+
+.icona-funcionalitat2{
+    width: 48px;
+    display: flex;
+    align-items: center; 
+    margin-top: -27px;
+    margin-left: 6px;
 }
 
 .titol-funcionalitat{
     font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    margin-top: -47px;
+    margin-top: -52px;
     margin-left: -195px;
 }
 
 .titol-funcionalitat2{
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 15px;
-    margin-top: -47px;
-    margin-left: -128px;
+    margin-top: -58px;
+    margin-left: -140px;
 }
 
 .text-funcionalitat{
     margin-left: 55px;
     margin-right: 30px;
+    margin-top: -22px;
     font-size: 15px;
     line-height: 1.6;
     text-align: justify;
     font-weight: bold;
+    padding-bottom: -200px;
 }
 
 .boto-funcionalitat{
@@ -307,6 +311,57 @@ nav a:hover {
 .boto-funcionalitat:hover {
     color: white;
 }
+
+
+/* 3 seccions en morat */
+/* MINI */
+.mini {
+  color: #c9c9c9;
+  text-align: center;
+  margin-top: 32px;
+}
+.mini:hover{
+    color: white;
+}
+
+.col-1{
+    background: transparent;
+    margin-left: 61px;
+    width: 30%;
+    font-size: 20px;
+}
+
+.col-2{
+    background: transparent;
+    margin-left: 38px;
+    
+    width: 30%;
+}
+
+.mini .col-3 {
+  background: transparent;
+  margin-left: 60px;
+}
+.mini h3 {
+  font-size: 25px;
+  margin-bottom: -2px;
+}
+.mini p {
+  font-size: 16.5px;
+}
+.mini img {
+  width: 50px;
+  margin-bottom: -10px;
+}
+.code {
+  font-family: 'Source Code Pro', monospace;
+  color: orange;
+}
+
+
+
+
+
 
 /* Ajustos per al responsive */
 @media (max-width: 768px) {
