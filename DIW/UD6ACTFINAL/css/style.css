@@ -217,8 +217,8 @@ nav a:hover {
 }
 
 .caixa-funcionalitat {
-    margin-left: 120px;
     background-color: rgb(236, 88, 3);
+    margin-left: 3%;
     border-radius: 12px;
     padding: 75px 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
@@ -284,9 +284,13 @@ nav a:hover {
     margin-right: 30px;
     font-size: 15px;
     line-height: 1.6;
-    color: #ffffff;
+    color: #d6d6d6;
     text-align: justify;
     font-weight: bold;
+}
+
+.text-funcionalitat:hover{
+    color: white;
 }
 
 .boto-funcionalitat{
@@ -294,7 +298,8 @@ nav a:hover {
     color: white;
     font-size: 14px;
     font-weight: bold;
-    margin-top: 14px;
+    padding-top: 24px;
+    margin-bottom: -20px;
     margin-left: 67px;
     text-decoration: none;
     font-weight: bold;
@@ -316,11 +321,6 @@ nav a:hover {
         margin-bottom: 30px;
     }
 }
-
-
-
-
-
 
 
 /** apartat responsive */
