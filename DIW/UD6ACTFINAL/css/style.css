@@ -316,9 +316,9 @@ nav a:hover {
 /* 3 seccions en morat */
 /* MINI */
 .mini {
-  color: #c9c9c9;
-  text-align: center;
-  margin-top: 32px;
+    color: #c9c9c9;
+    text-align: center;
+    margin-top: 32px;
 }
 .mini:hover{
     color: white;
@@ -339,25 +339,155 @@ nav a:hover {
 }
 
 .mini .col-3 {
-  background: transparent;
-  margin-left: 60px;
+    background: transparent;
+    margin-left: 60px;
 }
 .mini h3 {
-  font-size: 25px;
-  margin-bottom: -2px;
+    font-size: 25px;
+    margin-bottom: -2px;
 }
 .mini p {
-  font-size: 16.5px;
+    font-size: 16.5px;
 }
 .mini img {
-  width: 50px;
-  margin-bottom: -10px;
+    width: 50px;
+    margin-bottom: -10px;
 }
 .code {
-  font-family: 'Source Code Pro', monospace;
-  color: orange;
+    font-family: 'Source Code Pro', monospace;
+    color: orange;
 }
 
+
+
+/* ARRANQUEM */
+#arranquem {
+    padding: 74px 0;
+    background: white;
+    color: #000;
+    margin-left: 18.2%;
+    margin-right: 18%;
+}
+#arranquem h2 {
+    text-align: center;
+    font-size: 43px;
+    font-weight: normal;
+    margin-left: -25px;
+}
+#arranquem h3 {
+    margin-top: 42px;
+    font-weight: normal;
+    font-size: 27px;
+}
+
+#arranquem p {
+    font-size: 16.5px;
+    line-height: 1.6;
+    margin-top: -10px;
+    text-align: justify;
+    margin-bottom: -12px;
+}
+
+#arranquem li{
+    font-size: 16.5px;
+    line-height: 1.6;
+}
+
+#arranquem .code{
+    color: rgb(34, 34, 34);
+    background-color: rgb(175, 175, 175);
+    border-radius: 5px;
+    font-size: 15px;
+    height: 10px;
+    padding-bottom: 20px;    
+    text-align: center;
+    outline:none;
+    border-color: rgb(175, 175, 175);
+}
+
+#arranquem img{
+    margin-top: 20px;
+}
+
+#arranquem .codebox {
+    margin-top: 33px;
+    width: 100%;
+    height: 180px;
+    background: #f3f3f3;
+    padding-left: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 30px
+}
+
+#arranquem .tRoig{
+    color: red;
+}
+
+#arranquem .tGroc{
+    color: rgb(255, 187, 0);
+}
+
+.publicarWeb{
+    padding-top: 25px;
+}
+
+
+#arranquem a {
+    color: orange;
+    text-decoration: none;
+}
+#arranquem a:hover {
+    color: #ffb066;
+}
+.avis {
+    border: 1px solid #dddddd;
+    margin-top: 95px;
+    padding: 15px;
+    font-size: 14px;
+}
+
+
+
+/* BLOQUE NEGRE */
+#no-desenvolupes {
+    margin-top: 13px;
+    background: #151617;
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+#no-desenvolupes h2 {
+    margin-top: 0px;
+    margin-left: -28px;
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+#no-desenvolupes p {
+    margin-top: -5px;
+    font-size: 27.5px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#no-desenvolupes .pujar{
+    font-size: 27.5px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: -28px;
+    margin-bottom: 35px;
+}
+
+#no-desenvolupes a {
+    color: rgb(201, 82, 7);
+    text-decoration: none;
+}
+#no-desenvolupes a:hover {
+    color: #ffb066;
+}
 
 
 
