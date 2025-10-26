@@ -4,9 +4,9 @@
 }
 
 body {
-    margin:0;
-    font-family: Arial, sans-serif;
+    margin: 0;
 }
+
 .container-fluid {
     width: 100%;
     padding-right: 15px;
@@ -38,6 +38,10 @@ body {
     padding-left: 0 !important;
 }
 
+/** posem el pròxim codi perquè sino posem 12 columnes (que en posem menys en una fila)
+     * els elements HTML que haja després de la fila actual no ocupen l'espai 
+     *que falta de les columnes fins al final i que vagen en una altra fila */
+
 .row {
     margin-right: 68px;
     margin-left: -15px;
@@ -52,11 +56,19 @@ body {
     max-width: 100%;
 }
 
+/***
+    *Dividint el total de la pantalla entre 12.   Cada tros és una columna:
+    
+    *100 / 12 columnes = 8.33%
+    */
+/** si no diguem res ocupa el 100% */ 
+
 .col {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
 }
+
 .col-1 {
     flex: 0 0 auto;
     width: 8.3333333333%;
@@ -122,8 +134,7 @@ body {
     padding-left: 15px;
 }
 
-
-/* Estilos específicos para el header */
+/* Estils per al header */
 #main-header {
     background-color: #151617;
     padding: 8px 0;
@@ -171,15 +182,12 @@ nav a:hover {
     color: orangered;
 }
 
-
 /* Secció hero amb gradient morat */
 #hero {
     background-image: 
-    url('/DIW/UD6ACTFINAL/img/confeti.svg'),
-    radial-gradient(80vw circle at 50% 10%, #3a2099 17%, #480c59 100%);
+        url('../img/confeti.svg'),
+        radial-gradient(80vw circle at 50% 10%, #3a2099 17%, #480c59 100%);
     background-repeat: no-repeat;
-   
-  
     font-family: Arial, sans-serif;    
     color: white;
     width: 100%;
@@ -194,20 +202,17 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.textP p{
+.textP p {
     font-size: 27px;    
     margin: 0 auto;
     line-height: 1.5;
     font-weight: normal;
 }
-.textP{
+
+.textP {
     margin-top: 35px;
     margin-left: 75px;
 }
-
-
-
-
 
 /* Estils per a les caixes de funcionalitats */
 #funcionalitats {
@@ -255,14 +260,14 @@ nav a:hover {
     color: white;
 }
 
-.icona-funcionalitat{
+.icona-funcionalitat {
     width: 80px;
     display: flex;
     align-items: center; 
     margin-top: -28px;
 }
 
-.icona-funcionalitat2{
+.icona-funcionalitat2 {
     width: 48px;
     display: flex;
     align-items: center; 
@@ -270,20 +275,20 @@ nav a:hover {
     margin-left: 6px;
 }
 
-.titol-funcionalitat{
+.titol-funcionalitat {
     font-size: 40px;
     margin-top: -52px;
     margin-left: -195px;
 }
 
-.titol-funcionalitat2{
+.titol-funcionalitat2 {
     font-size: 40px;
     font-weight: bold;
     margin-top: -58px;
     margin-left: -140px;
 }
 
-.text-funcionalitat{
+.text-funcionalitat {
     margin-left: 55px;
     margin-right: 30px;
     margin-top: -22px;
@@ -294,7 +299,7 @@ nav a:hover {
     padding-bottom: -200px;
 }
 
-.boto-funcionalitat{
+.boto-funcionalitat {
     display: inline-block;
     color: #d6d6d6;
     font-size: 14px;
@@ -312,29 +317,27 @@ nav a:hover {
     color: white;
 }
 
-
 /* 3 seccions en morat */
-/* MINI */
 .mini {
     color: #c9c9c9;
     text-align: center;
     margin-top: 32px;
 }
-.mini:hover{
+
+.mini:hover {
     color: white;
 }
 
-.col-1{
+.col-1 {
     background: transparent;
     margin-left: 61px;
     width: 30%;
     font-size: 20px;
 }
 
-.col-2{
+.col-2 {
     background: transparent;
     margin-left: 38px;
-    
     width: 30%;
 }
 
@@ -342,23 +345,26 @@ nav a:hover {
     background: transparent;
     margin-left: 60px;
 }
+
 .mini h3 {
     font-size: 25px;
     margin-bottom: -2px;
 }
+
 .mini p {
     font-size: 16.5px;
 }
+
 .mini img {
     width: 50px;
     margin-bottom: -10px;
 }
+
 .code {
     font-family: 'Source Code Pro', monospace;
-    color: orange;
+    background-color: rgba(78, 78, 78, 0.527);
+    border-radius: 5px;
 }
-
-
 
 /* ARRANQUEM */
 #arranquem {
@@ -368,12 +374,14 @@ nav a:hover {
     margin-left: 18.2%;
     margin-right: 18%;
 }
+
 #arranquem h2 {
     text-align: center;
     font-size: 43px;
     font-weight: normal;
     margin-left: -25px;
 }
+
 #arranquem h3 {
     margin-top: 42px;
     font-weight: normal;
@@ -388,12 +396,12 @@ nav a:hover {
     margin-bottom: -12px;
 }
 
-#arranquem li{
+#arranquem li {
     font-size: 16.5px;
     line-height: 1.6;
 }
 
-#arranquem .code{
+#arranquem .code {
     color: rgb(34, 34, 34);
     background-color: rgb(175, 175, 175);
     border-radius: 5px;
@@ -401,11 +409,16 @@ nav a:hover {
     height: 10px;
     padding-bottom: 20px;    
     text-align: center;
-    outline:none;
+    outline: none;
     border-color: rgb(175, 175, 175);
 }
 
-#arranquem img{
+#arranquem .code2{
+    background-color: rgb(185, 185, 185);
+    border-radius: 5px;
+}
+
+#arranquem img {
     margin-top: 20px;
 }
 
@@ -417,29 +430,30 @@ nav a:hover {
     padding-left: 20px;
     border-radius: 8px;
     overflow-x: auto;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
-#arranquem .tRoig{
+#arranquem .tRoig {
     color: red;
 }
 
-#arranquem .tGroc{
-    color: rgb(255, 187, 0);
+#arranquem .tGroc {
+    color: rgb(255, 145, 0);
 }
 
-.publicarWeb{
+.publicarWeb {
     padding-top: 25px;
 }
-
 
 #arranquem a {
     color: orange;
     text-decoration: none;
 }
+
 #arranquem a:hover {
     color: #ffb066;
 }
+
 .avis {
     border: 1px solid #dddddd;
     margin-top: 95px;
@@ -447,9 +461,7 @@ nav a:hover {
     font-size: 14px;
 }
 
-
-
-/* BLOQUE NEGRE */
+/* BLOC NEGRE */
 #no-desenvolupes {
     margin-top: 13px;
     background: #151617;
@@ -473,7 +485,7 @@ nav a:hover {
     margin-right: 15%;
 }
 
-#no-desenvolupes .pujar{
+#no-desenvolupes .pujar {
     font-size: 27.5px;
     margin-left: 15%;
     margin-right: 15%;
@@ -485,23 +497,19 @@ nav a:hover {
     color: rgb(201, 82, 7);
     text-decoration: none;
 }
+
 #no-desenvolupes a:hover {
     color: #ffb066;
 }
 
-
-
-
 /* AJUDA */
-
-
-
 #ajuda {
     text-align: center;
     padding: 60px 0;
     color: #4d4c4c;
 }
-#ajuda:hover{
+
+#ajuda:hover {
     color: black;
 }
 
@@ -512,14 +520,16 @@ nav a:hover {
     margin-bottom: 20px;
     font-weight: normal;
 }
+
 #ajuda img {
     width: 50px;
 }
+
 #ajuda h3 {
     font-size: 25px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 #footer {
     margin-top: -32px;
     background-color: #fff;
@@ -532,7 +542,6 @@ nav a:hover {
     color: #555;
 }
 
-/* Texto del copyright */
 #footer p {
     margin-top: 0px;
     margin-left: -6px;
@@ -540,7 +549,6 @@ nav a:hover {
     color: #555;
 }
 
-/* Contenedor de enlaces */
 #footer .xarxes {
     font-size: 14px;
     margin-right: 72px;
@@ -548,7 +556,6 @@ nav a:hover {
     gap: 59px;
 }
 
-/* Enlaces */
 #footer .xarxes a {
     text-decoration: none;
     font-weight: bold;
@@ -560,49 +567,45 @@ nav a:hover {
     color: #777;
 }
 
-
-
-
-
-
 /* COOKIES */
 #cookies {
     margin-left: 30%;
     margin-bottom: 3%;
-  position: fixed;
-  border-radius: 50px;
-  bottom: 0;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  width: 38%;
-  height: 65px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  font-size: 14px;
-  border: 1px solid #474747;
+    position: fixed;
+    border-radius: 50px;
+    bottom: 0;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 38%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 1px solid #474747;
 }
+
 #cookies a {
-  color: orange;
-  text-decoration: none;
+    color: orange;
+    text-decoration: none;
 }
+
 #cookies a:hover {
-  color: #ffb066;
+    color: #ffb066;
 }
+
 #cookies span {
-  background: #33333300;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background 0.3s;
+    background: #33333300;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
 }
+
 #cookies span:hover {
-  background: #555;
+    background: #555;
 }
-
-
-
 
 /* Ajustos per al responsive */
 @media (max-width: 768px) {
@@ -615,43 +618,43 @@ nav a:hover {
     }
 }
 
-
-/** apartat responsive */
-
+/* Apartat responsive */
 @media only screen and (max-width: 767px) {
     /* For mobile phones: */
     .row {
-    flex-direction: column;
+        flex-direction: column;
     }
+    
     .container {
-    width: 100%;
+        width: 100%;
     }
+    
     [class*="col-"] {
-    width: 100%;
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 768px) {
     /* For tablets and */
     .container {
-    width: 738px;
+        width: 738px;
     }
 }
 
 @media only screen and (min-width: 769px) {
     .container {
-    width: 739px;
+        width: 739px;
     }
 }
 
 @media only screen and (min-width: 992px) {
     .container {
-    width: 960px;
+        width: 960px;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     .container {
-    width: 100%;
+        width: 100%;
     }
 }

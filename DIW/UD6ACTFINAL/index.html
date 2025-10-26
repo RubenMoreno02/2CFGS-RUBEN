@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UD6A Activitat Final</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         
     </style>
@@ -16,7 +16,6 @@
             <div class="row">
                 <div class="col-6">
                     <div class="logo-container">
-                        <!-- Para simular el logo ya que no tenemos acceso a /img/icona_escut.svg -->
                         <img class="fotoLogo" src="img/icona_escut.svg" alt="">
                         <div class="logo">2onDAW-DI</div>
                     </div>
@@ -51,15 +50,14 @@
             </div>
         </div>
 
-         <!-- Secció de funcionalitats (Plug-ins i Assistència) -->
+        <!-- Secció de funcionalitats (Plug-ins i Assistència) -->
         <section id="funcionalitats">
             <div class="container">
                 <div class="row">
                     <div class="col-6">
                         <div class="caixa-funcionalitat">
                             <div class="icona-funcionalitat">
-                                <!-- Substituir amb la imatge real del plugin -->
-                                <img src="/DIW/UD6ACTFINAL/img/icona_plugin.svg" alt="Icona Plug-ins">
+                                <img src="img/icona_plugin.svg" alt="Icona Plug-ins">
                             </div>
                             <h3 class="titol-funcionalitat">Plug-ins</h3>
                             <p class="text-funcionalitat">
@@ -71,8 +69,7 @@
                     <div class="col-6">
                         <div class="caixa-funcionalitat2">
                             <div class="icona-funcionalitat2">
-                                <!-- Substituir amb la imatge real de l'assistència -->
-                                <img src="/DIW/UD6ACTFINAL/img/icona_assistencia.svg" alt="Icona Assistència">
+                                <img src="img/icona_assistencia.svg" alt="Icona Assistència">
                             </div>
                             <h3 class="titol-funcionalitat2">Assistència</h3>
                             <p class="text-funcionalitat">
@@ -85,146 +82,131 @@
             </div>
         </section>
         
-        
         <!-- 3 seccions en morat -->
-
         <div class="mini row">
-        <div class="col-1">
-            <img src="img/icona_format_fitxer.svg" alt="" />
-            <h3>Format del fitxer →</h3>
-            <p>Pots utilitzar el mateix Visual Studio per codificar els teus anexos.</p>
+            <div class="col-1">
+                <img src="img/icona_format_fitxer.svg" alt="" />
+                <h3>Format del fitxer →</h3>
+                <p>Pots utilitzar el mateix Visual Studio per codificar els teus anexos.</p>
+            </div>
+            <div class="col-2">
+                <img src="img/icona_app.svg" alt="" />
+                <h3>APP →</h3>
+                <p>Integra el teu codi <span class="code">daw://</span> en el repositori de GitHub.</p>
+            </div>
+            <div class="col-3">
+                <img src="img/icona_preferencies.svg" alt="" />
+                <h3>API →</h3>
+                <p>Pots usar JSON per a interactuar amb la nostra plataforma.</p>
+            </div>
         </div>
-        <div class="col-2">
-            <img src="img/icona_app.svg" alt="" />
-            <h3>APP →</h3>
-            <p>Integra el teu codi <span class="code">daw://</span> en el repositori de GitHub.</p>
-        </div>
-        <div class="col-3">
-            <img src="img/icona_preferencies.svg" alt="" />
-            <h3>API →</h3>
-            <p>Pots usar JSON per a interactuar amb la nostra plataforma.</p>
-        </div>
-        </div>
-
     </section>
 
     <!-- ARRANQUEM -->
-  <section id="arranquem">
-    <div class="container">
-      <h2>Arranquem</h2>
-      <h3>Maquetem la web</h3>
-      <p>
-        En primer lloc has d’obrir l’entorn de desenvolupament preferit (Visual
-        Studio, Php Storm o el que siga). Després has d’obrir un nou fitxer i
-        emmagatzemar-lo com a html. El codi de baix mostra com fer la maquetació
-        del primer <i>“Hola món”</i> 🖐️.
-      </p>
-      <ol>
-        <li>Obri l’editor</li>
-        <li>
-          Crea un nou fitxer html. En Visual Studio Code és amb les tecles
-          <button class="code">ctrl + n</button>
-        </li>
-        <img src="img/file_new.png" alt="">
-        <li>Copia i pega el codi de baix</li>
-        <li>Obri la pàgina en un navegador</li>
-      </ol>
-      <div class="codebox">
-<pre><code>&lt;<span class="tGroc">div</span> class="<span class="tRoig">container</span>"&gt;
-  &lt;<span class="tGroc">div</span> class="<span class="tRoig">row</span>"&gt;
-    &lt;<span class="tGroc">div</span> class="<span class="tRoig">col-12</span>"&gt;
-      Hola món 🖐️!
-    &lt;/<span class="tGroc">div</span>&gt;
-  &lt;/<span class="tGroc">div</span>&gt;
-&lt;/<span class="tGroc">div</span>&gt;
-</code></pre>
-      </div>
+    <section id="arranquem">
+        <div class="container">
+            <h2>Arranquem</h2>
+            <h3>Maquetem la web</h3>
+            <p>
+                En primer lloc has d'obrir l'entorn de desenvolupament preferit (Visual
+                Studio, Php Storm o el que siga). Després has d'obrir un nou fitxer i
+                emmagatzemar-lo com a html. El codi de baix mostra com fer la maquetació
+                del primer <i>"Hola món"</i> 🖐️.
+            </p>
+            <ol>
+                <li>Obri l'editor</li>
+                <li>
+                    Crea un nou fitxer html. En Visual Studio Code és amb les tecles
+                    <button class="code">ctrl + n</button>
+                </li>
+                <img src="img/file_new.png" alt="">
+                <li>Copia i pega el codi de baix</li>
+                <li>Obri la pàgina en un navegador</li>
+            </ol>
+            <div class="codebox">
+                <pre><code>&lt;<span class="tGroc">div</span> class="<span class="tRoig">container</span>"&gt;
+        &lt;<span class="tGroc">div</span> class="<span class="tRoig">row</span>"&gt;
+              &lt;<span class="tGroc">div</span> class="<span class="tRoig">col-12</span>"&gt;
+              Hola món 🖐️!
+              &lt;/<span class="tGroc">div</span>&gt;
+        &lt;/<span class="tGroc">div</span>&gt;
+&lt;/<span class="tGroc">div</span>&gt;</code></pre>
+            </div>
 
+            <h3 class="publicarWeb">Publicar la web</h3>
+            <p>
+                Per publicar la web és relativament senzill. Has d'utilitzar un client ftp com
+                el <span class="code2"> filezilla </span> i configurar-lo per accedir al teu
+                <a href="#">hosting</a>. Una vegada configurat només has de pujar els
+                fitxers i ja està!!!
+            </p>
+            <div class="avis">
+                Veus alguna cosa incorrecta o incompleta en aquesta pàgina?
+                <a href="#">Ajuda'ns a millorar.</a>
+            </div>
+        </div>
+    </section>
 
-      <h3 class="publicarWeb">Publicar la web</h3>
-      <p>
-        Per publicar la web és relativament senzill. Has d’utilitzar un client ftp com
-        el <span class="code2">filezilla</span> i configurar-lo per accedir al teu
-        <a href="#">hosting</a>. Una vegada configurat només has de pujar els
-        fitxers i ja està!!!
-      </p>
-      <div class="avis">
-        Veus alguna cosa incorrecta o incompleta en aquesta pàgina?
-        <a href="#">Ajuda’ns a millorar.</a>
-      </div>
+    <!-- BLOC NEGRE -->
+    <section id="no-desenvolupes">
+        <div class="container">
+            <h2>No desenvolupes planes web?<br />Dona'ns idees</h2>
+            <p>
+                Si no tens molta destresa programant
+                <a href="#">deixa'ns una suggerència</a> per millorar la nostra formació.
+            </p>
+            <p class="pujar">
+                Fes una ullada a <a href="#">la nostra llista</a> de coses que ja hem
+                desenvolupat.
+            </p>
+        </div>
+    </section>
+
+    <!-- AJUDA -->
+    <section id="ajuda">
+        <div class="container row">
+            <h1>Estem per ajudar-te</h1>
+            <div class="col-4">
+                <img src="img/icona_forum.svg" alt="" />
+                <h3>Comunitat →</h3>
+                <p>Uneix-te a la nostra comunitat i comenta els teus dubtes.</p>
+            </div>
+            <div class="col-4">
+                <img src="img/icona_exemples.svg" alt="" />
+                <h3>Exemples →</h3>
+                <p>Mira els exemples que han realitzat altres estudiants.</p>
+            </div>
+            <div class="col-4">
+                <img src="img/icona_chat.svg" alt="" />
+                <h3>Xat →</h3>
+                <p>Contacta amb el nostre xat i et donarem suport instantani.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p>© 2025X Disseny interfícies web</p>
+        <div class="xarxes">
+            <a href="#">GitHub</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- COOKIES -->
+    <div id="cookies">
+        <p>
+            Usem cookies pròpies i de tercers per millorar els nostres serveis. Si continues
+            navegant en aquesta pàgina, acceptes la nostra
+            <a href="#">política de cookies</a>.
+        </p>
+        <span id="close">✕</span>
     </div>
-  </section>
 
-
-
-  <!-- BLOQUE NEGRE -->
-  <section id="no-desenvolupes">
-    <div class="container">
-      <h2>No desenvolupes planes web?<br />Dona’ns idees</h2>
-      <p>
-        Si no tens molta destresa programant
-        <a href="#">deixa’ns una suggerència</a> per millorar la nostra formació.
-      </p>
-      <p class="pujar">
-        Fes una ullada a <a href="#">la nostra llista</a> de coses que ja hem
-        desenvolupat.
-      </p>
-    </div>
-  </section>
-
-  <!-- AJUDA -->
-  <section id="ajuda">
-    <div class="container row">
-      <h1>Estem per ajudar-te</h1>
-      <div class="col-4">
-        <img src="img/icona_forum.svg" alt="" />
-        <h3>Comunitat →</h3>
-        <p>Uneix-te a la nostra comunitat i comenta els teus dubtes.</p>
-      </div>
-      <div class="col-4">
-        <img src="img/icona_exemples.svg" alt="" />
-        <h3>Exemples →</h3>
-        <p>Mira els exemples que han realitzat altres estudiants.</p>
-      </div>
-      <div class="col-4">
-        <img src="img/icona_chat.svg" alt="" />
-        <h3>Xat →</h3>
-        <p>Contacta amb el nostre xat i et donarem suport instantani.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="footer">
-    <p>© 2025X Disseny interfícies web</p>
-    <div class="xarxes">
-      <a href="#">GitHub</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-    </div>
-  </footer>
-
-
-
-  <!-- COOKIES -->
-  <div id="cookies">
-    <p>
-      Usem cookies pròpies i de tercers per millorar els nostres serveis. Si continues
-      navegant en aquesta pàgina, acceptes la nostra
-      <a href="#">política de cookies</a>.
-    </p>
-    <span id="close">✕</span>
-  </div>
-
-  <script>
-    document.getElementById("close").onclick = () =>
-      (document.getElementById("cookies").style.display = "none");
-  </script>
-
-
-    
-
-    
-   
+    <script>
+        document.getElementById("close").onclick = () =>
+            (document.getElementById("cookies").style.display = "none");
+    </script>
 </body>
 </html>
