@@ -1,0 +1,140 @@
+/* Estilos personalizados */
+:root {
+    --primary-color: #2563eb;
+    --text-color: #1f2937;
+    --light-gray: #f3f4f6;
+    --medium-gray: #9ca3af;
+    --border-color: #e5e7eb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* Header */
+header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  margin-right: 8px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav-menu li a {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: var(--primary-color);
+}
+
+.header-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.header-icons i {
+  font-size: 1.2rem;
+  color: var(--medium-gray);
+  transition: color 0.3s ease;
+}
+
+.header-icons i:hover {
+  color: var(--primary-color);
+}
+
+
+/* Main content */
+main {
+    padding: 3rem 0;
+    min-height: 60vh;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-gray);
+    padding: 3rem 0 1.5rem;
+    margin-top: 3rem;
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--medium-gray);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.payment-methods {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.payment-methods img {
+    height: 24px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
