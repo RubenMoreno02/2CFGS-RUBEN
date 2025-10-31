@@ -1,15 +1,7 @@
-/* Estilos personalizados */
-:root {
-    --primary-color: #2563eb;
-    --text-color: #1f2937;
-    --light-gray: #f3f4f6;
-    --medium-gray: #9ca3af;
-    --border-color: #e5e7eb;
-}
-
+/* General Styles */
 body {
     font-family: 'Inter', sans-serif;
-    color: var(--text-color);
+    color: #1f2937;
     line-height: 1.6;
 }
 
@@ -21,44 +13,54 @@ a {
 }
 
 a:hover {
-    color: var(--primary-color);
+    color: #2563eb;
 }
 
 /* Header */
 header {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border-color);
+  padding: 2rem 0;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.logo {
+/* .logo {
   font-weight: 700;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+} */
+
+.logo img{
+  height: 88px;
+  width: auto;
+  display: block;
+  float: left;
 }
 
-.logo i {
-  margin-right: 8px;
-}
-
-.nav-menu {
+.nav-menu ul{
   display: flex;
   justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
+  border: 1px solid #c41414;
+  padding: 30px;
 }
 
 .nav-menu li a {
   font-weight: 500;
-  color: var(--text-color);
+  color: #1f2937;
   text-decoration: none;
   transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+  border: 1px solid #144fc4;
+  padding: 25px;
 }
 
+
 .nav-menu li a:hover {
-  color: var(--primary-color);
+  transition: background-color 0.3s ease;
+  background-color: #2563eb;
+  color: white;
 }
 
 .header-icons {
@@ -69,12 +71,11 @@ header {
 
 .header-icons i {
   font-size: 1.2rem;
-  color: var(--medium-gray);
   transition: color 0.3s ease;
 }
 
 .header-icons i:hover {
-  color: var(--primary-color);
+  color: #2563eb;
 }
 
 
@@ -84,16 +85,65 @@ main {
     min-height: 60vh;
 }
 
+
+
 .main-title {
-    font-size: 2.5rem;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 2rem;
     text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 footer {
-    background-color: var(--light-gray);
+    background-color: #f3f4f6;
     padding: 3rem 0 1.5rem;
     margin-top: 3rem;
 }
@@ -115,11 +165,11 @@ footer {
 }
 
 .footer-links a {
-    color: var(--medium-gray);
+    color: #9ca3af;
 }
 
 .footer-links a:hover {
-    color: var(--primary-color);
+    color: #2563eb;
 }
 
 .payment-methods {
@@ -135,6 +185,6 @@ footer {
 .copyright {
     text-align: center;
     margin-top: 3rem;
-    color: var(--medium-gray);
+    color: #9ca3af;
     font-size: 0.9rem;
 }
