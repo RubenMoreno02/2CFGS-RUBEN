@@ -5,29 +5,18 @@ body {
     line-height: 1.6;
 }
 
+/* Header */
+header {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
 a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
     transition: color 0.3s ease;
 }
-
-a:hover {
-    color: #2563eb;
-}
-
-/* Header */
-header {
-  padding: 2rem 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-/* .logo {
-  font-weight: 700;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-} */
 
 .logo img{
   height: 88px;
@@ -43,39 +32,54 @@ header {
   margin: 0;
   padding: 0;
   border: 1px solid #c41414;
-  padding: 30px;
+  padding: 18px;
+  padding-top: 30px;
 }
 
 .nav-menu li a {
-  font-weight: 500;
-  color: #1f2937;
+  font-size: 17px;
+  font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
   transition: background-color 0.3s ease;
-  border: 1px solid #144fc4;
-  padding: 25px;
+  border: 1px solid rgb(87, 87, 87);
+  padding-top: 18px;
+  padding-right: 22px;
+  padding-left: 22px;
+  padding-bottom: 18px;
+  text-align: center;
 }
 
+.home1{
+  border-radius: 12px 0px 0px 12px;
+  background-color: rgb(138, 179, 207);
+  color: white;
+}
+.contactar1{
+  border-radius: 0px 12px 12px 0px;
+}
 
 .nav-menu li a:hover {
   transition: background-color 0.3s ease;
-  background-color: #2563eb;
+  background-color: rgb(138, 179, 207);
   color: white;
 }
 
+
 .header-icons {
+  padding-top: 30px;
   display: flex;
   justify-content: flex-end;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .header-icons i {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   transition: color 0.3s ease;
 }
 
 .header-icons i:hover {
-  color: #2563eb;
+  color: rgb(138, 179, 207);
 }
 
 
