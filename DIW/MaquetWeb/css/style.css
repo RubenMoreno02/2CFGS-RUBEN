@@ -95,7 +95,7 @@ main {
 /* ---------- FOOTER ---------- */
 footer {
   border-top: 1px solid #ccc;
-  margin-top: 1.5rem;
+  margin-top: 10px;
   font-size: 14px;
   color: #1f2937;
 }
@@ -109,9 +109,10 @@ footer {
 }
 
 footer h4 {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
-  margin-bottom: 0.7rem;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 footer ul {
@@ -123,30 +124,32 @@ footer ul {
 footer li {
   margin-bottom: 0.4rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 footer li i {
-  margin-right: 8px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #1f2937;
-  position: relative;
-  top: 1px;
 }
 
 footer li a {
   color: #1f2937;
   text-decoration: none;
   transition: color 0.3s ease;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 footer li a:hover {
   color: #808080;
 }
 
+
 /* Redes sociales */
-.social-icons {
+.social-icons1 {
   display: flex;
+  font-size: 20px;
   gap: 12px;
   margin-top: 0.4rem;
 }
@@ -187,6 +190,14 @@ footer li a:hover {
   font-size: 13px;
   color: #333;
 }
+
+
+.col-13 {
+  flex: 0 0 auto;
+  width: 16.6666666667%;
+  margin-left: 10%;
+}
+
 
 /* Responsive (opcional, pero recomendado) */
 @media (max-width: 768px) {
