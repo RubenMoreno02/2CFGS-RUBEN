@@ -94,12 +94,16 @@ main {
 
 /* ---------- FOOTER ---------- */
 footer {
+  
   border-top: 1px solid #ccc;
   margin-top: 10px;
   font-size: 14px;
   color: #1f2937;
 }
-
+footer .container-fluid{
+  margin-left: 8.5%;
+  margin-right: 8.5%;
+}
 
 
 .footer-content {
@@ -109,20 +113,23 @@ footer {
 }
 
 footer h4 {
+  border: 1px solid red;
   font-size: 17px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.9rem;
 }
 
 footer ul {
+  border: 1px solid rgb(204, 0, 255);
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
+  font-size: 18px;
+  padding-right: 20px;
 }
 
 footer li {
-  margin-bottom: 0.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,8 +144,6 @@ footer li a {
   color: #1f2937;
   text-decoration: none;
   transition: color 0.3s ease;
-  display: inline-block;
-  margin-right: 5px;
 }
 
 footer li a:hover {
@@ -148,10 +153,12 @@ footer li a:hover {
 
 /* Redes sociales */
 .social-icons1 {
+    border: 1px solid rgb(43, 255, 0);
+
   display: flex;
-  font-size: 20px;
-  gap: 12px;
-  margin-top: 0.4rem;
+  font-size: 27px;
+  gap: 28px;
+  margin-top: 5px;
 }
 
 .social-icons i {
@@ -165,16 +172,17 @@ footer li a:hover {
 
 /* Métodos de pago */
 .payment-icons {
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: -10px;
+  border: 1px solid rgb(43, 255, 0);
   justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-  padding-top: 1.5rem;
+  
+  
 }
 
 .payment-icons img {
-  height: 26px;
+  margin-bottom: 20px;
+  height: 50px;
+  width: aut;
   object-fit: contain;
   transition: opacity 0.3s ease;
 }
@@ -186,7 +194,7 @@ footer li a:hover {
 /* Footer inferior */
 .footer-bottom {
   text-align: center;
-  padding: 1rem 0 0.5rem;
+  padding: 1.5rem 0 0.5rem;
   font-size: 13px;
   color: #333;
 }
@@ -195,7 +203,7 @@ footer li a:hover {
 .col-13 {
   flex: 0 0 auto;
   width: 16.6666666667%;
-  margin-left: 10%;
+  margin-left: 8.5%;
 }
 
 
