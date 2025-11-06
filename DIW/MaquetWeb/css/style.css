@@ -1,14 +1,8 @@
-/* General Styles */
+/* ========== ESTILS GENERALS ========== */
 body {
     font-family: 'Inter', sans-serif;
     color: #1f2937;
     line-height: 1.6;
-}
-
-/* Header */
-header {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid #646466;
 }
 
 a {
@@ -18,13 +12,20 @@ a {
     transition: color 0.3s ease;
 }
 
+/* ========== HEADER ========== */
+header {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #646466;
+}
+
+/* Logo */
 .logo img{
   height: 88px;
   width: auto;
   display: block;
 }
 
-/* Botón hamburguesa (oculto por defecto) */
+/* Botó hamburguesa (ocult) */
 .hamburger-btn {
   display: none;
   background: none;
@@ -40,6 +41,7 @@ a {
   color: rgb(138, 179, 207);
 }
 
+/* Menú de navegació */
 .nav-menu ul{
   display: flex;
   justify-content: center;
@@ -63,11 +65,13 @@ a {
   text-align: center;
 }
 
+/* Elements específics del menú */
 .home1{
   border-radius: 12px 0px 0px 12px;
   background-color: rgb(138, 179, 207);
   color: white;
 }
+
 .contactar1{
   border-radius: 0px 12px 12px 0px;
 }
@@ -78,6 +82,7 @@ a {
   color: white;
 }
 
+/* Icones del capçal */
 .header-icons {
   padding-top: 30px;
   display: flex;
@@ -94,8 +99,7 @@ a {
   color: rgb(138, 179, 207);
 }
 
-
-/* ---------- MAIN ---------- */
+/* ========== MAIN ========== */
 main {
     padding: 1.3rem 0;
 }
@@ -105,7 +109,7 @@ main {
     text-align: center;
 }
 
-/* ---------- FOOTER ---------- */
+/* ========== FOOTER ========== */
 footer {  
   border-top: 1px solid #ccc;
   font-size: 14px;
@@ -160,7 +164,7 @@ footer li a:hover {
   color: #808080;
 }
 
-/* Redes sociales */
+/* Xarxes socials */
 .social-icons1 {
   display: flex;
   font-size: 27px;
@@ -177,7 +181,7 @@ footer li a:hover {
   color: #808080;
 }
 
-/* Métodos de pago */
+/* Mètodes de pagament */
 .payment-icons {
   margin-top: -10px;
   justify-content: flex-start;
@@ -202,13 +206,113 @@ footer li a:hover {
   font-size: 17px;
   color: #333;
 }
+
 footer hr{
   margin-top: -20px;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 650px) {
+/* Secció del footer */
+.footer-section {
+  margin-bottom: 0;
+}
 
+.footer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.footer-toggle {
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+  color: rgb(138, 179, 207);
+  min-width: 20px;
+}
+
+.footer-links {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+footer li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.link-arrow {
+  font-size: 0.9rem;
+  color: rgb(138, 179, 207);
+  min-width: 16px;
+  margin-left: 10px;
+}
+
+footer li a {
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  flex-grow: 1;
+}
+
+footer li a:hover {
+  color: rgb(138, 179, 207);
+}
+
+/* Estat actiu del capçaler */
+.footer-header.active-header {
+  background-color: #c5c5c5;
+  border-radius: 1px;
+}
+
+/* Xarxes socials */
+.social-icons1 span {
+  display: none;
+}
+
+/* Estils addicionals del footer */
+.social-icons1 a {
+  color: #1f2937;
+  transition: color 0.3s ease;
+}
+
+.social-icons1 a:hover {
+  color: rgb(138, 179, 207);
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+
+}
+
+.social-icons1 {
+  display: flex;
+  font-size: 27px;
+  gap: 26px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 17px;
+  color: #333;
+  padding: 20px 0;
+}
+
+/* ========== DISSENY RESPONSIVE ========== */
+
+/* ---------- VERSIÓ MÒBIL (650px) ---------- */
+@media (max-width: 650px) {
   header .row{
     display: flex;
     justify-content: space-between;
@@ -247,7 +351,6 @@ footer hr{
     display: block;
     font-size: 2rem;
     background: none;
-    /*border: none;*/
     cursor: pointer;
     color: #1f2937;
     padding: 0;
@@ -259,7 +362,6 @@ footer hr{
     color: rgb(138, 179, 207);
   }
   
-  /* Reorganización del layout del header */
   .hamburger-col {
     margin-right: -45px;
     display: flex;
@@ -278,8 +380,6 @@ footer hr{
     justify-content: flex-start;
     align-items: center;
   }
-
-  
   
   .nav-col {
     width: 100% !important;
@@ -359,19 +459,17 @@ footer hr{
     margin: 0 auto;
   }
   
-  /* Ajustar iconos del header */
+  /* Ajustar icones */
   .header-icons {
     padding-left: 140px;
     padding-top: 15px;
     gap: 1.1rem;
   }
   
-  
   .header-icons i {
     font-size: 1.7rem;
   }
   
-  /* Asegurar que las columnas ocupen el espacio correcto */
   .hamburger-col,
   .logo-col,
   .icons-col {
@@ -392,45 +490,194 @@ footer hr{
     width: 10%;
   }
   
-  /* Ajustar padding del header en móvil */
+  /* Ajustar padding del capçal en mòbil */
   header {
     padding: 0.8rem 0;
     position: relative;
   }
-}
-
-
-
-
-
-/* Responsive para tablets y móviles más grandes */
-@media (max-width: 768px) {
+  
+  /* Peu de pàgina responsive */
   .footer-content {
     flex-direction: column;
   }
-
-  .col-2 {
+  
+  .footer-content .col-2 {
     width: 100% !important;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+    padding: 0 15px;
+  }
+  
+  .footer-section:last-child {
+    border-bottom: none;
+  }
+  
+  .footer-header {
+    padding: 18px 0;
+    margin: 0;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    padding: 15px;
+    justify-content: space-between;
+  }
+  
+  .footer-header h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .footer-toggle {
+    transform: rotate(180deg);
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+  }
+  
+  .footer-links {
+    max-height: 0;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .footer-links.active {
+    max-height: 500px;
+    padding-bottom: 15px;
+  }
+  
+  .footer-toggle.rotate {
+    transform: rotate(0deg);
+    color: rgb(0, 0, 0);
+  }
+  
+  .link-arrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: rgb(138, 179, 207);
+  }
+  
+  .payment-section {
+    width: 100% !important;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  .payment-section h4 {
+    display: none;
+  }
+  
+  .payment-icons {
+    justify-content: center !important;
+    text-align: center;
+  }
+  
+  footer .container-fluid {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  footer ul {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Xarxes socials */
+  .social-icons1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
 
-  .payment-icons {
-    justify-content: center;
+  .social-icons1 div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-icons1 span {
+    display: block;
+    font-size: 15px;
+    color: #1f2937;
+  }
+
+  .social-icons1 a {
+    font-size: 22px;
+    color: #1f2937;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons1 a:hover {
+    color: rgb(138, 179, 207);
+  }
+
+  .payment-icons img {
+    margin-bottom: 10px;
+    height: 55px;
+    width: 55px;
+    margin: 0 40px 0 40px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+  }
+
+  .payment-icons img:hover {
+    opacity: 0.7;
   }
 }
 
-/* Responsive para tablets y móviles más grandes */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
+/* ---------- VERSIÓ ESCRIPTORI (650px) ---------- */
+@media (min-width: 650px) {
+  .footer-header {
+    cursor: default;
+    padding: 8px 0 31px 0;
+    justify-content: flex-start;
   }
-
-  .col-2 {
-    width: 100% !important;
-    margin-bottom: 1rem;
+  
+  .footer-toggle {
+    display: none;
   }
-
-  .payment-icons {
-    justify-content: center;
+  
+  .footer-links {
+    max-height: none !important;
+    display: block !important;
+  }
+  
+  /* MOSTRAR FLETXAS EN DESKTOP */
+  .link-arrow {
+    display: inline-block !important;
+    font-size: 0.8rem;
+    color: #1f2937;
+    margin-left: 8px;
+  }
+  
+  footer li {
+    padding: 8px 0;
+    margin-right: 10px;
+    justify-content: space-between;
+  }
+  
+  footer li a {
+    flex-grow: 1;
+    padding-right: 10px;
+  }
+  
+  /* Estils del footer */
+  footer ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+    padding-right: 20px;
+  }
+  
+  footer li i {
+    font-size: 1rem;
+    color: #1f2937;
+  }
+  
+  footer li a:hover {
+    color: #808080;
   }
 }
