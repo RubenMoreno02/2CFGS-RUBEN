@@ -237,7 +237,7 @@ footer hr{
 
   header .header-icons {
     display: flex;
-    align-items:flex-start;
+    align-items:flex-end;
     justify-content: flex-end;
     margin: 0;
   }
@@ -245,13 +245,12 @@ footer hr{
   /* Header responsive */
   .hamburger-btn {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2rem;
     background: none;
     /*border: none;*/
-    border: 1px solid red;
     cursor: pointer;
     color: #1f2937;
-    padding: 10px;
+    padding: 0;
     margin: 0;
     transition: color 0.3s ease;
   }
@@ -262,25 +261,25 @@ footer hr{
   
   /* Reorganización del layout del header */
   .hamburger-col {
-    border: 1px solid rgb(65, 163, 35);
+    margin-right: -45px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
   
   .logo-col {
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .icons-col {
-    border: 1px solid red;
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
+
+  
   
   .nav-col {
     width: 100% !important;
@@ -362,12 +361,14 @@ footer hr{
   
   /* Ajustar iconos del header */
   .header-icons {
-    padding-top: 0;
-    gap: 0.8rem;
+    padding-left: 140px;
+    padding-top: 15px;
+    gap: 1.1rem;
   }
   
+  
   .header-icons i {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
   
   /* Asegurar que las columnas ocupen el espacio correcto */
