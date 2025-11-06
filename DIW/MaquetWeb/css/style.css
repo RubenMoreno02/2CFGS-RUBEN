@@ -208,6 +208,40 @@ footer hr{
 
 /* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 500px) {
+
+  header .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  header .col-9 {
+    display: contents;
+  }
+
+  header .col-2 {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  header .col-1 {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  header .header-icons {
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
   /* Header responsive */
   .hamburger-btn {
     display: block;
@@ -228,7 +262,7 @@ footer hr{
   
   /* Reorganización del layout del header */
   .hamburger-col {
-    border: 1px solid rgb(163, 35, 35);
+    border: 1px solid rgb(65, 163, 35);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -244,7 +278,7 @@ footer hr{
   .icons-col {
     border: 1px solid red;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
   }
   
