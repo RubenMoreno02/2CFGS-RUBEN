@@ -148,35 +148,26 @@
     </footer>
 
     <script>
-        // JavaScript para el menú hamburguesa
-        document.getElementById('hamburgerBtn').addEventListener('click', function() {
-            const navMenu = document.getElementById('navMenu');
-            const hamburgerIcon = this.querySelector('i');
-            
-            navMenu.classList.toggle('active');
-            
-            // Cambiar icono de hamburguesa a X y viceversa
-            if (navMenu.classList.contains('active')) {
-                hamburgerIcon.classList.remove('fa-bars');
-                hamburgerIcon.classList.add('fa-times');
-            } else {
-                hamburgerIcon.classList.remove('fa-times');
-                hamburgerIcon.classList.add('fa-bars');
-            }
-        });
+// Menú hamburguesa simplificado
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+    const navMenu = document.getElementById('navMenu');
+    const icon = this.querySelector('i');
+    
+    navMenu.classList.toggle('active');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+});
 
-        // Cerrar menú al hacer clic en un enlace (opcional)
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', function() {
-                const navMenu = document.getElementById('navMenu');
-                const hamburgerBtn = document.getElementById('hamburgerBtn');
-                const hamburgerIcon = hamburgerBtn.querySelector('i');
-                
-                navMenu.classList.remove('active');
-                hamburgerIcon.classList.remove('fa-times');
-                hamburgerIcon.classList.add('fa-bars');
-            });
-        });
-    </script>
+// Cerrar menú al hacer clic en enlaces
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', function() {
+        const navMenu = document.getElementById('navMenu');
+        const icon = document.querySelector('#hamburgerBtn i');
+        
+        navMenu.classList.remove('active');
+        icon.classList.replace('fa-times', 'fa-bars');
+    });
+});
+</script>
 </body>
 </html>
