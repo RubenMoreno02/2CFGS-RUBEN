@@ -22,7 +22,22 @@ a {
   height: 88px;
   width: auto;
   display: block;
-  float: left;
+}
+
+/* Botón hamburguesa (oculto por defecto) */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1f2937;
+  padding: 0;
+  margin: 0;
+}
+
+.hamburger-btn:hover {
+  color: rgb(138, 179, 207);
 }
 
 .nav-menu ul{
@@ -79,7 +94,8 @@ a {
   color: rgb(138, 179, 207);
 }
 
-/* Main content */
+
+/* ---------- MAIN ---------- */
 main {
     padding: 1.3rem 0;
 }
@@ -190,7 +206,185 @@ footer hr{
   margin-top: -20px;
 }
 
-/* Responsive */
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 500px) {
+  /* Header responsive */
+  .hamburger-btn {
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    /*border: none;*/
+    border: 1px solid red;
+    cursor: pointer;
+    color: #1f2937;
+    padding: 10px;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .hamburger-btn:hover {
+    color: rgb(138, 179, 207);
+  }
+  
+  /* Reorganización del layout del header */
+  .hamburger-col {
+    border: 1px solid rgb(163, 35, 35);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .logo-col {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icons-col {
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav-col {
+    width: 100% !important;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  /* Menú desplegable vertical */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 50%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-top: 1px solid #eee;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .nav-menu.active {
+    display: block;
+    max-height: 500px;
+    transition: max-height 0.3s ease-in;
+  }
+  
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .nav-menu li a {
+    display: block;
+    padding: 15px 20px;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: white;
+    color: #1f2937;
+  }
+  
+  .nav-menu li a:hover {
+    background-color: rgb(138, 179, 207);
+    color: white;
+    transform: translateX(5px);
+  }
+  
+  .home1,
+  .contactar1 {
+    border-radius: 0;
+    background-color: transparent;
+    color: #1f2937;
+  }
+  
+  .nav-menu li:first-child a {
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  /* Ajustar logo */
+  .logo img {
+    height: 60px;
+    float: none;
+    margin: 0 auto;
+  }
+  
+  /* Ajustar iconos del header */
+  .header-icons {
+    padding-top: 0;
+    gap: 0.8rem;
+  }
+  
+  .header-icons i {
+    font-size: 1.3rem;
+  }
+  
+  /* Asegurar que las columnas ocupen el espacio correcto */
+  .hamburger-col,
+  .logo-col,
+  .icons-col {
+    width: auto;
+    flex-grow: 0;
+  }
+  
+  .hamburger-col {
+    width: 20%;
+    justify-content: flex-start;
+  }
+  
+  .logo-col {
+    width: 30%;
+  }
+  
+  .icons-col {
+    width: 10%;
+  }
+  
+  /* Ajustar padding del header en móvil */
+  header {
+    padding: 0.8rem 0;
+    position: relative;
+  }
+}
+
+
+
+
+
+/* Responsive para tablets y móviles más grandes */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .col-2 {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .payment-icons {
+    justify-content: center;
+  }
+}
+
+/* Responsive para tablets y móviles más grandes */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
