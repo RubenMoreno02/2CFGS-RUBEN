@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UD6ACT9 - Red Plane</title>
+  <!-- Fitxer JavaScript amb la lògica del joc -->
+  <script src="js/scripts.js"></script>
+
+  <!-- Fonts de Google per al text -->
+  <link href="https://fonts.googleapis.com/css2?family=Modak&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Icones de Font Awesome per utilitzar símbols com fletxes o creus -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Fitxer d’estils extern (CSS) -->
+  <link rel="stylesheet" href="css/estils.css">
+</head>
+<body>
+
+  <!-- HEADER: mostra el marcador de puntuació -->
+  <header>
+    <div class="marcador">
+      <div class="marcador-inner">
+        <span class="puntuation">Score</span>
+        <span class="valor">100 pt</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Inputs per canviar el nivell del joc (fons diferent segons el nivell) -->
+  <input type="radio" id="nivell1" name="nivell" checked hidden>
+  <input type="radio" id="nivell2" name="nivell" hidden>
+
+  <!-- Checkbox invisible per controlar l’obertura i tancament del modal d’ajuda -->
+  <input type="checkbox" id="modal-toggle" hidden>
+
+  <!-- ÀREA PRINCIPAL DEL JOC -->
+  <main class="game-wrap">
+    <div class="game-area">
+      <!-- Avió del jugador (només un element visible) -->
+      <div class="avio" id="avio"></div>
+    </div>
+  </main>
+
+  <!-- PEU DE PÀGINA amb botons per a ajuda i canviar de nivell -->
+  <footer class="barre-inferior">
+    <div class="barra-content">
+      <!-- Botó que obre el modal d’ajuda -->
+      <label for="modal-toggle" class="btn help"> Ajuda </label>
+      <!-- Botons per canviar entre nivells 1 i 2 -->
+      <label for="nivell1" class="btn niv">Nivell 1</label>
+      <label for="nivell2" class="btn niv">Nivell 2</label>
+    </div>
+  </footer>
+
+  <!-- MODAL D’AJUDA: finestra emergent amb controls del joc -->
+  <div class="modal">
+    <!-- Capa de fons del modal (tancar fent clic fora) -->
+    <label for="modal-toggle" class="modal-overlay"></label>
+    
+    <!-- Contingut principal del modal -->
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>AJUDA</h2>
+        <!-- Botó per tancar el modal -->
+        <label for="modal-toggle" class="tanca">x</label>
+      </div>
+
+      <!-- Llista amb controls del joc -->
+      <ul class="controls-list">
+        <li><i class="fas fa-arrow-left"></i> Esquerra</li>
+        <li><i class="fas fa-arrow-right"></i> Dreta</li>
+        <li><i class="fas fa-arrow-up"></i> Amunt</li>
+        <li><i class="fas fa-arrow-down"></i> Avall</li>
+        <li>1: Parar/Activar so</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ÀUDIO: música de fons i so del moviment de l’avió -->
+  <audio id="backgroundMusic" loop>
+    <source src="audio/musica_fons.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="movementSound">
+    <source src="audio/avio_es_mou.mp3" type="audio/mpeg">
+  </audio>  
+</body>
+</html>

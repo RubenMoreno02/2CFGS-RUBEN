@@ -1,0 +1,210 @@
+/* RESETEIG BÀSIC: eliminem marges i ajustem mida dels elements */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body {
+  font-family: "Playfair Display", serif;
+  background: url("../fons_nivells/nivell1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* CANVI DE FONS segons el nivell seleccionat */
+#nivell1:checked ~ .game-wrap {
+  background: url("../fons_nivells/nivell1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#nivell2:checked ~ .game-wrap {
+  background: url("../fons_nivells/nivell2.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* HEADER - MARCADOR DE PUNTS */
+header {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  z-index: 100;
+}
+
+.marcador {
+  background: rgba(174, 174, 180, 0.85);
+  border-radius: 9px;
+  padding: 12.5px 27px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+  font-family: "Modak", cursive;
+}
+
+.marcador-inner .puntuation {
+  display: none; /* amaguem el text "Score" */
+}
+
+.marcador-inner .valor {
+  font-size: 32px;
+  color: #a33125;
+}
+
+/* ÀREA PRINCIPAL DEL JOC */
+.game-wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-area {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* AVIÓ DEL JUGADOR */
+.avio {
+  position: absolute;
+  width: 120px;
+  height: 56px;
+  top: 6.3%;
+  left: 2.4%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+  animation: flotar 1.2s ease-in-out infinite; /* efecte de flotació */
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+/* Animació de flotació de l’avió */
+@keyframes flotar {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+}
+
+/* BARRA INFERIOR amb botons */
+.barre-inferior {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(14, 13, 13, 0.589);
+  padding: 13px 0;
+}
+
+.barra-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ESTIL DELS BOTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 17px 30px;
+  border-radius: 40px;
+  background: #7eb2c3ce;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: #c8e6ffe6;
+  transform: translateY(-3px);
+}
+
+/* MODAL D’AJUDA (ocult fins que s’activa el checkbox) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mostrem el modal quan el checkbox està activat */
+#modal-toggle:checked ~ .modal { 
+  display: flex; 
+}
+
+/* CONTINGUT DEL MODAL */
+.modal-box {
+  background-color: white;
+  width: 360px;
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+/* Capçalera del modal (títol i botó de tancament) */
+.modal-header {
+  margin: 26px;
+  background-color: #5a9bd5;
+  color: white;
+  padding: 10px;
+  position: relative;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+/* Botó "X" per tancar el modal */
+.tanca {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 25px;
+  height: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background-color: gray;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Llista dels controls dins el modal */
+.controls-list {
+  list-style: none;
+  padding-left: 20px;
+  font-size: 16px;
+  margin: 0;
+  color: #222;
+}
+
+.controls-list li {
+  margin: 12px 0;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.controls-list i {
+  margin-right: 10px;
+  color: #333;
+  font-size: 18px;
+}
