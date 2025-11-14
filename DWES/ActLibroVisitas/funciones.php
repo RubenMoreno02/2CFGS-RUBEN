@@ -1,5 +1,5 @@
 <?php
-// Carga todas las visitas desde el archivo
+// Carga todas las visitas desde el archivo txt
 function cargarVisitas() {
     if (!file_exists("visitas.txt")) {
         return [];
@@ -16,7 +16,7 @@ function guardarVisita($comentario) {
     }
 }
 
-// Pinta un comentario individual
+// Comentario individual
 function pintarVisita($texto) {
     echo "<p style='border-bottom:1px solid #ccc; padding:8px;'>$texto</p>";
 }

@@ -19,7 +19,7 @@ $visitas = cargarVisitas();
         }
     }
     ?>
-
+    
     <p><a href="nueva_visita.php">Añadir un comentario</a></p>
     <p><a href="index.php">Volver al inicio</a></p>
 </body>
