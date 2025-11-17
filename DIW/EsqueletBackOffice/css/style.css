@@ -46,11 +46,12 @@ header span{
 }
 
 header .barra {
+  text-decoration: none;
   margin-top: 13px;
-    width: 1px;
-    height: 45px;
-    background-color: var(--color-secondari);
-    margin-right: 16px;
+  width: 1px;
+  height: 45px;
+  background-color: var(--color-secondari);
+  margin-right: 16px;
 }
 
 header .fa-solid {
@@ -72,8 +73,7 @@ main .submenuHeader{
 /* MENÚ VERTICAL */
 .menuVertical {
   background-color: var(--color-primari);
-  width: 200px;
-  min-height: 100vh;
+  min-height: 900px;
   padding: 0;
   margin: 0;
 }
@@ -87,12 +87,19 @@ main .submenuHeader{
 .menuVertical li {
   color: var(--color-text);
   padding: 16px 20px;
-  display: flex;
   align-items: center;
   gap: 8px;
   font-size: 16px;
   border-bottom: 1px solid var(--color-quaternari);
   cursor: pointer;
+}
+
+.fa-solid{
+  margin-right: 5px;
+}
+
+.cerrar{
+  display: none;
 }
 
 .menuVertical li:hover {
@@ -113,4 +120,68 @@ main .submenuHeader{
 .no-padding {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+/* FORMULARI */
+.contentArea {
+  background-color: var(--color-quaternari);
+  padding: 13px 15px;
+}
+
+.fila-filtres label {
+  color: var(--color-secondari);
+  display: block;
+  font-size: 16px;
+  padding-bottom: 13px;
+}
+
+.fila-filtres input {
+  width: 100%;
+  padding: 6.5px;
+  border: 1px solid var(--color-secondari);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  display: flex;
+  float: inline-start;
+}
+
+.botons {
+  display: flex;
+  float: inline-end;
+  gap: 15px;
+}
+
+.btn {
+  margin-top: -8px;
+  padding: 9px 18px;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.buscar {
+  background-color: var(--color-terciari);
+  color: var(--color-text);
+}
+
+.btn.netejar {
+  background-color: #9c9c9c;
+  color: var(--color-text);
+}
+
+.btn:hover {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+
+.menuVertical li {
+  transition: background-color 0.2s, font-weight 0.2s;
+}
+
+.menuVertical li:hover {
+  background-color: var(--color-secondari);
+  font-weight: 600;
 }
