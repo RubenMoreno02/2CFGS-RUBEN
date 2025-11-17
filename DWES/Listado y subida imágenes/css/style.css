@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.mensaje {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #e0ffe0;
+    border: 1px solid #a0d0a0;
+    border-radius: 3px;
+}
+
+.formulario-subida {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.formulario-subida input[type="file"] {
+    margin: 10px 0;
+}
+
+.formulario-subida button {
+    padding: 8px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.formulario-subida button:hover {
+    background: #45a049;
+}
+
+.grid-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.imagen-item {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+}
+
+.imagen-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.info-imagen {
+    margin-top: 10px;
+}
+
+.nombre {
+    font-weight: bold;
+    display: block;
+}
+
+.fecha {
+    color: #666;
+    font-size: 12px;
+    display: block;
+    margin: 5px 0;
+}
+
+.form-borrar button {
+    padding: 5px 10px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.form-borrar button:hover {
+    background: #d32f2f;
+}
