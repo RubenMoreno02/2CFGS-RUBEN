@@ -7,11 +7,17 @@ body {
 --color-secondari: #47488E;
 --color-terciari: #F6B01F;
 --color-quaternari: #ECECEC;
+--color-text: #ffffff;
 }
 
+/* HEADER */
 
 header{
   margin-bottom: -10px;
+}
+
+header .LogoHeader{
+  float: inline-start;
 }
 
 header .logo{
@@ -47,18 +53,64 @@ header .barra {
     margin-right: 16px;
 }
 
-
 header .fa-solid {
   margin-top: 27px;
   padding-right: 14px;
 }
 
+/* SECCIÓ ENTRE HEADER I MAIN */
 main .submenuHeader{
   background-color: var(--color-secondari);
-  color: var(--color-quaternari);
+  color: var(--color-text);
   width: 100%;
-  height: 50px;
+  height: 51px;
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+/* MENÚ VERTICAL */
+.menuVertical {
+  background-color: var(--color-primari);
+  width: 200px;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.menuVertical ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuVertical li {
+  color: var(--color-text);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  border-bottom: 1px solid var(--color-quaternari);
+  cursor: pointer;
+}
+
+.menuVertical li:hover {
+  background-color: var(--color-secondari);
+}
+
+.menuVertical li.activat {
+  background-color: var(--color-secondari);
+}
+
+.menuVertical i {
+  width: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* LLEVAR EL PADDING DE L'ESQUERRA */
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
