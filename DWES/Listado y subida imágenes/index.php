@@ -9,11 +9,6 @@ if (empty($_SESSION['csrf_token'])) {
 // Carpeta de imágenes
 $uploadDir = 'uploads/';
 
-// Crear carpeta si no existe
-if (!file_exists($uploadDir)) {
-    mkdir($uploadDir, 0755, true);
-}
-
 // Manejar subida de archivos
 $mensaje = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['imagen'])) {
@@ -34,9 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['imagen'])) {
         if (!in_array($extension, $extensionesPermitidas)) {
             $mensaje = 'Solo se permiten imágenes JPG, PNG o GIF.';
         } elseif (!in_array($tipoMime, $tiposMimePermitidos)) {
-            $mensaje = 'Tipo de archivo no permitido.';
-        } elseif ($archivo['size'] > 5 * 1024 * 1024) { // 5MB máximo
-            $mensaje = 'El archivo es demasiado grande (máximo 5MB).';
+            $mensaje = 'Tipo de archivo no permitido.';        
         } elseif ($archivo['error'] !== UPLOAD_ERR_OK) {
             $mensaje = 'Error al subir el archivo.';
         } elseif (move_uploaded_file($archivo['tmp_name'], $rutaCompleta)) {
@@ -80,7 +73,7 @@ if (file_exists($uploadDir)) {
 </head>
 <body>
     <div class="container">
-        <h1>Galería de Imágenes</h1>
+        <h1>Galeria de Imágenes</h1>
         
         <?php if ($mensaje): ?>
             <div class="mensaje"><?php echo htmlspecialchars($mensaje); ?></div>
