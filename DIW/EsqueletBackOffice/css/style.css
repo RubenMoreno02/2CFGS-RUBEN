@@ -54,7 +54,8 @@ header .barra {
   margin-right: 16px;
 }
 
-header .fa-solid {
+.login .fa-solid{
+  
   margin-top: 27px;
   padding-right: 14px;
 }
@@ -94,7 +95,7 @@ main .submenuHeader{
   cursor: pointer;
 }
 
-.fa-solid{
+main .fa-solid{  
   margin-right: 5px;
 }
 
@@ -185,3 +186,106 @@ main .submenuHeader{
   background-color: var(--color-secondari);
   font-weight: 600;
 }
+
+/* ---------------- MOBILE ≤ 777px ---------------- */
+@media (max-width: 777px) {
+
+  /* Mostrar icono hamburguesa */
+  .btn-hamburguesa {    
+    font-size: 40px;
+    margin-top: 29px;
+    padding: auto;
+    color: var(--color-secondari);
+    cursor: pointer;
+    display: block;
+    float: inline-start;
+    margin-right: 110px;
+  }
+
+
+  /* Ocultar menú vertical per defecte */
+  .menuVertical {    
+    display: none;
+    position: absolute;
+    top: 150px; 
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    min-height: 500px;    
+  }
+
+  .cerrar{
+    display: block;
+  }
+
+  .LogoHeader{
+    float: right;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .logo {
+    width: 112px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+    
+
+  /* LOGIN — només foto visible */
+  .login span,
+  .login .barra,
+  .login .logout {
+    display: none !important;
+  }
+
+  header .avatar{
+    width: 65px;
+    margin-top: 5px;
+    margin-right: -7px;
+    border-radius: 50px;
+}
+
+  .login {
+    margin-right: 5px;
+  }
+
+  .botons{
+    display: block;
+  }
+
+  .btn {
+    margin-top: -8px;
+    padding: 9px 58px;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn.buscar {
+    display: block;
+    
+    
+    background-color: var(--color-terciari);
+    color: var(--color-text);
+  }
+
+.btn.netejar {
+  float: left;
+  background-color: #9c9c9c;
+  color: var(--color-text);
+}
+}
+
+/* ---------------- DESKTOP > 777px ---------------- */
+@media (min-width: 778px) {
+  .btn-hamburguesa {
+    display: none;
+  }
+
+  .menuVertical {
+    display: block !important;
+  }
+}
+
