@@ -253,26 +253,25 @@ main .fa-solid{
 
   .botons{
     display: block;
+    width: 100%;
   }
 
   .btn {
     margin-top: -8px;
-    padding: 9px 58px;
+    width: 100%;
     border: none;
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
   }
-  .btn.buscar {
-    display: block;
-    
-    
+  .btn.buscar {   
+    margin-top: 14px; 
     background-color: var(--color-terciari);
     color: var(--color-text);
   }
 
 .btn.netejar {
-  float: left;
+  margin-top: 9px;
   background-color: #9c9c9c;
   color: var(--color-text);
 }
