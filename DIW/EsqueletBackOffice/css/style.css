@@ -1,290 +1,285 @@
+/* ===== VARIABLES I CONFIGURACIONS GLOBAL ===== */
+:root {
+    --color-primari: #539041;
+    --color-secondari: #47488E;
+    --color-terciari: #F6B01F;
+    --color-quaternari: #ECECEC;
+    --color-text: #ffffff;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-:root{
---color-primari: #539041;
---color-secondari: #47488E;
---color-terciari: #F6B01F;
---color-quaternari: #ECECEC;
---color-text: #ffffff;
+/* ===== HEADER ===== */
+header {
+    margin-bottom: -10px;
 }
 
-/* HEADER */
-
-header{
-  margin-bottom: -10px;
+/* Logo del header */
+header .LogoHeader {
+    float: inline-start;
 }
 
-header .LogoHeader{
-  float: inline-start;
+header .logo {
+    width: 112px;
+    height: auto;
+    display: block;
+    margin-left: -8px;
 }
 
-header .logo{
-  width: 112px;
-  height: auto;display: block;
-  margin-left: -8px;
+/* Àrea de login */
+header .login {
+    padding-top: 15px;
+    float: inline-end;
+    display: flex;
+    justify-content: center;
+    color: var(--color-secondari);
 }
 
-header .login{
-  padding-top: 15px;
-  float: inline-end;
-  display: flex;
-  justify-content: center;
-  color: var(--color-secondari);
+header .avatar {
+    width: 80px;
+    height: auto;
+    border-radius: 50px;
+    margin-right: 16px;
 }
 
-header .avatar{
-  width: 80px;
-  height: auto;
-  border-radius: 50px;
-  margin-right: 16px;
-}
-header span{
-  margin-top: 25px;
-  margin-right: 17px;
+header span {
+    margin-top: 25px;
+    margin-right: 17px;
 }
 
 header .barra {
-  text-decoration: none;
-  margin-top: 13px;
-  width: 1px;
-  height: 45px;
-  background-color: var(--color-secondari);
-  margin-right: 16px;
+    text-decoration: none;
+    margin-top: 13px;
+    width: 1px;
+    height: 45px;
+    background-color: var(--color-secondari);
+    margin-right: 16px;
 }
 
-.login .fa-solid{
-  
-  margin-top: 27px;
-  padding-right: 14px;
+.login .fa-solid {
+    margin-top: 27px;
+    padding-right: 14px;
 }
 
-/* SECCIÓ ENTRE HEADER I MAIN */
-main .submenuHeader{
-  background-color: var(--color-secondari);
-  color: var(--color-text);
-  width: 100%;
-  height: 51px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
+/* ===== SECCIÓ ENTRE HEADER I MAIN ===== */
+main .submenuHeader {
+    background-color: var(--color-secondari);
+    color: var(--color-text);
+    width: 100%;
+    height: 51px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-/* MENÚ VERTICAL */
+/* ===== MENÚ VERTICAL ===== */
 .menuVertical {
-  background-color: var(--color-primari);
-  min-height: 900px;
-  padding: 0;
-  margin: 0;
+    background-color: var(--color-primari);
+    min-height: 900px;
+    padding: 0;
+    margin: 0;
 }
 
 .menuVertical ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .menuVertical li {
-  color: var(--color-text);
-  padding: 16px 20px;
-  align-items: center;
-  gap: 8px;
-  font-size: 16px;
-  border-bottom: 1px solid var(--color-quaternari);
-  cursor: pointer;
+    color: var(--color-text);
+    padding: 16px 20px;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--color-quaternari);
+    cursor: pointer;
+    transition: background-color 0.2s, font-weight 0.2s;
 }
 
-main .fa-solid{  
-  margin-right: 5px;
+main .fa-solid {
+    margin-right: 5px;
 }
 
-.cerrar{
-  display: none;
+.cerrar {
+    display: none;
 }
 
 .menuVertical li:hover {
-  background-color: var(--color-secondari);
+    background-color: var(--color-secondari);
+    font-weight: 600;
 }
 
 .menuVertical li.activat {
-  background-color: var(--color-secondari);
+    background-color: var(--color-secondari);
 }
 
 .menuVertical i {
-  width: 20px;
-  text-align: center;
-  font-size: 16px;
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
 }
 
-/* LLEVAR EL PADDING DE L'ESQUERRA */
 .no-padding {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-/* FORMULARI */
+/* ===== FORMULARI ===== */
 .contentArea {
-  background-color: var(--color-quaternari);
-  padding: 13px 15px;
+    background-color: var(--color-quaternari);
+    padding: 13px 15px;
 }
 
 .fila-filtres label {
-  color: var(--color-secondari);
-  display: block;
-  font-size: 16px;
-  padding-bottom: 13px;
+    color: var(--color-secondari);
+    display: block;
+    font-size: 16px;
+    padding-bottom: 13px;
 }
 
+/* Camps d'entrada */
 .fila-filtres input {
-  width: 100%;
-  padding: 6.5px;
-  border: 1px solid var(--color-secondari);
-  border-radius: 6px;
-  margin-bottom: 20px;
-  font-size: 15px;
-  display: flex;
-  float: inline-start;
+    width: 100%;
+    padding: 6.5px;
+    border: 1px solid var(--color-secondari);
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    display: flex;
+    float: inline-start;
 }
 
+/* Botons */
 .botons {
-  display: flex;
-  float: inline-end;
-  gap: 15px;
+    display: flex;
+    float: inline-end;
+    gap: 15px;
 }
 
 .btn {
-  margin-top: -8px;
-  padding: 9px 18px;
-  border: none;
-  font-size: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn.buscar {
-  background-color: var(--color-terciari);
-  color: var(--color-text);
-}
-
-.btn.netejar {
-  background-color: #9c9c9c;
-  color: var(--color-text);
-}
-
-.btn:hover {
-  font-weight: 600;
-  opacity: 0.9;
-}
-
-
-.menuVertical li {
-  transition: background-color 0.2s, font-weight 0.2s;
-}
-
-.menuVertical li:hover {
-  background-color: var(--color-secondari);
-  font-weight: 600;
-}
-
-/* ---------------- MOBILE ≤ 777px ---------------- */
-@media (max-width: 777px) {
-
-  /* Mostrar icono hamburguesa */
-  .btn-hamburguesa {    
-    font-size: 40px;
-    margin-top: 29px;
-    padding: auto;
-    color: var(--color-secondari);
-    cursor: pointer;
-    display: block;
-    float: inline-start;
-    margin-right: 110px;
-  }
-
-
-  /* Ocultar menú vertical per defecte */
-  .menuVertical {    
-    display: none;
-    position: absolute;
-    top: 150px; 
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    min-height: 500px;    
-  }
-
-  .cerrar{
-    display: block;
-  }
-
-  .LogoHeader{
-    float: right;
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-
-  .logo {
-    width: 112px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-  }
-    
-
-  /* LOGIN — només foto visible */
-  .login span,
-  .login .barra,
-  .login .logout {
-    display: none !important;
-  }
-
-  header .avatar{
-    width: 65px;
-    margin-top: 5px;
-    margin-right: -7px;
-    border-radius: 50px;
-}
-
-  .login {
-    margin-right: 5px;
-  }
-
-  .botons{
-    display: block;
-    width: 100%;
-  }
-
-  .btn {
     margin-top: -8px;
-    width: 100%;
+    padding: 9px 18px;
     border: none;
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
-  }
-  .btn.buscar {   
-    margin-top: 14px; 
+}
+
+.btn.buscar {
     background-color: var(--color-terciari);
     color: var(--color-text);
-  }
+}
 
 .btn.netejar {
-  margin-top: 9px;
-  background-color: #9c9c9c;
-  color: var(--color-text);
-}
+    background-color: #9c9c9c;
+    color: var(--color-text);
 }
 
-/* ---------------- DESKTOP > 777px ---------------- */
+.btn:hover {
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* --------- MOBILE ≤ 777px --------- */
+@media (max-width: 777px) {
+    /* Botó hamburguesa */
+    .btn-hamburguesa {
+        font-size: 40px;
+        margin-top: 29px;
+        padding: auto;
+        color: var(--color-secondari);
+        cursor: pointer;
+        display: block;
+        float: inline-start;
+        margin-right: 110px;
+    }
+
+    /* Menú vertical */
+    .menuVertical {
+        display: none;
+        position: absolute;
+        top: 150px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        min-height: 500px;
+    }
+
+    .cerrar {
+        display: block;
+    }
+
+    /* Logo en mòbil */
+    .LogoHeader {
+        float: right;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .logo {
+        width: 112px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Login - només la foto visible */
+    .login span,
+    .login .barra,
+    .login .logout {
+        display: none !important;
+    }
+
+    header .avatar {
+        width: 65px;
+        margin-top: 5px;
+        margin-right: -7px;
+        border-radius: 50px;
+    }
+
+    .login {
+        margin-right: 5px;
+    }
+
+    /* Botons en mòbil */
+    .botons {
+        display: block;
+        width: 100%;
+    }
+
+    .btn {
+        margin-top: -8px;
+        width: 100%;
+        border: none;
+        font-size: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn.buscar {
+        margin-top: 14px;
+        background-color: var(--color-terciari);
+        color: var(--color-text);
+    }
+
+    .btn.netejar {
+        margin-top: 9px;
+        background-color: #9c9c9c;
+        color: var(--color-text);
+    }
+}
+
+/* --------- DESKTOP > 777px --------- */
 @media (min-width: 778px) {
-  .btn-hamburguesa {
-    display: none;
-  }
+    .btn-hamburguesa {
+        display: none;
+    }
 
-  .menuVertical {
-    display: block !important;
-  }
+    .menuVertical {
+        display: block !important;
+    }
 }
-
