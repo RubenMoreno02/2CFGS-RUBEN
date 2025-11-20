@@ -1,0 +1,12 @@
+CREATE DATABASE clientesdb;
+
+USE clientesdb;
+
+CREATE TABLE clientes (
+    dni VARCHAR(9) PRIMARY KEY,
+    nombre VARCHAR(50),
+    correo VARCHAR(50)
+);
+
+INSERT INTO clientes VALUES
+('987654321A','Ruben','ruben@gmail.com');

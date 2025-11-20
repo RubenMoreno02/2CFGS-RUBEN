@@ -1,0 +1,66 @@
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+table a{
+    color: blue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    width: 300px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+input[type="text"], input[type="email"] {
+    width: 95%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+}
+
+button, input[type="submit"] {
+    padding: 5px 10px;
+    background: lightblue;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #9cc4e2;
+}
+
+.borrarC{
+    text-align: center;
+}
