@@ -3,11 +3,6 @@ include "Conexion.class.php";
 
 $pdo = Conexion::conectar();
 
-if (!isset($_GET["dni"])) {
-    echo "No hi ha dni.";
-    exit;
-}
-
 $dni = $_GET["dni"];
 
 // Coger cliente para mostrarlo
@@ -26,7 +21,7 @@ if (isset($_POST["si"])) {
     $del = $pdo->prepare("DELETE FROM clientes WHERE dni=?");
     $del->execute([$dni]);
 
-    header("Location: index.php?msg=borrat");
+    header("Location: index.php?msg=borrado");
     exit;
 }
 

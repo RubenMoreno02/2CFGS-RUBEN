@@ -11,9 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
 
-    if (empty($nombre)) $errores[] = "El nom és obligatori";
-    if (empty($correo)) $errores[] = "El correu és obligatori";
-    if (!preg_match("/^[0-9]{8}[A-Za-z]$/", $dni)) $errores[] = "DNI incorrecte";
+    if (empty($nombre)) $errores[] = "El nombre es obligatorio";
+    if (empty($correo)) $errores[] = "El correo es obligatorio";
+    if (!preg_match("/^[0-9]{8}[A-Za-z]$/", $dni)) $errores[] = "DNI incorrecto";
 
     if (empty($errores)) {
         try {
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute([$dni, $nombre, $correo]);
             header("Location: index.php");
         } catch (PDOException $e) {
-            $errores[] = "Este DNI ja existeix";
+            $errores[] = "Este DNI ya existe";
         }
     }
 }
@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="style.css">
     
     DNI: <input type="text" name="dni" value="<?= $dni ?>"><br>
-    Nom: <input type="text" name="nombre" value="<?= $nombre ?>"><br>
-    Correu: <input type="text" name="correo" value="<?= $correo ?>"><br>
+    Nombre: <input type="text" name="nombre" value="<?= $nombre ?>"><br>
+    Correo: <input type="email" name="correo" value="<?= $correo ?>"><br>
     <button type="submit">Guardar</button>
 </form>
 

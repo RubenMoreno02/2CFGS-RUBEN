@@ -7,11 +7,11 @@ $clientes = Cliente::getTodos();
 
 <link rel="stylesheet" href="style.css">
 
-<h1>Llistat de clients</h1>
+<h1>Listado de clientes</h1>
 <a href="clientenuevo.php">Nuevo cliente</a>
 
 <table border="1">
-<tr><th>DNI</th><th>Nom</th><th>Correu</th><th>Accions</th></tr>
+<tr><th>DNI</th><th>Nombre</th><th>Correo</th><th>Acciones</th></tr>
 
 <?php foreach($clientes as $c): ?>
 <tr>

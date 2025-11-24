@@ -9,4 +9,4 @@ CREATE TABLE clientes (
 );
 
 INSERT INTO clientes VALUES
-('987654321A','Ruben','ruben@gmail.com');
+('98765432A','Rubén','ruben@gmail.com');

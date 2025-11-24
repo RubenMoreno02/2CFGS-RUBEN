@@ -5,10 +5,6 @@ $pdo = Conexion::conectar();
 
 $errores = [];
 
-if (!isset($_GET["dni"])) {
-    echo "No has puesto ningún dni.";
-    exit;
-}
 
 $dni = $_GET["dni"];
 
@@ -49,20 +45,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-
 <h1>Editar client</h1>
 
 <form method="POST">
     <link rel="stylesheet" href="style.css">
 
-    <label>DNI (no es pot canviar):</label><br>
+    <label>DNI (no modificable):</label><br>
     <input type="text" value="<?php echo $dni ?>" disabled><br><br>
 
-    <label>Nom:</label><br>
+    <label>Nombre:</label><br>
     <input type="text" name="nombre" value="<?php echo $nombre ?>"><br><br>
 
-    <label>Correu:</label><br>
-    <input type="text" name="correo" value="<?php echo $correo ?>"><br><br>
+    <label>Correo:</label><br>
+    <input type="email" name="correo" value="<?php echo $correo ?>"><br><br>
 
     <input type="submit" value="Guardar">
 </form>
