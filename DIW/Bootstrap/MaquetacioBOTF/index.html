@@ -10,31 +10,44 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <div>
-        <i class="bi bi-lightbulb bg-warning rounded fs-4"></i>
-        <a class="navbar-brand" href="#">SELECTIO</a>
+    <!-- HEADER -->
+  <header class="app-topbar">
+    <div class="container-fluid h-100">
+      <div class="d-flex align-items-center justify-content-between h-100">
+        <!-- Esquerra: Logo -->
+        <div class="d-flex align-items-center gap-2">
+          <span class="brand-dot" aria-hidden="true"><i class="bi bi-lightbulb"></i></span>
+          <span class="fw-bold fs-4">SELECTIO</span>
+        </div>
+
+        <!-- Dreta: usuari + logout -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Botó menú mòbil -->
+          <button class="btn btn-outline-secondary d-lg-none" type="button"
+                  data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <div class="d-flex align-items-center gap-2">
+            <img src="img/foto_persona.png" alt="Avatar" class="rounded-circle">
+            <span class="fw-semibold">Manolo Garibolo</span>
+          </div>
+
+          <div class="vr"></div>
+            <i class="bi bi-box-arrow-right"></i>
+          </button>
+        </div>
+      </div>
     </div>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          
-        </li>
-        
-      </ul>
-      <img src="img/foto_persona.png" class="fotoHeader" alt="">
-      <span class="navbar-text">Manolo Garibolo</span>
-      
-    </div>
-  </div>
-</nav>
-    </header>
+  </header>
+
+  <!-- TITLEBAR -->
+      <div class="titlebar">
+        <h1>Llistat d'usuaris</h1>
+        <p>Gestió i manteniment dels usuaris del sistema</p>
+      </div>
+
+      <div class="content-inner">
+  
 </body>
 </html>

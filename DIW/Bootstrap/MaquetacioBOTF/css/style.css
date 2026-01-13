@@ -1,5 +1,78 @@
-.fotoHeader{
-    width: 6%;
+:root{
+    --c-blanc: #ffffff;
+    --c-gris: #cfd2d6;
+    --c-blauClaret: #1E78FD;
+    --c-blauMari: #1e2b3c;
+    --c-morat: #3f3e87;
+
+    --c-blauClar: #bcd0ea;
+    --c-gris2: #b8b8b8;
+    --c-blancTabla: #f2f4f7;
+
+    --c-groc: #f4b400;
+    --c-grisOscur: #30343a;
+    --c-morat2: #4b4aa4;
+
+    --c-textGris: #6c757d;
+}
+
+body{
+    background:var(--c-blanc);
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    width: 100%;
+    height: 88px;
+
+}
+
+.app-topbar{
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1030;
+    background: var(--c-blanc);
+    border-bottom: 1px solid var(--c-gris);
+}
+
+.brand-dot{
+    width: 32px;
+    height: 32px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background: var(--c-groc);
+    color:var(--c-blanc);
+    font-size:18px;
+    
+}
+
+.rounded-circle{
+    width: 65px;
     height: auto;
-    border-radius: 50%;
+}
+
+.bi.bi-box-arrow-right{
+    color: var(--c-blauClaret);
+    font-size: 23px;
+}
+
+/* BARRA TITOL */
+.titlebar{
+    margin-top: 88px;
+    background: var(--c-gris);
+    padding: 18px 16px;
+    text-align:center;
+}
+.titlebar h1{ 
+    font-size: 22px; 
+    margin:0; 
+    font-weight:700; }
+.titlebar p{ 
+    margin:0; 
+    color: #6b7280; 
+    font-size: 13px; 
 }
