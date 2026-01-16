@@ -2,8 +2,10 @@
     --c-blanc: #ffffff;
     --c-gris: #cfd2d6;
     --c-blauClaret: #1E78FD;
-    --c-blauMari: #1e2b3c;
-    --c-morat: #3f3e87;
+    --c-blauMari: #1E293B;
+    --c-morat: #47488E;
+
+    
 
     --c-blauClar: #bcd0ea;
     --c-gris2: #b8b8b8;
@@ -18,7 +20,6 @@
 
 body{
     background:var(--c-blanc);
-    overflow-x:hidden;
 }
 
 /* HEADER */
@@ -55,24 +56,55 @@ header{
     height: auto;
 }
 
-.bi.bi-box-arrow-right{
+.btn-outline-secondary{
+    border: none;
+    margin: -10px;
+}
+
+.btn-outline-secondary:hover{
+    background: var(--c-gris);
+    border: none;
+}
+
+header .bi.bi-box-arrow-right{
     color: var(--c-blauClaret);
     font-size: 23px;
 }
 
 /* BARRA TITOL */
-.titlebar{
+.barra-titol{
     margin-top: 88px;
     background: var(--c-gris);
     padding: 18px 16px;
     text-align:center;
 }
-.titlebar h1{ 
+.barra-titol h1{ 
     font-size: 22px; 
     margin:0; 
-    font-weight:700; }
-.titlebar p{ 
+    font-weight:700; 
+}
+.barra-titol p{ 
     margin:0; 
     color: #6b7280; 
     font-size: 13px; 
+}
+
+/* MENÚ VERTICAL */
+
+.p-3{
+    float: left !important;
+    background: var(--c-blauMari);
+    width: 100%;
+    margin-left: -5px;
+    text-decoration: none;
+    color: var(--c-blanc);
+    margin-bottom: -5px;
+}
+main .bi{
+    font-size: 22px;
+    margin-right: 18px;
+}
+
+.opcio-seleccionada{
+    background-color: var(--c-morat) !important;
 }

@@ -10,44 +10,81 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- HEADER -->
+  <!-- HEADER -->
   <header class="app-topbar">
     <div class="container-fluid h-100">
-      <div class="d-flex align-items-center justify-content-between h-100">
+      <div class="row align-items-center h-100">
+
         <!-- Esquerra: Logo -->
-        <div class="d-flex align-items-center gap-2">
-          <span class="brand-dot" aria-hidden="true"><i class="bi bi-lightbulb"></i></span>
-          <span class="fw-bold fs-4">SELECTIO</span>
+        <div class="col-6 col-lg-4">
+          <div class="d-flex align-items-center gap-2">
+            <span class="brand-dot" aria-hidden="true">
+              <i class="bi bi-lightbulb"></i>
+            </span>
+            <span class="fw-bold fs-4">SELECTIO</span>
+          </div>
         </div>
 
         <!-- Dreta: usuari + logout -->
-        <div class="d-flex align-items-center gap-3">
-          <!-- Botó menú mòbil -->
-          <button class="btn btn-outline-secondary d-lg-none" type="button"
-                  data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-            <i class="bi bi-list"></i>
-          </button>
+        <div class="col-6 col-lg-8">
+          <div class="d-flex align-items-center justify-content-end gap-3">
 
-          <div class="d-flex align-items-center gap-2">
-            <img src="img/foto_persona.png" alt="Avatar" class="rounded-circle">
-            <span class="fw-semibold">Manolo Garibolo</span>
+            <!-- Botó menú mòbil -->
+            <button class="btn btn-outline-secondary d-lg-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+              <i class="bi bi-list"></i>
+            </button>
+
+            <div class="d-flex align-items-center gap-2">
+              <img src="img/foto_persona.png" alt="Avatar" class="rounded-circle">
+              <span class="fw-semibold d-none d-sm-inline">Manolo Garibolo</span>
+            </div>
+
+            <div class="vr"></div>
+
+            <button class="btn btn-outline-secondary" type="button" aria-label="Tancar sessió">
+              <i class="bi bi-box-arrow-right"></i>
+            </button>
+
           </div>
-
-          <div class="vr"></div>
-            <i class="bi bi-box-arrow-right"></i>
-          </button>
         </div>
+
       </div>
     </div>
   </header>
 
-  <!-- TITLEBAR -->
-      <div class="titlebar">
-        <h1>Llistat d'usuaris</h1>
-        <p>Gestió i manteniment dels usuaris del sistema</p>
+  <!-- BARRA TITOL -->
+  <div class="barra-titol">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1>Llistat d'usuaris</h1>
+          <p>Gestió i manteniment dels usuaris del sistema</p>
+        </div>
       </div>
-
-      <div class="content-inner">
-  
+    </div>
+  </div>
+  <main>
+  <!-- MENÚ VERTICAL -->
+  <div class="container-fluid gx-2">
+    <div class="row-2">
+      <div class="col-2">            
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-paperclip"></i></span>Atributs</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-cart-fill"></i></span>Carrets</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-person-standing"></i></span>Clients</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-sliders"></i></span>Configur</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-bag"></i></span>Coman.</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-bar-chart"></i></span>Estadís.</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-folder"></i></span>Famílies</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-geo-alt"></i></span>Localitza.</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-tag"></i></span>Ofertes</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-box-seam"></i></span>Productes</a>
+            <a class="p-3 opcio-seleccionada"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>
+          
+        
+      </div>
+    </div>
+  </div>
+  </main>
 </body>
 </html>
