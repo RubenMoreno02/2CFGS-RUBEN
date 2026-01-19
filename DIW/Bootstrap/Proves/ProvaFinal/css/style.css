@@ -1,0 +1,242 @@
+:root{
+  --c-blanc: #ffffff;
+  --c-gris: #cfd2d6;
+  --c-blauClaret: #1E78FD;
+  --c-blauMari: #1E293B;
+  --c-morat: #47488E;
+  --c-blauClar: #bcd0ea;
+
+  --c-groc: #f4b400;
+  --c-grisOscur: #30343a;
+  --c-morat2: #4b4aa4;
+
+  --topbar-h: 88px;
+  --titlebar-h: 76px;
+  --sidebar-w: 270px;
+}
+
+body{
+    background:var(--c-blanc);
+}
+
+/* TOPBAR */
+.app-topbar{
+  position: fixed;
+  top:0; left:0; right:0;
+  height: var(--topbar-h);
+  z-index: 1030;
+  background: var(--c-blanc);
+  border-bottom: 1px solid var(--c-gris);
+}
+
+.brand-dot{
+  width: 32px;
+  height: 32px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background: var(--c-groc);
+  color: var(--c-blanc);
+  font-size:18px;
+}
+
+.avatar{
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+}
+
+.icon-btn{
+  border: 0;
+  background: transparent;
+  padding: .4rem .6rem;
+}
+.icon-btn:hover{
+  background: #eef1f4;
+}
+.icon-btn .bi{
+  font-size: 22px;
+}
+.icon-btn .bi.bi-box-arrow-right{
+  color: var(--c-blauClaret);
+}
+
+/* TITLEBAR */
+.app-titlebar{
+  position: fixed;
+  top: var(--topbar-h);
+  left: 0;
+  right: 0;
+  height: var(--titlebar-h);
+  z-index: 1025;
+  display:flex;
+  align-items:center;
+  background: var(--c-gris);
+  border-bottom: 1px solid #bfc3c8;
+}
+.app-titlebar h1{ font-size: 22px; }
+.app-titlebar p{ font-size: 13px; }
+
+/* LAYOUT */
+.app-layout{
+  display: flex;
+  width: 100%;
+}
+
+/* SIDEBAR */
+.app-sidebar{
+  position: fixed;
+  top: calc(var(--topbar-h) + var(--titlebar-h));
+  left: 0;
+  width: var(--sidebar-w);
+  height: calc(100vh - var(--topbar-h) - var(--titlebar-h));
+  background: var(--c-blauMari);
+  overflow: auto;
+}
+
+.sidebar-nav{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.sidebar-link{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  padding: 14px 18px;
+  color: var(--c-blanc);
+  text-decoration: none;
+  opacity: .95;
+}
+.sidebar-link:hover{
+  background: var(--c-morat);
+}
+.sidebar-link i{ font-size: 22px; }
+.sidebar-link.active{
+  background: var(--c-morat);
+}
+.sidebar-badge{
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+}
+
+/* MAIN */
+.app-main{
+  width: 100%;
+  padding: 16px;
+}
+
+/* en escriptori el main deixa espai al sidebar */
+@media (min-width: 992px){
+  body{ overflow: hidden; } /* clau: en PC no scrollem el body */
+  .app-main{
+    margin-left: var(--sidebar-w);
+    height: calc(100vh - var(--topbar-h) - var(--titlebar-h));
+    overflow: hidden; /* clau: el scroll va a la taula */
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* FILTRES */
+.filters-panel{
+  background: var(--c-blauClar);
+  padding: 16px;
+  border: 1px solid #aabbd6;
+}
+
+/* BOTONS */
+.btn-filtrar{
+  background: var(--c-groc);
+  border: 0;
+  color: #111;
+}
+.btn-filtrar:hover{
+  background: var(--c-blauMari);
+  color: var(--c-blanc);
+}
+
+.btn-netejar{
+  background: #6c757d;
+  border: 0;
+  color: var(--c-blanc);
+}
+.btn-netejar:hover{
+  background: var(--c-blauMari);
+}
+
+.btn-aplicar{
+  background: var(--c-morat2);
+  border: 0;
+  color: var(--c-blanc);
+}
+.btn-aplicar:hover{
+  background: var(--c-blauMari);
+}
+
+.btn-crear{
+  background: #1e2329;
+  border: 0;
+  color: var(--c-blanc);
+}
+.btn-crear:hover{
+  background: #000;
+}
+
+/* ACTIONS BAR */
+.actions-bar{
+  background: #b8b8b8;
+  padding: 12px;
+  border: 1px solid #a9a9a9;
+}
+
+/* TAULA (scroll només ací) */
+.table-shell{
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-scroll{
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid #d8dde3;
+  border-radius: 8px;
+  background: #f2f4f7;
+}
+
+.table-head th{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #e9ecef;
+  color: #2a2d7c;
+  font-weight: 700;
+}
+
+.col-check{ width: 42px; }
+
+/* botons accions */
+.btn-action{
+  border: 0;
+  background: transparent;
+  padding: .2rem .35rem;
+}
+.btn-action i{ font-size: 18px; }
+
+/* TARGETES MÒBIL */
+.user-card{
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
+  background: #f2f4f7;
+  overflow: hidden;
+}
+.user-card-body{
+  padding: 12px 14px;
+}

@@ -12,46 +12,72 @@
 <body>
   <!-- HEADER -->
   <header class="app-topbar">
-    <div class="container-fluid h-100">
-      <div class="row align-items-center h-100">
+    <div class="container-fluid h-100 px-3">
+      <div class="d-flex align-items-center justify-content-between h-100">
 
-        <!-- Esquerra: Logo -->
-        <div class="col-6 col-lg-4">
+        <!-- Logo -->
+        <div class="d-flex align-items-center gap-2">
+          <span class="brand-dot" aria-hidden="true">
+            <i class="bi bi-lightbulb"></i>
+          </span>
+          <span class="fw-bold fs-4">SELECTIO</span>
+        </div>
+
+        <!-- Usuari -->
+        <div class="d-flex align-items-center gap-3">
+
+          <!-- Botó menú mòbil -->
+          <button class="btn icon-btn d-lg-none" type="button"
+                  data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                  aria-controls="mobileMenu" aria-label="Obrir menú">
+            <i class="bi bi-list"></i>
+          </button>
+
           <div class="d-flex align-items-center gap-2">
-            <span class="brand-dot" aria-hidden="true">
-              <i class="bi bi-lightbulb"></i>
-            </span>
-            <span class="fw-bold fs-4">SELECTIO</span>
+            <img src="img/foto_persona.png" alt="Avatar" class="avatar rounded-circle">
+            <span class="fw-semibold d-none d-sm-inline">Manolo Garibolo</span>
           </div>
+
+          <div class="vr d-none d-sm-block"></div>
+
+          <button class="btn icon-btn" type="button" aria-label="Tancar sessió">
+            <i class="bi bi-box-arrow-right"></i>
+          </button>
+
         </div>
-
-        <!-- Dreta: usuari + logout -->
-        <div class="col-6 col-lg-8">
-          <div class="d-flex align-items-center justify-content-end gap-3">
-
-            <!-- Botó menú mòbil -->
-            <button class="btn btn-outline-secondary d-lg-none" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-              <i class="bi bi-list"></i>
-            </button>
-
-            <div class="d-flex align-items-center gap-2">
-              <img src="img/foto_persona.png" alt="Avatar" class="rounded-circle">
-              <span class="fw-semibold d-none d-sm-inline">Manolo Garibolo</span>
-            </div>
-
-            <div class="vr"></div>
-
-            <button class="btn btn-outline-secondary" type="button" aria-label="Tancar sessió">
-              <i class="bi bi-box-arrow-right"></i>
-            </button>
-
-          </div>
-        </div>
-
       </div>
     </div>
   </header>
+  <!-- OFFCANVAS MÒBIL (sense scroll quan està obert) -->
+  <div class="offcanvas offcanvas-start app-offcanvas"
+       tabindex="-1" id="mobileMenu"
+       data-bs-scroll="false" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <span class="brand-dot" aria-hidden="true"><i class="bi bi-lightbulb"></i></span>
+        <strong>SELECTIO</strong>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tancar"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="#"><i class="bi bi-paperclip"></i><span>Atributs</span></a>
+        <a class="sidebar-link" href="#"><i class="bi bi-cart-fill"></i><span>Carrets</span></a>
+        <a class="sidebar-link" href="#"><i class="bi bi-person-standing"></i><span>Clients</span></a>
+        <a class="sidebar-link" href="#"><i class="bi bi-sliders"></i><span>Configur.</span></a>
+        <a class="sidebar-link" href="#">
+          <i class="bi bi-bag"></i><span>Coman.</span>
+          <span class="ms-auto badge bg-danger rounded-circle d-flex align-items-center justify-content-center sidebar-badge">1</span>
+        </a>
+        <a class="sidebar-link" href="#"><i class="bi bi-bar-chart"></i><span>Estadís.</span></a>
+        <a class="sidebar-link" href="#"><i class="bi bi-folder"></i><span>Famílies</span></a>
+        <a class="sidebar-link" href="#"><i class="bi bi-geo-alt"></i><span>Localitza.</span></a>
+        <a class="sidebar-link" href="#"><i class="bi bi-tag"></i><span>Ofertes</span></a>
+        <a class="sidebar-link" href="#"><i class="bi bi-box-seam"></i><span>Productes</span></a>
+        <a class="sidebar-link active" href="#"><i class="bi bi-person"></i><span>Usuaris</span></a>
+      </nav>
+    </div>
+  </div>
 
   <!-- BARRA TITOL -->
   <div class="barra-titol ">
