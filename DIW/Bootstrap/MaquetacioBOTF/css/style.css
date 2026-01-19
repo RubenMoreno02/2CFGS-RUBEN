@@ -4,9 +4,6 @@
     --c-blauClaret: #1E78FD;
     --c-blauMari: #1E293B;
     --c-morat: #47488E;
-
-    
-
     --c-blauClar: #bcd0ea;
     --c-gris2: #b8b8b8;
     --c-blancTabla: #f2f4f7;
@@ -100,11 +97,47 @@ header .bi.bi-box-arrow-right{
     color: var(--c-blanc);
     margin-bottom: -5px;
 }
-main .bi{
+
+.p-3:hover{
+    background-color: var(--c-morat);
+}
+
+aside .bi{
     font-size: 22px;
     margin-right: 18px;
 }
 
 .opcio-seleccionada{
     background-color: var(--c-morat) !important;
+}
+
+.badge.rounded-circle{
+    width: 20px; 
+    height: 20px; 
+    font-size: 14px;
+}
+
+
+/* CONTINGUT MAIN */
+.app-main {
+  background-color: var(--c-blauClar); 
+  margin: 20px;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.filters-panel {
+  background-color: transparent;
+}
+
+.btn-warning-custom {
+  background-color: var(--c-groc);
+  color: #000;
+  border: none;
+}
+
+.btn-warning-custom:hover,.btn-secondary:hover {
+  background-color: var(--c-blauMari);
+  color: var(--c-blanc);
+  
 }
