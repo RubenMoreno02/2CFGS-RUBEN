@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="app-body">
   <!-- HEADER -->
   <header class="app-topbar">
     <div class="container-fluid h-100 px-3">
@@ -41,7 +41,7 @@
           <div class="vr d-none d-sm-block"></div>
 
           <button class="btn icon-btn" type="button" aria-label="Tancar sessió">
-            <i class="bi bi-box-arrow-right"></i>
+            <i class="bi bi-box-arrow-right d-none d-sm-inline"></i>
           </button>
 
         </div>
@@ -53,34 +53,28 @@
        tabindex="-1" id="mobileMenu"
        data-bs-scroll="false" data-bs-backdrop="true">
     <div class="offcanvas-header">
-      <div class="d-flex align-items-center gap-2">
-        <span class="brand-dot" aria-hidden="true"><i class="bi bi-lightbulb"></i></span>
-        <strong>SELECTIO</strong>
-      </div>
+      
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tancar"></button>
     </div>
     <div class="offcanvas-body p-0">
-      <nav class="sidebar-nav">
-        <a class="sidebar-link" href="#"><i class="bi bi-paperclip"></i><span>Atributs</span></a>
-        <a class="sidebar-link" href="#"><i class="bi bi-cart-fill"></i><span>Carrets</span></a>
-        <a class="sidebar-link" href="#"><i class="bi bi-person-standing"></i><span>Clients</span></a>
-        <a class="sidebar-link" href="#"><i class="bi bi-sliders"></i><span>Configur.</span></a>
-        <a class="sidebar-link" href="#">
-          <i class="bi bi-bag"></i><span>Coman.</span>
-          <span class="ms-auto badge bg-danger rounded-circle d-flex align-items-center justify-content-center sidebar-badge">1</span>
-        </a>
-        <a class="sidebar-link" href="#"><i class="bi bi-bar-chart"></i><span>Estadís.</span></a>
-        <a class="sidebar-link" href="#"><i class="bi bi-folder"></i><span>Famílies</span></a>
-        <a class="sidebar-link" href="#"><i class="bi bi-geo-alt"></i><span>Localitza.</span></a>
-        <a class="sidebar-link" href="#"><i class="bi bi-tag"></i><span>Ofertes</span></a>
-        <a class="sidebar-link" href="#"><i class="bi bi-box-seam"></i><span>Productes</span></a>
-        <a class="sidebar-link active" href="#"><i class="bi bi-person"></i><span>Usuaris</span></a>
-      </nav>
+      <div class="col-12">            
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-paperclip"></i></span>Atributs</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-cart-fill"></i></span>Carrets</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-person-standing"></i></span>Clients</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-sliders"></i></span>Configur</a>
+            <a class="p-3 d-flex align-items-center gap-2" href="#"><span class="menu-ic"><i class="bi bi-bag" ></i></span>Coman.<span class="badge rounded-circle bg-danger d-flex align-items-center justify-content-center">1</span></a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-bar-chart"></i></span>Estadís.</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-folder"></i></span>Famílies</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-geo-alt"></i></span>Localitza.</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-tag"></i></span>Ofertes</a>
+            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-box-seam"></i></span>Productes</a>
+            <a class="p-3 opcio-seleccionada"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>        
+      </div>
     </div>
   </div>
 
   <!-- BARRA TITOL -->
-  <div class="barra-titol ">
+  <div class="barra-titol">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
@@ -92,7 +86,7 @@
   </div>
   
   <!-- MENÚ VERTICAL -->
-  <aside>  
+  <aside class="d-none d-md-block">  
   <div class="container-fluid gx-2 col-0 col-md-12 col-lg-12">
     <div class="row-2">
       <div class="col-2">            
@@ -151,7 +145,168 @@
 
     </div>
   </section>
+  
 </main>
+
+<!-- BARRA ACCIONS -->
+<section class="actions-bar rounded-2 mt-3">
+  <div class="container-fluid p-0 ">
+    <div class="row g-2 align-items-center">
+
+      <div class="col-12 col-lg-8">
+        <div class="row g-2">
+          <div class="col-12 col-md-6 form-floating">
+            <label class="d-block mb-0 text-muted">Accions en lot</label>
+            <select class="form-select" aria-label="Accions en lot">
+              <option selected>Tria una opció</option>
+              <option>Activar</option>
+              <option>Desactivar</option>
+              <option>Eliminar</option>
+            </select>
+          </div>
+
+          <div class="col-12 col-md-6 d-grid">
+            <button class="btn btn-aplicar">
+              <i class="bi bi-check-circle me-1"></i> Aplicar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 d-grid d-lg-flex justify-content-lg-end">
+        <button class="btn btn-crear">
+          <i class="bi bi-plus-circle me-1"></i> Crear
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TAULA (NOMÉS ESCRIPTORI) -->
+      <section class="table-shell d-none d-lg-flex mt-3">
+        <div class="table-scroll">
+          <table class="table align-middle table-striped mb-0">
+            <thead class="table-head">
+              <tr>
+                <th class="col-check"><input class="form-check-input" type="checkbox" aria-label="Seleccionar tots"></th>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>DNI/NIF</th>
+                <th>Telèfon</th>
+                <th>Correu</th>
+                <th>Accions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Exemple files -->
+              <tr>
+                <td><input class="form-check-input " type="checkbox" aria-label="Seleccionar fila 1001"></td>
+                <td class="fw-bold text-center">1001</td>
+                <td>Juan Palomo</td>
+                <td>68458699G</td>
+                <td>639639639</td>
+                <td>carlos2@gmail.com</td>
+                <td>
+                  <button class="btn btn-action text-primary" aria-label="Editar"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-action text-dark" aria-label="Vore"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-action text-danger" aria-label="Eliminar"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+
+              <tr>
+                <td><input class="form-check-input " type="checkbox" aria-label="Seleccionar fila 1001"></td>
+                <td class="fw-bold text-center">1001</td>
+                <td>Juan Palomo</td>
+                <td>68458699G</td>
+                <td>639639639</td>
+                <td>carlos2@gmail.com</td>
+                <td>
+                  <button class="btn btn-action text-primary" aria-label="Editar"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-action text-dark" aria-label="Vore"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-action text-danger" aria-label="Eliminar"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+
+              <tr>
+                <td><input class="form-check-input " type="checkbox" aria-label="Seleccionar fila 1001"></td>
+                <td class="fw-bold text-center">1001</td>
+                <td>Juan Palomo</td>
+                <td>68458699G</td>
+                <td>639639639</td>
+                <td>carlos2@gmail.com</td>
+                <td>
+                  <button class="btn btn-action text-primary" aria-label="Editar"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-action text-dark" aria-label="Vore"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-action text-danger" aria-label="Eliminar"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+
+              <!-- ... més files -->
+            </tbody>
+          </table>
+        </div>
+
+        <nav class="py-3 d-flex justify-content-center">
+          <ul class="pagination mb-0">
+            <li class="page-item"><a class="page-link" href="#" aria-label="Anterior">&laquo;</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Següent">&raquo;</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- TARGETES (NOMÉS MÒBIL) -->
+      <section class="d-lg-none mt-3">
+
+        <article class="user-card mb-3">
+          <div class="d-flex align-items-center justify-content-center gap-2 py-2">
+            <strong>Seleccionar</strong>
+            <input class="form-check-input" type="checkbox" aria-label="Seleccionar usuari 1001">
+          </div>
+
+          <div class="user-card-body">
+            <hr class="my-2">
+            <p class="m-0 fw-bold text-center">ID: 1001</p>
+            <hr class="my-2">
+            <p class="m-0 text-center"><strong>Nom:</strong> Juan Palomo</p>
+            <hr class="my-2">
+            <p class="m-0 text-center"><strong>DNI/NIF:</strong> 68458699G</p>
+            <hr class="my-2">
+            <p class="m-0 text-center"><strong>Telèfon:</strong> 639639639</p>
+            <hr class="my-2">
+            <p class="m-0 text-center"><strong>Correu:</strong> carlos2@gmail.com</p>
+            <hr class="my-2">
+
+            <div class="d-flex justify-content-center gap-3 pt-2">
+              <button class="btn btn-action text-primary" aria-label="Editar"><i class="bi bi-pencil-square"></i></button>
+              <button class="btn btn-action text-dark" aria-label="Vore"><i class="bi bi-eye"></i></button>
+              <button class="btn btn-action text-danger" aria-label="Eliminar"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>     
+        </article>
+
+        
+
+    
+
+        <!-- ... més targetes -->
+
+        <nav class="py-3 d-flex justify-content-center">
+          <ul class="pagination mb-0">
+            <li class="page-item"><a class="page-link" href="#" aria-label="Anterior">&laquo;</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Següent">&raquo;</a></li>
+          </ul>
+        </nav>
+      </section>
+
+    </main>
+  </div>
 
 </body>
 </html>

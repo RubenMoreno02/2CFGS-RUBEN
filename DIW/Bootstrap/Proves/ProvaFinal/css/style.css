@@ -19,6 +19,11 @@ body{
     background:var(--c-blanc);
 }
 
+.app-body{
+  background: var(--c-blanc);
+  padding-top: calc(var(--topbar-h) + var(--titlebar-h));
+}
+
 /* TOPBAR */
 .app-topbar{
   position: fixed;

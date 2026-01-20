@@ -7,16 +7,18 @@
     --c-blauClar: #bcd0ea;
     --c-gris2: #b8b8b8;
     --c-blancTabla: #f2f4f7;
-
     --c-groc: #f4b400;
     --c-grisOscur: #30343a;
     --c-morat2: #4b4aa4;
-
     --c-textGris: #6c757d;
 }
 
 body{
     background:var(--c-blanc);
+}
+
+.app-body{
+  padding-top: calc(var(--topbar-h) + var(--titlebar-h));
 }
 
 /* HEADER */
@@ -74,6 +76,8 @@ header .bi.bi-box-arrow-right{
     background: var(--c-gris);
     padding: 18px 16px;
     text-align:center;
+    position: sticky;
+    top: 88px;
 }
 .barra-titol h1{ 
     font-size: 22px; 
@@ -87,15 +91,14 @@ header .bi.bi-box-arrow-right{
 }
 
 /* MENÚ VERTICAL */
-
 .p-3{
     float: left !important;
-    background: var(--c-blauMari);
     width: 100%;
     margin-left: -5px;
     text-decoration: none;
     color: var(--c-blanc);
     margin-bottom: -5px;
+    background: var(--c-blauMari);
 }
 
 .p-3:hover{
@@ -141,3 +144,104 @@ aside .bi{
   color: var(--c-blanc);
   
 }
+
+/* ACTIONS BAR */
+.actions-bar{
+  background: #b8b8b8;
+  padding: 12px;
+  margin: 0px 20px 0px 20px;
+  margin-bottom: -17px;
+    border-radius: 0px 0px 0px 0px;
+
+
+}
+
+.btn-aplicar{
+  background: var(--c-morat2);
+  border: 0;
+  height: 55px;
+  width: 100px;
+  color: var(--c-blanc);
+  margin-left: -8px;
+  border-radius: 0px 8px 8px 0;
+   /* Arriba-izquierda, Arriba-derecha, Abajo-derecha, Abajo-izquierda */
+
+}
+.btn-aplicar:hover{
+  background: var(--c-blauMari);
+}
+
+.btn-crear{
+  background: #1e2329;
+  height: 50px;
+  border: 0;
+  color: var(--c-blanc);
+}
+.btn-crear:hover{
+  background: #000;
+}
+select.form-select{
+    border-radius: 8px 0px 0px 8px; /* Arriba-izquierda, Arriba-derecha, Abajo-derecha, Abajo-izquierda */
+    height: auto;
+}
+
+
+/* TAULA (scroll només ací) */
+.table-shell{
+    margin: 20px;
+    margin-bottom: -40px;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.table-scroll{
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid #d8dde3;
+  border-radius: 8px;
+  background: #f2f4f7;
+}
+
+.table-head th{
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #e9ecef;
+  color: #2a2d7c;
+  font-weight: 700;
+  text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+.col-check{ 
+    width: 42px; 
+}
+
+/* botons accions */
+.btn-action{
+  border: 0;
+  background: transparent;
+  padding: .2rem .35rem;
+}
+.btn-action i{ font-size: 18px; }
+
+/* TARGETES MÒBIL */
+.user-card{
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
+  background: #f2f4f7;
+  overflow: hidden;
+}
+.user-card-body{
+  padding: 12px 14px;
+}
+
+
+
