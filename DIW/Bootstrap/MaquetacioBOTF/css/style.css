@@ -1,4 +1,4 @@
-:root{
+:root {
     --c-blanc: #ffffff;
     --c-gris: #cfd2d6;
     --c-blauClaret: #1E78FD;
@@ -11,237 +11,151 @@
     --c-grisOscur: #30343a;
     --c-morat2: #4b4aa4;
     --c-textGris: #6c757d;
-}
-
-body{
-    background:var(--c-blanc);
-}
-
-.app-body{
-  padding-top: calc(var(--topbar-h) + var(--titlebar-h));
-}
-
-/* HEADER */
-
-header{
-    width: 100%;
-    height: 88px;
-
-}
-
-.app-topbar{
-    position: fixed;
-    top:0; left:0; right:0;
-    z-index: 1030;
-    background: var(--c-blanc);
-    border-bottom: 1px solid var(--c-gris);
-}
-
-.brand-dot{
-    width: 32px;
-    height: 32px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background: var(--c-groc);
-    color:var(--c-blanc);
-    font-size:18px;
     
+    --header-height: 88px;
 }
 
-.rounded-circle{
-    width: 65px;
-    height: auto;
+body {
+    background-color: var(--c-blanc);
+    padding-top: var(--header-height); 
 }
 
-.btn-outline-secondary{
-    border: none;
-    margin: -10px;
+/* --- COLORS PERSONALITZATS --- */
+.bg-blau-mari { 
+  background-color: var(--c-blauMari); 
 }
-
-.btn-outline-secondary:hover{
-    background: var(--c-gris);
-    border: none;
-}
-
-header .bi.bi-box-arrow-right{
-    color: var(--c-blauClaret);
-    font-size: 23px;
-}
-
-/* BARRA TITOL */
-.barra-titol{
-    margin-top: 88px;
-    background: var(--c-gris);
-    padding: 18px 16px;
-    text-align:center;
-    position: sticky;
-    top: 88px;
-}
-.barra-titol h1{ 
-    font-size: 22px; 
-    margin:0; 
-    font-weight:700; 
-}
-.barra-titol p{ 
-    margin:0; 
-    color: #6b7280; 
-    font-size: 13px; 
-}
-
-/* MENÚ VERTICAL */
-.p-3{
-    float: left !important;
-    width: 100%;
-    margin-left: -5px;
-    text-decoration: none;
-    color: var(--c-blanc);
-    margin-bottom: -5px;
-    background: var(--c-blauMari);
-}
-
-.p-3:hover{
-    background-color: var(--c-morat);
-}
-
-aside .bi{
-    font-size: 22px;
-    margin-right: 18px;
-}
-
-.opcio-seleccionada{
-    background-color: var(--c-morat) !important;
-}
-
-.badge.rounded-circle{
-    width: 20px; 
-    height: 20px; 
-    font-size: 14px;
-}
-
-
-/* CONTINGUT MAIN */
-.app-main {
+.bg-blau-clar { 
   background-color: var(--c-blauClar); 
-  margin: 20px;
-  padding: 20px;
-  border-radius: 6px;
+}
+.bg-morat { 
+  background-color: var(--c-morat); 
+}
+.bg-groc { 
+  background-color: var(--c-groc); 
+}
+.bg-gris-clar { 
+  background-color: var(--c-blancTabla); 
+}
+.text-blau-claret { 
+  color: var(--c-blauClaret); 
+}
+.text-morat { 
+  color: var(--c-morat); 
 }
 
-.filters-panel {
-  background-color: transparent;
+/* --- HEADER --- */
+.app-topbar {
+  height: var(--header-height);
+  border-bottom: 1px solid var(--c-gris);
+  background-color: var(--c-blanc);
 }
 
-.btn-warning-custom {
-  background-color: var(--c-groc);
-  color: #000;
+.brand-dot {
+  width: 32px; height: 32px;
+  font-size: 18px;
+}
+
+.avatar {
+  width: 65px; height: 65px;
+  object-fit: cover;
+}
+
+/* --- BARRA TITOL --- */
+.barra-titol {
+  top: var(--header-height);
+  background-color: var(--c-gris);
+  z-index: 1020;
+}
+
+/* --- SIDEBAR I LINKS --- */
+.nav-link-custom {
+  color: var(--c-blanc);
+  background-color: var(--c-blauMari);
+  transition: background-color 0.2s;
+  display: block;
+  width: 100%;
+}
+
+.nav-link-custom:hover, 
+.nav-link-custom.active {
+  background-color: var(--c-morat);
+  color: var(--c-blanc);
+}
+
+.menu-ic { 
+  margin-right: 12px; 
+  font-size: 1.2rem; 
+}
+
+.badge-custom { 
+  width: 20px; 
+  height: 20px; 
+  font-size: 14px; 
+}
+
+/* --- BOTONS --- */
+.btn-groc {
+  background-color: var(--c-groc); 
+  color: var(--c-blanc); 
   border: none;
 }
 
-.btn-warning-custom:hover,.btn-secondary:hover {
-  background-color: var(--c-blauMari);
-  color: var(--c-blanc);
-  
-}
-
-/* ACTIONS BAR */
-.actions-bar{
-  background: #b8b8b8;
-  padding: 12px;
-  margin: 0px 20px 0px 20px;
-  margin-bottom: -17px;
-    border-radius: 0px 0px 0px 0px;
-
-
-}
-
-.btn-aplicar{
-  background: var(--c-morat2);
-  border: 0;
-  height: 55px;
-  width: 100px;
-  color: var(--c-blanc);
-  margin-left: -8px;
-  border-radius: 0px 8px 8px 0;
-   /* Arriba-izquierda, Arriba-derecha, Abajo-derecha, Abajo-izquierda */
-
-}
-.btn-aplicar:hover{
-  background: var(--c-blauMari);
-}
-
-.btn-crear{
-  background: #1e2329;
-  height: 50px;
-  border: 0;
-  color: var(--c-blanc);
-}
-.btn-crear:hover{
-  background: #000;
-}
-select.form-select{
-    border-radius: 8px 0px 0px 8px; /* Arriba-izquierda, Arriba-derecha, Abajo-derecha, Abajo-izquierda */
-    height: auto;
+.btn-groc:hover { 
+  background-color: var(--c-blauMari); 
+  color: var(--c-blanc); 
 }
 
 
-/* TAULA (scroll només ací) */
-.table-shell{
-    margin: 20px;
-    margin-bottom: -40px;
-  flex: 1 1 auto;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  
+/* --- TAULA--- */
+.actions-bar-bg { 
+  background: #b8b8b8; 
 }
 
-.table-scroll{
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow: auto;
+.select-rounded-start { 
+  border-radius: 8px 0 0 8px; 
+}
+
+.table-scroll-container {
+  background: var(--c-blancTabla);
   border: 1px solid #d8dde3;
-  border-radius: 8px;
-  background: #f2f4f7;
+  overflow: auto;
+  max-height: 600px; 
 }
 
-.table-head th{
-  position: sticky;
-  top: 0;
+.sticky-th th {
+  position: sticky; 
+  top: 0; 
   z-index: 2;
-  background: #e9ecef;
+  background: #e9ecef; 
   color: #2a2d7c;
-  font-weight: 700;
-  text-align: center;
 }
 
-td{
-    text-align: center;
-}
-
-.col-check{ 
-    width: 42px; 
-}
-
-/* botons accions */
-.btn-action{
-  border: 0;
-  background: transparent;
-  padding: .2rem .35rem;
-}
-.btn-action i{ font-size: 18px; }
-
-/* TARGETES MÒBIL */
-.user-card{
+.user-card {
   border: 1px solid #e2e6ea;
-  border-radius: 8px;
-  background: #f2f4f7;
-  overflow: hidden;
-}
-.user-card-body{
-  padding: 12px 14px;
+  background: var(--c-blancTabla);
 }
 
 
+/* --- COLORS PERSONALITZATS --- */
+.bg-barra-gris { 
+  background-color: var(--c-gris2); 
+}
+.btn-morat-aplicar { 
+  background-color: var(--c-morat2); 
+  color: var(--c-blanc); 
+  border: none; 
+}
+.btn-morat-aplicar:hover { 
+  background-color: var(--c-blauMari); 
+  color: var(--c-blanc); 
+}
+
+.input-group{
+  max-width: 265px;
+}
+
+.input-group > .form-floating {
+  flex: 1 1 auto;
+  width: 1%;
+}
 

@@ -4,308 +4,406 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body class="app-body">
-  <!-- HEADER -->
-  <header class="app-topbar">
-    <div class="container-fluid h-100 px-3">
-      <div class="d-flex align-items-center justify-content-between h-100">
+<body> <header class="app-topbar fixed-top d-flex align-items-center px-3 shadow-sm">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between">
 
-        <!-- Logo -->
         <div class="d-flex align-items-center gap-2">
-          <span class="brand-dot" aria-hidden="true">
+          <span class="brand-dot rounded-circle d-inline-flex align-items-center justify-content-center bg-groc text-white">
             <i class="bi bi-lightbulb"></i>
           </span>
-          <span class="fw-bold fs-4">SELECTIO</span>
+          <span class="fw-bold fs-4 text-dark">SELECTIO</span>
         </div>
 
-        <!-- Usuari -->
         <div class="d-flex align-items-center gap-3">
-
-          <!-- Botó menú mòbil -->
-          <button class="btn icon-btn d-lg-none" type="button"
-                  data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
-                  aria-controls="mobileMenu" aria-label="Obrir menú">
-            <i class="bi bi-list"></i>
+          <button class="btn btn-outline-secondary border-0 d-lg-none" type="button"
+                  data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <i class="bi bi-list fs-4"></i>
           </button>
 
           <div class="d-flex align-items-center gap-2">
-            <img src="img/foto_persona.png" alt="Avatar" class="avatar rounded-circle">
+            <img src="img/foto_persona.png" alt="Avatar" class="avatar rounded-circle border">
             <span class="fw-semibold d-none d-sm-inline">Manolo Garibolo</span>
           </div>
 
-          <div class="vr d-none d-sm-block"></div>
+          <div class="vr d-none d-sm-block mx-2"></div>
 
-          <button class="btn icon-btn" type="button" aria-label="Tancar sessió">
-            <i class="bi bi-box-arrow-right d-none d-sm-inline"></i>
+          <button class="btn border-0 text-blau-claret p-0" type="button">
+            <i class="bi bi-box-arrow-right fs-4 d-none d-sm-inline"></i>
           </button>
-
         </div>
       </div>
     </div>
   </header>
-  <!-- OFFCANVAS MÒBIL (sense scroll quan està obert) -->
-  <div class="offcanvas offcanvas-start app-offcanvas"
-       tabindex="-1" id="mobileMenu"
-       data-bs-scroll="false" data-bs-backdrop="true">
+
+  <div class="offcanvas offcanvas-start bg-blau-mari" tabindex="-1" id="mobileMenu">
     <div class="offcanvas-header">
-      
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tancar"></button>
+      <h5 class="offcanvas-title text-white">Menú</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body p-0">
-      <div class="col-12">            
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-paperclip"></i></span>Atributs</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-cart-fill"></i></span>Carrets</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-person-standing"></i></span>Clients</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-sliders"></i></span>Configur</a>
-            <a class="p-3 d-flex align-items-center gap-2" href="#"><span class="menu-ic"><i class="bi bi-bag" ></i></span>Coman.<span class="badge rounded-circle bg-danger d-flex align-items-center justify-content-center">1</span></a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-bar-chart"></i></span>Estadís.</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-folder"></i></span>Famílies</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-geo-alt"></i></span>Localitza.</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-tag"></i></span>Ofertes</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-box-seam"></i></span>Productes</a>
-            <a class="p-3 opcio-seleccionada"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>        
-      </div>
+        <div class="list-group list-group-flush">
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-paperclip"></i></span>Atributs</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-cart-fill"></i></span>Carrets</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-person-standing"></i></span>Clients</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-sliders"></i></span>Configur</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0 d-flex align-items-center"><span class="menu-ic"><i class="bi bi-bag"></i></span>Coman.<span class="badge badge-custom rounded-circle bg-danger ms-2 d-flex align-items-center justify-content-center">1</span></a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-bar-chart"></i></span>Estadís.</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-folder"></i></span>Famílies</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-geo-alt"></i></span>Localitza.</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-tag"></i></span>Ofertes</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-box-seam"></i></span>Productes</a>
+            <a href="#" class="nav-link-custom active p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>
+        </div>
     </div>
   </div>
 
-  <!-- BARRA TITOL -->
-  <div class="barra-titol">
+  <div class="barra-titol w-100 position-sticky py-3 text-center border-bottom">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <h1>Llistat d'usuaris</h1>
-          <p>Gestió i manteniment dels usuaris del sistema</p>
-        </div>
-      </div>
+      <h1 class="h5 fw-bold mb-0">Llistat d'usuaris</h1>
+      <p class="mb-0 text-muted small">Gestió i manteniment dels usuaris del sistema</p>
     </div>
   </div>
   
-  <!-- MENÚ VERTICAL -->
-  <aside class="d-none d-md-block">  
-  <div class="container-fluid gx-2 col-0 col-md-12 col-lg-12">
-    <div class="row-2">
-      <div class="col-2">            
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-paperclip"></i></span>Atributs</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-cart-fill"></i></span>Carrets</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-person-standing"></i></span>Clients</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-sliders"></i></span>Configur</a>
-            <a class="p-3 d-flex align-items-center gap-2" href="#"><span class="menu-ic"><i class="bi bi-bag" ></i></span>Coman.<span class="badge rounded-circle bg-danger d-flex align-items-center justify-content-center">1</span></a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-bar-chart"></i></span>Estadís.</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-folder"></i></span>Famílies</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-geo-alt"></i></span>Localitza.</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-tag"></i></span>Ofertes</a>
-            <a class="p-3" href="#"><span class="menu-ic"><i class="bi bi-box-seam"></i></span>Productes</a>
-            <a class="p-3 opcio-seleccionada"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>        
-      </div>
-    </div>
-  </div>
-</aside>
-<main class="app-main">
-  <section class="filters-panel p-2">
-    <div class="container-fluid p-0">
-
-      <!-- FILA 1 -->
-      <div class="row g-3">
-        <div class="col-12 col-md-6 col-lg-4">
-          <label class="form-label fw-semibold">Nom</label>
-          <input class="form-control" type="text" placeholder="Filtrar per nom ...">
+  <div class="container-fluid">
+    <div class="row">
+      
+      <aside class="col-md-3 col-lg-2 d-none d-md-block p-0 bg-blau-mari min-vh-100">  
+        <div class="d-flex flex-column">
+            <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-paperclip"></i></span>Atributs</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-cart-fill"></i></span>Carrets</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-person-standing"></i></span>Clients</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-sliders"></i></span>Configur</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none d-flex align-items-center"><span class="menu-ic"><i class="bi bi-bag"></i></span>Coman.<span class="badge badge-custom rounded-circle bg-danger ms-2 d-flex align-items-center justify-content-center">1</span></a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-bar-chart"></i></span>Estadís.</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-folder"></i></span>Famílies</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-geo-alt"></i></span>Localitza.</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-tag"></i></span>Ofertes</a>
+            <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-box-seam"></i></span>Productes</a>
+            <a href="#" class="nav-link-custom active p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>
         </div>
+      </aside>
 
-        <div class="col-12 col-md-6 col-lg-4">
-          <label class="form-label fw-semibold">Cognoms</label>
-          <input class="form-control" type="text" placeholder="Filtrar per cognoms ...">
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <label class="form-label fw-semibold">Dni</label>
-          <input class="form-control" type="text" placeholder="Filtrar per dni ...">
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <label class="form-label fw-semibold">Email</label>
-          <input class="form-control" type="email" placeholder="Filtrar per email ...">
-        </div>
-      </div>
-
-      <!-- FILA 2 -->
-      <div class="row g-3 mt-1 align-items-end">
-        <div class="col-12 col-md-12 col-lg-12 d-flex justify-content-lg-end justify-content-md-end gap-2">
-          <button class="btn btn-warning-custom">
-            <i class="bi bi-funnel me-1"></i> Filtrar
-          </button>
-          <button class="btn btn-secondary">
-            <i class="bi bi-trash me-1"></i> Netejar
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  
-</main>
-
-<!-- BARRA ACCIONS -->
-<section class="actions-bar rounded-2 mt-3">
-  <div class="container-fluid p-0 ">
-    <div class="row g-2 align-items-center">
-
-      <div class="col-12 col-lg-8">
-        <div class="row g-2">
-          <div class="col-12 col-md-6 form-floating">
-            <label class="d-block mb-0 text-muted">Accions en lot</label>
-            <select class="form-select" aria-label="Accions en lot">
-              <option selected>Tria una opció</option>
-              <option>Activar</option>
-              <option>Desactivar</option>
-              <option>Eliminar</option>
-            </select>
-          </div>
-
-          <div class="col-12 col-md-6 d-grid">
-            <button class="btn btn-aplicar">
-              <i class="bi bi-check-circle me-1"></i> Aplicar
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-4 d-grid d-lg-flex justify-content-lg-end">
-        <button class="btn btn-crear">
-          <i class="bi bi-plus-circle me-1"></i> Crear
-        </button>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TAULA (NOMÉS ESCRIPTORI) -->
-      <section class="table-shell d-none d-lg-flex mt-3">
-        <div class="table-scroll">
-          <table class="table align-middle table-striped mb-0">
-            <thead class="table-head">
-              <tr>
-                <th class="col-check"><input class="form-check-input" type="checkbox" aria-label="Seleccionar tots"></th>
-                <th>ID</th>
-                <th>Nom</th>
-                <th>DNI/NIF</th>
-                <th>Telèfon</th>
-                <th>Correu</th>
-                <th>Accions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Exemple files -->
-              <tr>
-                <td><input class="form-check-input " type="checkbox" aria-label="Seleccionar fila 1001"></td>
-                <td class="fw-bold text-center">1001</td>
-                <td>Juan Palomo</td>
-                <td>68458699G</td>
-                <td>639639639</td>
-                <td>carlos2@gmail.com</td>
-                <td>
-                  <button class="btn btn-action text-primary" aria-label="Editar"><i class="bi bi-pencil-square"></i></button>
-                  <button class="btn btn-action text-dark" aria-label="Vore"><i class="bi bi-eye"></i></button>
-                  <button class="btn btn-action text-danger" aria-label="Eliminar"><i class="bi bi-trash"></i></button>
-                </td>
-              </tr>
-
-              <tr>
-                <td><input class="form-check-input " type="checkbox" aria-label="Seleccionar fila 1001"></td>
-                <td class="fw-bold text-center">1001</td>
-                <td>Juan Palomo</td>
-                <td>68458699G</td>
-                <td>639639639</td>
-                <td>carlos2@gmail.com</td>
-                <td>
-                  <button class="btn btn-action text-primary" aria-label="Editar"><i class="bi bi-pencil-square"></i></button>
-                  <button class="btn btn-action text-dark" aria-label="Vore"><i class="bi bi-eye"></i></button>
-                  <button class="btn btn-action text-danger" aria-label="Eliminar"><i class="bi bi-trash"></i></button>
-                </td>
-              </tr>
-
-              <tr>
-                <td><input class="form-check-input " type="checkbox" aria-label="Seleccionar fila 1001"></td>
-                <td class="fw-bold text-center">1001</td>
-                <td>Juan Palomo</td>
-                <td>68458699G</td>
-                <td>639639639</td>
-                <td>carlos2@gmail.com</td>
-                <td>
-                  <button class="btn btn-action text-primary" aria-label="Editar"><i class="bi bi-pencil-square"></i></button>
-                  <button class="btn btn-action text-dark" aria-label="Vore"><i class="bi bi-eye"></i></button>
-                  <button class="btn btn-action text-danger" aria-label="Eliminar"><i class="bi bi-trash"></i></button>
-                </td>
-              </tr>
-
-              <!-- ... més files -->
-            </tbody>
-          </table>
-        </div>
-
-        <nav class="py-3 d-flex justify-content-center">
-          <ul class="pagination mb-0">
-            <li class="page-item"><a class="page-link" href="#" aria-label="Anterior">&laquo;</a></li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#" aria-label="Següent">&raquo;</a></li>
-          </ul>
-        </nav>
-      </section>
-
-      <!-- TARGETES (NOMÉS MÒBIL) -->
-      <section class="d-lg-none mt-3">
-
-        <article class="user-card mb-3">
-          <div class="d-flex align-items-center justify-content-center gap-2 py-2">
-            <strong>Seleccionar</strong>
-            <input class="form-check-input" type="checkbox" aria-label="Seleccionar usuari 1001">
-          </div>
-
-          <div class="user-card-body">
-            <hr class="my-2">
-            <p class="m-0 fw-bold text-center">ID: 1001</p>
-            <hr class="my-2">
-            <p class="m-0 text-center"><strong>Nom:</strong> Juan Palomo</p>
-            <hr class="my-2">
-            <p class="m-0 text-center"><strong>DNI/NIF:</strong> 68458699G</p>
-            <hr class="my-2">
-            <p class="m-0 text-center"><strong>Telèfon:</strong> 639639639</p>
-            <hr class="my-2">
-            <p class="m-0 text-center"><strong>Correu:</strong> carlos2@gmail.com</p>
-            <hr class="my-2">
-
-            <div class="d-flex justify-content-center gap-3 pt-2">
-              <button class="btn btn-action text-primary" aria-label="Editar"><i class="bi bi-pencil-square"></i></button>
-              <button class="btn btn-action text-dark" aria-label="Vore"><i class="bi bi-eye"></i></button>
-              <button class="btn btn-action text-danger" aria-label="Eliminar"><i class="bi bi-trash"></i></button>
-            </div>
-          </div>     
-        </article>
-
+      <main class="col-12 col-md-9 col-lg-10 p-3">
         
+        <section class="bg-blau-clar p-4 rounded mb-4">
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <label class="form-label fw-semibold">Nom</label>
+              <input class="form-control" type="text" placeholder="Filtrar per nom ...">
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <label class="form-label fw-semibold">Cognoms</label>
+              <input class="form-control" type="text" placeholder="Filtrar per cognoms ...">
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <label class="form-label fw-semibold">Dni</label>
+              <input class="form-control" type="text" placeholder="Filtrar per dni ...">
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <label class="form-label fw-semibold">Email</label>
+              <input class="form-control" type="email" placeholder="Filtrar per email ...">
+            </div>
+          </div>
 
-    
+          <div class="row mt-3">
+            <div class="col-12 d-flex justify-content-end gap-2">
+              <button class="btn btn-groc">
+                <i class="bi bi-funnel me-1"></i> Filtrar
+              </button>
+              <button class="btn btn-secondary">
+                <i class="bi bi-trash me-1"></i> Netejar
+              </button>
+            </div>
+          </div>
+        </section>
 
-        <!-- ... més targetes -->
+        <section class="bg-barra-gris mx-0 mt-0 p-2 rounded-top">
+          <div class="d-flex justify-content-between align-items-center">
+            
+            <div class="input-group">
+              <div class="form-floating">
+                <select class="form-select border-0 mx-0" id="accionsLot" aria-label="Accions en lot">
+                  <option selected>Tria una opció</option>
+                  <option value="1">Activar</option>
+                  <option value="2">Desactivar</option>
+                  <option value="3">Eliminar</option>
+                </select>
+                <label for="accionsLot">Accions en lot</label>
+              </div>
+              <button class="btn btn-morat-aplicar px-3 d-flex align-items-center gap-2" type="button">
+                <i class="bi bi-check-circle"></i> Aplicar
+              </button>
+            </div>
 
-        <nav class="py-3 d-flex justify-content-center">
-          <ul class="pagination mb-0">
-            <li class="page-item"><a class="page-link" href="#" aria-label="Anterior">&laquo;</a></li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#" aria-label="Següent">&raquo;</a></li>
-          </ul>
-        </nav>
-      </section>
+            <button class="btn btn-dark py-3 px-2 d-flex align-items-center gap-2" type="button">
+              <i class="bi bi-plus-circle"></i> Crear
+            </button>
 
-    </main>
+          </div>
+        </section>
+
+        <section class="d-none d-lg-block mx-0 mt-0">
+          <div class="table-scroll-container rounded-bottom">
+            <table class="table align-middle table-striped mb-0 sticky-th">
+              <thead>
+                <tr>
+                  <th class="py-3 text-center" style="width: 50px;"><input class="form-check-input" type="checkbox"></th>
+                  <th class="py-3 text-center">ID</th>
+                  <th class="py-3 text-center">Nom</th>
+                  <th class="py-3 text-center">DNI/NIF</th>
+                  <th class="py-3 text-center">Telèfon</th>
+                  <th class="py-3 text-center">Correu</th>
+                  <th class="py-3 text-center">Accions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1001</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1002</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1003</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1004</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1005</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1006</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1007</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1008</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1009</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1010</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1011</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1012</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1013</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1014</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center"><input class="form-check-input" type="checkbox"></td>
+                  <td class="fw-bold text-center">1015</td>
+                  <td class="text-center">Juan Palomo</td>
+                  <td class="text-center">68458699G</td>
+                  <td class="text-center">639639639</td>
+                  <td class="text-center">carlos2@gmail.com</td>
+                  <td class="text-center">
+                    <button class="btn border-0 text-primary p-1"><i class="bi bi-pencil-square fs-5"></i></button>
+                    <button class="btn border-0 text-dark p-1"><i class="bi bi-eye fs-5"></i></button>
+                    <button class="btn border-0 text-danger p-1"><i class="bi bi-trash fs-5"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <nav class="py-3 d-flex justify-content-center">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1001</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          <nav class="py-3 d-flex justify-content-center">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+            </ul>
+          </nav>
+        </section>
+
+      </main>
+    </div>
   </div>
 
 </body>
