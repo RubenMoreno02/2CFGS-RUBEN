@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body> 
-  <header class="app-topbar fixed-top bg-white border-bottom d-flex align-items-center px-3 shadow-sm" style="height: 90px;">
+  <!-- HEADER-->
+  <header class="app-topbar fixed-top bg-white border-bottom d-flex align-items-center px-3 shadow-sm">
   <div class="container-fluid">
     <div class="row align-items-center">
       
@@ -21,14 +22,14 @@
       </div>
 
       <div class="col-4 col-md-auto d-flex justify-content-center justify-content-md-start align-items-center gap-2">
-        <span class="rounded-circle d-inline-flex align-items-center justify-content-center bg-warning text-white" style="width: 35px; height: 35px;">
+        <span class="rounded-circle d-inline-flex align-items-center justify-content-center bg-warning text-white brand-dot" >
           <i class="bi bi-lightbulb"></i>
         </span>
         <span class="fw-bold fs-4 text-dark">SELECTIO</span>
       </div>
 
       <div class="col-4 col-md d-flex justify-content-end align-items-center gap-2">
-        <img src="img/foto_persona.png" alt="Avatar" class="rounded-circle border" style="width: 45px; height: 45px; object-fit: cover;">
+        <img src="img/foto_persona.png" alt="Avatar" class="avatar rounded-circle border" >
         <span class="fw-semibold d-none d-md-inline">Manolo Garibolo</span>
         
         <div class="vr d-none d-md-block mx-2"></div>
@@ -40,7 +41,7 @@
     </div>
   </div>
 </header>
-
+  <!-- MENÚ MBL-->
   <div class="offcanvas offcanvas-start bg-blau-mari" tabindex="-1" id="mobileMenu">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title text-white">Menú</h5>
@@ -69,7 +70,7 @@
       <p class="mb-0 text-muted small">Gestió i manteniment dels usuaris del sistema</p>
     </div>
   </div>
-  
+  <!-- MENÚ PC-->
   <div class="container-fluid">
     <div class="row">
         <aside class="col-md-3 col-lg-2 d-none d-md-block p-0 bg-blau-mari sidebar-fixed">
@@ -88,7 +89,7 @@
 
         </div>
       </aside>
-
+      <!-- FORMULARI-->
       <main class="col-12 col-md-9 col-lg-10 p-3">
         
         <section class="bg-blau-clar p-4 rounded mb-4">
@@ -147,13 +148,13 @@
 
           </div>
         </section>
-
+        <!-- TAULA PC-->
         <section class="d-none d-lg-block mx-0 mt-0">
           <div class="rounded-bottom">
             <table class="table align-middle table-striped mb-0 sticky-th">
               <thead>
                 <tr>
-                  <th class="py-3 text-center" style="width: 50px;"><input class="form-check-input" type="checkbox"></th>
+                  <th class="py-3 text-center"><input class="form-check-input" type="checkbox"></th>
                   <th class="py-3 text-center">ID</th>
                   <th class="py-3 text-center">Nom</th>
                   <th class="py-3 text-center">DNI/NIF</th>
@@ -362,7 +363,7 @@
             </table>
           </div>
           
-
+          <!-- PAGINACIÓ PC-->
           <nav class="py-3 d-flex justify-content-center">
             <ul class="pagination">
               <li class="page-item"><a class="page-link text-negre " href="#">&laquo;</a></li>
@@ -373,7 +374,8 @@
             </ul>
           </nav>
         </section>
-
+      
+        <!-- TAULA MBL-->
         <section class="d-lg-none mt-3">
           <article class="user-card rounded mb-3 p-3 text-center">
             <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
@@ -394,7 +396,314 @@
                 <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
             </div>
           </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1002</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
 
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1003</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1004</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1005</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1006</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1007</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1008</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1009</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1010</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1011</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1012</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1013</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1014</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          </article>
+          <section class="d-lg-none mt-3">
+          <article class="user-card rounded mb-3 p-3 text-center">
+            <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+              <strong>Seleccionar</strong>
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <hr>
+            <p class="mb-2 fw-bold">ID: 1015</p>
+            <hr>
+            <p class="mb-2"><strong>Nom:</strong> Juan Palomo</p>
+            <hr>
+            <p class="mb-2"><strong>DNI:</strong> 68458699G</p>
+            <hr>
+            
+            <div class="d-flex justify-content-center gap-3 pt-2">
+                <button class="btn border-0 text-primary"><i class="bi bi-pencil-square fs-4"></i></button>
+                <button class="btn border-0 text-dark"><i class="bi bi-eye fs-4"></i></button>
+                <button class="btn border-0 text-danger"><i class="bi bi-trash fs-4"></i></button>
+            </div>
+          </article>
+
+          <!-- PAGINACIÓ MBL-->
           <nav class="py-3 d-flex justify-content-center">
             <ul class="pagination">
               <li class="page-item"><a class="page-link text-negre " href="#">&laquo;</a></li>
