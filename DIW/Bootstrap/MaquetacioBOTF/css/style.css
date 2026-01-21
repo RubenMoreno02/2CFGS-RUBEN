@@ -18,7 +18,10 @@
 body {
     background-color: var(--c-blanc);
     padding-top: var(--header-height); 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
+
 
 /* --- COLORS PERSONALITZATS --- */
 .bg-blau-mari { 
@@ -43,6 +46,20 @@ body {
   color: var(--c-morat); 
 }
 
+.text-negre{
+  color: var(--c-grisOscur);
+}
+.bg-negre{
+  background-color: var(--c-grisOscur);
+}
+.text-blanc{
+  color: var(--c-blanc);
+}
+.bg-negre:hover{
+  background-color: var(--c-morat);
+  color: var(--c-blanc);
+}
+
 /* --- HEADER --- */
 .app-topbar {
   height: var(--header-height);
@@ -59,6 +76,7 @@ body {
   width: 65px; height: 65px;
   object-fit: cover;
 }
+ 
 
 /* --- BARRA TITOL --- */
 .barra-titol {
@@ -74,6 +92,13 @@ body {
   transition: background-color 0.2s;
   display: block;
   width: 100%;
+}
+
+.sidebar-fixed {
+  position: sticky;
+  top: 166px;
+  height: calc(100vh - 166px);
+  overflow-y: auto;
 }
 
 .nav-link-custom:hover, 
@@ -115,19 +140,12 @@ body {
   border-radius: 8px 0 0 8px; 
 }
 
-.table-scroll-container {
-  background: var(--c-blancTabla);
-  border: 1px solid #d8dde3;
-  overflow: auto;
-  max-height: 600px; 
-}
-
 .sticky-th th {
   position: sticky; 
   top: 0; 
   z-index: 2;
-  background: #e9ecef; 
-  color: #2a2d7c;
+  background: var(--c-gris); 
+  color: var(--c-morat);
 }
 
 .user-card {
@@ -158,4 +176,3 @@ body {
   flex: 1 1 auto;
   width: 1%;
 }
-

@@ -9,37 +9,37 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body> <header class="app-topbar fixed-top d-flex align-items-center px-3 shadow-sm">
-    <div class="container-fluid">
-      <div class="d-flex align-items-center justify-content-between">
-
-        <div class="d-flex align-items-center gap-2">
-          <span class="brand-dot rounded-circle d-inline-flex align-items-center justify-content-center bg-groc text-white">
-            <i class="bi bi-lightbulb"></i>
-          </span>
-          <span class="fw-bold fs-4 text-dark">SELECTIO</span>
-        </div>
-
-        <div class="d-flex align-items-center gap-3">
-          <button class="btn btn-outline-secondary border-0 d-lg-none" type="button"
-                  data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-            <i class="bi bi-list fs-4"></i>
-          </button>
-
-          <div class="d-flex align-items-center gap-2">
-            <img src="img/foto_persona.png" alt="Avatar" class="avatar rounded-circle border">
-            <span class="fw-semibold d-none d-sm-inline">Manolo Garibolo</span>
-          </div>
-
-          <div class="vr d-none d-sm-block mx-2"></div>
-
-          <button class="btn border-0 text-blau-claret p-0" type="button">
-            <i class="bi bi-box-arrow-right fs-4 d-none d-sm-inline"></i>
-          </button>
-        </div>
+<body> 
+  <header class="app-topbar fixed-top bg-white border-bottom d-flex align-items-center px-3 shadow-sm" style="height: 90px;">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      
+      <div class="col-4 d-md-none">
+        <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="bi bi-list fs-2"></i>
+        </button>
       </div>
+
+      <div class="col-4 col-md-auto d-flex justify-content-center justify-content-md-start align-items-center gap-2">
+        <span class="rounded-circle d-inline-flex align-items-center justify-content-center bg-warning text-white" style="width: 35px; height: 35px;">
+          <i class="bi bi-lightbulb"></i>
+        </span>
+        <span class="fw-bold fs-4 text-dark">SELECTIO</span>
+      </div>
+
+      <div class="col-4 col-md d-flex justify-content-end align-items-center gap-2">
+        <img src="img/foto_persona.png" alt="Avatar" class="rounded-circle border" style="width: 45px; height: 45px; object-fit: cover;">
+        <span class="fw-semibold d-none d-md-inline">Manolo Garibolo</span>
+        
+        <div class="vr d-none d-md-block mx-2"></div>
+        <button class="btn border-0 p-0 d-none d-md-inline text-primary">
+          <i class="bi bi-box-arrow-right fs-4"></i>
+        </button>
+      </div>
+
     </div>
-  </header>
+  </div>
+</header>
 
   <div class="offcanvas offcanvas-start bg-blau-mari" tabindex="-1" id="mobileMenu">
     <div class="offcanvas-header">
@@ -58,7 +58,7 @@
             <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-geo-alt"></i></span>Localitza.</a>
             <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-tag"></i></span>Ofertes</a>
             <a href="#" class="nav-link-custom p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-box-seam"></i></span>Productes</a>
-            <a href="#" class="nav-link-custom active p-3 text-decoration-none border-0"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>
+            <a href="#" class="nav-link-custom active p-3 text-decoration-none border-start border-white"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>
         </div>
     </div>
   </div>
@@ -72,9 +72,8 @@
   
   <div class="container-fluid">
     <div class="row">
-      
-      <aside class="col-md-3 col-lg-2 d-none d-md-block p-0 bg-blau-mari min-vh-100">  
-        <div class="d-flex flex-column">
+        <aside class="col-md-3 col-lg-2 d-none d-md-block p-0 bg-blau-mari sidebar-fixed">
+          <div class="d-flex flex-column">
             <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-paperclip"></i></span>Atributs</a>
             <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-cart-fill"></i></span>Carrets</a>
             <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-person-standing"></i></span>Clients</a>
@@ -85,7 +84,8 @@
             <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-geo-alt"></i></span>Localitza.</a>
             <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-tag"></i></span>Ofertes</a>
             <a href="#" class="nav-link-custom p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-box-seam"></i></span>Productes</a>
-            <a href="#" class="nav-link-custom active p-3 text-decoration-none"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>
+            <a href="#" class="nav-link-custom active p-3 text-decoration-none border-start border-white"><span class="menu-ic"><i class="bi bi-person"></i></span>Usuaris</a>
+
         </div>
       </aside>
 
@@ -149,7 +149,7 @@
         </section>
 
         <section class="d-none d-lg-block mx-0 mt-0">
-          <div class="table-scroll-container rounded-bottom">
+          <div class="rounded-bottom">
             <table class="table align-middle table-striped mb-0 sticky-th">
               <thead>
                 <tr>
@@ -361,13 +361,15 @@
               </tbody>
             </table>
           </div>
+          
 
           <nav class="py-3 d-flex justify-content-center">
             <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+              <li class="page-item"><a class="page-link text-negre " href="#">&laquo;</a></li>
+              <li class="page-item"><a class="page-link bg-negre text-blanc " href="#">1</a></li>
+              <li class="page-item"><a class="page-link text-negre" href="#">2</a></li>
+              <li class="page-item"><a class="page-link text-negre" href="#">3</a></li>
+              <li class="page-item"><a class="page-link text-negre" href="#">&raquo;</a></li>
             </ul>
           </nav>
         </section>
@@ -395,9 +397,11 @@
 
           <nav class="py-3 d-flex justify-content-center">
             <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+              <li class="page-item"><a class="page-link text-negre " href="#">&laquo;</a></li>
+              <li class="page-item"><a class="page-link bg-negre text-blanc " href="#">1</a></li>
+              <li class="page-item"><a class="page-link text-negre" href="#">2</a></li>
+              <li class="page-item"><a class="page-link text-negre" href="#">3</a></li>
+              <li class="page-item"><a class="page-link text-negre" href="#">&raquo;</a></li>
             </ul>
           </nav>
         </section>
