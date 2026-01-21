@@ -59,6 +59,25 @@ body {
   background-color: var(--c-morat);
   color: var(--c-blanc);
 }
+.bg-barra-gris { 
+  background-color: var(--c-gris2); 
+}
+.btn-morat-aplicar { 
+  background-color: var(--c-morat2); 
+  color: var(--c-blanc); 
+  border: none; 
+}
+.btn-morat-aplicar:hover { 
+  background-color: var(--c-blauMari); 
+  color: var(--c-blanc); 
+}
+.input-group{
+  max-width: 265px;
+}
+.input-group > .form-floating {
+  flex: 1 1 auto;
+  width: 1%;
+}
 
 /* --- HEADER --- */
 .app-topbar {
@@ -75,8 +94,7 @@ body {
 .avatar {
   width: 60px; height: 60px;
   object-fit: cover;
-}
- 
+} 
 
 /* --- BARRA TITOL --- */
 .barra-titol {
@@ -85,7 +103,7 @@ body {
   z-index: 1020;
 }
 
-/* --- SIDEBAR I LINKS --- */
+/* --- MENÚ I LINKS --- */
 .nav-link-custom {
   color: var(--c-blanc);
   background-color: var(--c-blauMari);
@@ -130,7 +148,6 @@ body {
   color: var(--c-blanc); 
 }
 
-
 /* --- TAULA--- */
 .actions-bar-bg { 
   background: var(--c-gris2); 
@@ -151,28 +168,4 @@ body {
 .user-card {
   border: 1px solid var(--c-blanc);
   background: var(--c-blancTabla);
-}
-
-
-/* --- COLORS PERSONALITZATS --- */
-.bg-barra-gris { 
-  background-color: var(--c-gris2); 
-}
-.btn-morat-aplicar { 
-  background-color: var(--c-morat2); 
-  color: var(--c-blanc); 
-  border: none; 
-}
-.btn-morat-aplicar:hover { 
-  background-color: var(--c-blauMari); 
-  color: var(--c-blanc); 
-}
-
-.input-group{
-  max-width: 265px;
-}
-
-.input-group > .form-floating {
-  flex: 1 1 auto;
-  width: 1%;
 }
