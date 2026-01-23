@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectio - Tenda de Tecnologia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --bg-body: #f8f9fa;
+            --bg-blue-light: #d0e3ff;
+            --text-blue: #0d6efd;
+            --gray-card: #f1f3f5;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-body);
+            color: #212529;
+        }
+
+        /* Navbar & Sticky setup */
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: background 0.2s;
+        }
+
+        .nav-link:hover {
+            background-color: #e9ecef;
+            color: #000;
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-radius: 0;
+        }
+
+        .search-input {
+            background-color: #f1f3f5;
+            border: none;
+            border-radius: 4px;
+        }
+
+        /* Hero Banner */
+        .hero-section {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        /* Custom Cards */
+        .category-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: none;
+            height: 100%;
+        }
+        .category-img-wrapper {
+            background-color: #eee;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .category-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Oferta Limitada Banner */
+        .offer-banner {
+            background-color: #e7f0ff; /* Blau claret personalitzat */
+            border-radius: 15px;
+        }
+        .badge-offer {
+            background-color: #b8d4ff;
+            color: #0d6efd;
+            border-radius: 50px;
+            padding: 5px 15px;
+            font-weight: 600;
+        }
+
+        /* Product Cards */
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 12px;
+            background: white;
+            position: relative;
+        }
+        .btn-wishlist {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff4d4d;
+            color: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+        .rating { color: #ffc107; font-size: 0.9rem; }
+
+        /* Footer */
+        footer {
+            background-color: white;
+            border-top: 1px solid #eee;
+            padding-top: 3rem;
+        }
+        .footer-link {
+            text-decoration: none;
+            color: #6c757d;
+            display: block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .footer-link:hover {
+            background-color: #f1f3f5;
+            color: #000;
+        }
+
+        /* Features section */
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #d0e3ff;
+            color: #0d6efd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Responsive menu shadow (as seen in image 9) */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                box-shadow: 0 15px 20px rgba(0,0,0,0.05);
+                background: white;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+            <i class="bi bi-lightbulb-fill text-warning me-2"></i> SELECTIO
+        </a>
+        
+        <div class="d-flex order-lg-3 align-items-center">
+            <div class="input-group d-none d-md-flex me-3" style="width: 250px;">
+                <span class="input-group-text search-input border-0"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control search-input border-0" placeholder="Cercar producte...">
+            </div>
+            <a href="#" class="nav-link position-relative me-3">
+                <i class="bi bi-cart-fill fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+            </a>
+            <a href="#" class="nav-link"><i class="bi bi-person fs-5"></i></a>
+            <button class="navbar-toggler ms-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Portàtils</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mòbils</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Totes les categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Components</a></li>
+                        <li><a class="dropdown-item" href="#">Perifèrics</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Consoles</a></li>
+                        <li><a class="dropdown-item" href="#">Videojocs</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Ofertes</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-4">
+    
+    <section class="hero-section shadow-sm mb-5">
+        <div class="row g-0 align-items-center">
+            <div class="col-md-6 p-5">
+                <span class="text-primary fw-bold small">Novetats</span>
+                <h1 class="display-4 fw-bold mt-2">El futur de la tecnologia està ací</h1>
+                <p class="text-muted mb-4">Actualitza't hui amb els últims accesoris d'alt rendiment amb dissenys moderns.</p>
+                <button class="btn btn-primary px-4 py-2">Comprar</button>
+            </div>
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="Tecnologia">
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-bold m-0">Comprar per categoria</h3>
+            <a href="#" class="text-decoration-none small fw-bold">Veure totes <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="category-card shadow-sm">
+                    <div class="category-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=300&q=80" alt="Portàtils">
+                    </div>
+                    <span class="fw-bold small">Portàtils</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-card shadow-sm">
+                    <div class="category-img-wrapper" style="background-color: #f7c7b7;">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80" alt="Mòbils">
+                    </div>
+                    <span class="fw-bold small">Mòbils</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-card shadow-sm">
+                    <div class="category-img-wrapper" style="background-color: #111;">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Àudio">
+                    </div>
+                    <span class="fw-bold small">Àudio</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="category-card shadow-sm">
+                    <div class="category-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="Wearables">
+                    </div>
+                    <span class="fw-bold small">Wearables</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-banner p-4 p-md-5 mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <span class="badge-offer small mb-3 d-inline-block">
+                    <i class="bi bi-clock-fill me-1"></i> OFERTA LIMITADA
+                </span>
+                <h2 class="display-6 fw-bold">Ofertes exprés de tecnologia</h2>
+                <p class="text-muted">Aconsegueix fins un 30% de descompte en dispositius intel·ligents per a casa. Modernitza el teu llar amb la nova IA.</p>
+                <button class="btn btn-dark px-4">Explorar ofertes</button>
+            </div>
+            <div class="col-md-5 d-none d-md-block text-end">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded" alt="Smarthome">
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-bold m-0">Tendències actuals</h3>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-arrow-left"></i></button>
+                <button class="btn btn-outline-dark btn-sm rounded-circle"><i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="product-card p-3 shadow-sm h-100">
+                    <button class="btn-wishlist"><i class="bi bi-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" class="img-fluid mb-3 rounded" alt="Sony">
+                    <div class="rating"><i class="bi bi-star-fill"></i> 4.8 <span class="text-muted small">(128)</span></div>
+                    <h6 class="fw-bold my-2">Sony WH-1000XM5</h6>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fw-bold fs-5 text-primary">348€</span>
+                        <button class="btn btn-primary btn-sm"><i class="bi bi-cart-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-card p-3 shadow-sm h-100">
+                    <span class="badge bg-primary position-absolute top-0 start-0 m-3">Novetat</span>
+                    <button class="btn-wishlist"><i class="bi bi-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=300&q=80" class="img-fluid mb-3 rounded" alt="Canon">
+                    <div class="rating"><i class="bi bi-star-fill"></i> 4.9 <span class="text-muted small">(85)</span></div>
+                    <h6 class="fw-bold my-2">Canon EOS R6</h6>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fw-bold fs-5 text-primary">2499€</span>
+                        <button class="btn btn-primary btn-sm"><i class="bi bi-cart-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-card p-3 shadow-sm h-100">
+                    <button class="btn-wishlist"><i class="bi bi-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1589492477829-5e65395b66cc?auto=format&fit=crop&w=300&q=80" class="img-fluid mb-3 rounded" alt="Google">
+                    <div class="rating"><i class="bi bi-star-fill"></i> 4.7 <span class="text-muted small">(259)</span></div>
+                    <h6 class="fw-bold my-2">Google Nested Àudio</h6>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fw-bold fs-5 text-primary">99,99€</span>
+                        <button class="btn btn-primary btn-sm"><i class="bi bi-cart-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="product-card p-3 shadow-sm h-100">
+                    <button class="btn-wishlist"><i class="bi bi-heart"></i></button>
+                    <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&w=300&q=80" class="img-fluid mb-3 rounded" alt="Oculus">
+                    <div class="rating"><i class="bi bi-star-fill"></i> 4.8 <span class="text-muted small">(173)</span></div>
+                    <h6 class="fw-bold my-2">Oculus Quest 2</h6>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fw-bold fs-5 text-primary">299€</span>
+                        <button class="btn btn-primary btn-sm"><i class="bi bi-cart-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row text-center py-5">
+        <div class="col-md-4 mb-4">
+            <div class="feature-icon"><i class="bi bi-truck"></i></div>
+            <h5 class="fw-bold">Enviament gratuït</h5>
+            <p class="text-muted small">* A partir de 50€</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
+            <h5 class="fw-bold">Pagament segur</h5>
+            <p class="text-muted small">100% pagament segur amb encriptació SSL</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="feature-icon"><i class="bi bi-headset"></i></div>
+            <h5 class="fw-bold">Suport 24/7</h5>
+            <p class="text-muted small">Un equip dedicat a ajudar-te en qualsevol moment</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container pb-5">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-4"><i class="bi bi-lightbulb-fill text-warning"></i> SELECTIO</h5>
+                <p class="text-muted small">La teua tenda online per a les últimes novetats en tecnologia. Millora les teues destreses digitals hui.</p>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3">TENDA</h6>
+                <a href="#" class="footer-link">Portàtils</a>
+                <a href="#" class="footer-link">Mòbils</a>
+                <a href="#" class="footer-link">Accesoris</a>
+                <a href="#" class="footer-link">Ofertes</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h6 class="fw-bold mb-3">POLÍTIQUES</h6>
+                <a href="#" class="footer-link">Condicions generals</a>
+                <a href="#" class="footer-link">Política de privacitat</a>
+                <a href="#" class="footer-link">Preferències de cookies</a>
+                <a href="#" class="footer-link">Avís legal</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h6 class="fw-bold mb-3">XARXES SOCIALS</h6>
+                <a href="https://facebook.com" class="footer-link"><i class="bi bi-facebook me-2"></i> Facebook</a>
+                <a href="https://linkedin.com" class="footer-link"><i class="bi bi-linkedin me-2"></i> Linkedin</a>
+                <a href="https://instagram.com" class="footer-link"><i class="bi bi-instagram me-2"></i> Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center py-3 border-top bg-light">
+        <small class="text-muted">@ 2025 Selectio</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+:root{
+  --selectio-body: #f3f4f6;       /* fons del body (gris claret) */
+  --selectio-offer: #dfeaf6;      /* fons banda OFERTA LIMITADA */
+  --selectio-badge: #cfe3fb;      /* fons del text OFERTA LIMITADA */
+}
+
+body{
+  font-family: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--selectio-body);
+}
+
+/* Pill “Totes les categories” només en desktop (en mòbil es veu com un link normal) */
+@media (min-width: 992px){
+  .categories-pill{
+    background: #d7e6ff;
+    border-radius: 999px;
+    padding: .35rem .85rem !important;
+    color: #1d5fbf !important;
+  }
+}
+
+/* Menú mòbil: que faça la “lleugera ombra” i quede com en la captura */
+.navbar-collapse.show{
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 10px 18px rgba(0,0,0,.12);
+}
+
+/* Submenú “Totes les categories” en mòbil que siga dins del flux i ample 100% (com la imatge) */
+@media (max-width: 991.98px){
+  .navbar .dropdown-menu{
+    position: static !important;
+    width: 100%;
+    margin-top: .35rem;
+  }
+}
+
+/* Hero i productes */
+.hero-card{
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+.offer-banner{
+  background: var(--selectio-offer);
+}
+
+/* badge oferta limitada */
+.offer-badge{
+  background: var(--selectio-badge);
+  color: #1d5fbf;
+}
+.offer-dot{
+  width: 22px;
+  height: 22px;
+  background: #b7d6ff;
+  color: #1d5fbf;
+  font-size: .8rem;
+}
+
+/* Cards tendències */
+.product-card{
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.product-heart{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.price{
+  color: #1d5fbf;
+  font-size: 1.05rem;
+}
+
+/* Beneficis */
+.benefit-icon{
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  background: #d7e6ff;
+  display: grid;
+  place-items: center;
+  color: #2b2b2b;
+  font-size: 1.25rem;
+}
+
+/* Footer links */
+.footer-link{
+  text-decoration: none;
+  color: #6c757d;
+}
+.footer-link:hover{
+  color: #212529;
+  text-decoration: underline;
+}
+.footer-social{
+  text-decoration: none;
+  color: #6c757d;
+}
+.footer-social:hover{
+  color: #212529;
+}
