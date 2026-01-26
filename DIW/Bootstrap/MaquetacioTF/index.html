@@ -18,34 +18,39 @@
         </a>
         
         <div class="d-flex order-lg-2 align-items-center">
-            <div class="input-group d-none d-md-flex me-3" style="width: 250px;">
+            <div class="input-group d-none d-md-flex me-3">
                 <span class="input-group-text search-input border-0"><i class="bi bi-search"></i></span>
                 <input type="text" class="form-control search-input border-0" placeholder="Cercar producte...">
             </div>
             
         </div>
 
-        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
+        <div class="collapse navbar-collapse order-lg-4 justify-content-end" id="navbarNav">
+            <ul class="nav justify-content-end">
                 <li class="nav-item"><a class="nav-link" href="#">Portàtils</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Mòbils</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Totes les categories</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Components</a></li>
-                        <li><a class="dropdown-item" href="#">Perifèrics</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Consoles</a></li>
-                        <li><a class="dropdown-item" href="#">Videojocs</a></li>
-                    </ul>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Mòbils</a></li>               
+
+                <!-- Example single danger button -->
+                <div class="btn-group">
+                <button type="button" class="btn dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                    Totes les categories
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Components</a></li>
+                    <li><a class="dropdown-item" href="#">Perifèrics</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Consoles</a></li>
+                    <li><a class="dropdown-item" href="#">Videojocs</a></li>
+                </ul>
+                </div>
+                
                 <li class="nav-item"><a class="nav-link" href="#">Ofertes</a></li>
             </ul>
             <a href="#" class="nav-link position-relative me-3">
-                <i class="bi bi-cart-fill fs-5"></i>
+                <i class="bi bi-cart-fill fs-3"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
             </a>
-            <a href="#" class="nav-link"><i class="bi bi-person fs-5"></i></a>
+            <a href="#" class="nav-link"><i class="bi bi-person fs-3"></i></a>
             <button class="navbar-toggler ms-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,22 +63,22 @@
     
         <section class="hero-section shadow-sm mb-5">
             <div class="row g-0 align-items-center">
-                <div class="col-md-6 p-5">
+                <div class="col-md-7 p-5">
                     <span class="text-primary fw-bold small">Novetats</span>
                     <h1 class="display-4 fw-bold mt-2">El futur de la tecnologia està ací</h1>
                     <p class="text-muted mb-4">Actualitza't hui amb els últims accesoris d'alt rendiment amb dissenys moderns.</p>
                     <button class="btn btn-primary px-4 py-2">Comprar</button>
                 </div>
-                <div class="col-md-6">
-                    <img src="img/img-1.png" class="img-fluid" alt="Tecnologia">
+                <div class="col-md-5 justify-content-end">
+                    <img src="img/img-1.png" class="img-fluid rounded justify-content-end" alt="Tecnologia">
                 </div>
             </div>
         </section>
 
         <section class="mb-5">
-            <div>
-                <h3>Comprar per categoria</h3>
-                <a href="">Veure totes</a>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-bold m-0">Comprar per categoria</h3>                
+                <a href="#" class="text-decoration-none small fw-bold">Veure totes <i class="bi bi-arrow-right"></i></a>                
             </div>
             <div class="row g-4">
                 <div class="col-6 col-md-3">
@@ -81,7 +86,7 @@
                         <div class="category-img-wrapper">
                             <img src="img/img-2.png" alt="">
                         </div>
-                        <span>Portàtils</span>
+                        <span class="fw-bold small">Portàtils</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
@@ -89,7 +94,7 @@
                         <div class="category-img-wrapper">
                             <img src="img/img-3.png" alt="">
                         </div>
-                        <span>Mòbils</span>
+                        <span class="fw-bold small">Mòbils</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
@@ -97,7 +102,7 @@
                         <div class="category-img-wrapper">
                             <img src="img/img-4.png" alt="">
                         </div>
-                        <span>Àudio</span>
+                        <span class="fw-bold small">Àudio</span>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
@@ -105,12 +110,81 @@
                         <div class="category-img-wrapper">
                             <img src="img/img-5.png" alt="">
                         </div>
-                        <span>Wearables</span>
+                        <span class="fw-bold small">Wearables</span>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="offer-banner p-4 p-md-5 mb-5">
+            <div class="row g-0 align-items-center">                
+                <div class="col-md-8">
+                <span class="badge-offer small mb-3 d-inline-block">
+                    <i class="bi bi-clock-fill me-1"></i> OFERTA LIMITADA
+                </span>
+                <div class="card-body">
+                    <h5 class="card-title display-6 fw-bold">Ofertes exprés de tecnologia</h5>
+                    <p class="card-text text-muted">Aconsegueix fins un 30% de descompte en dispositius intel·ligents per a casa.<br> Modernitza el teu llar amb la nova IA.</p>
+                    <button type="button" class="btn btn-dark px-4">Explorar ofertes</button>
+                </div>
+                </div>
+                <div class="col-md-4">
+                <img src="img/img-6.png" class="img-fluid rounded" alt="Ofertes de tecnologia">
+                </div>
+            </div>
+        </section>
+
+        <section>     
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card">
+                <img src="img/img-7.png" class="card-img-top" alt="...">
+                <span class="position-absolute top-0 end-0 m-2 fs-7 text-danger">
+                    <button class="btn-wishlist"><i class="bi bi-heart-fill"></i></button>
+                </span>
+                <div class="card-body">
+                    <p><i class="bi bi-star-fill text-warning"></i> <a class="text-primary text-decoration-none">4.8</a> (128)</p>
+                    <h5 class="card-title">Sony WH-1000XM5</h5>
+                </div>
+                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none">348€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                <img src="img/img-8.png" class="card-img-top" alt="...">
+            <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3
+                        d-inline-flex align-items-center justify-content-center">
+                <i class="bi bi-heart text-white fs-5"></i>
+            </span>                
+                <div class="card-body">
+                    <h5 class="card-title">Título de la tarjeta</h5>
+                    <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                <img src="img/img-9.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Título de la tarjeta</h5>
+                    <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                <img src="img/img-10.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Título de la tarjeta</h5>
+                    <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
         
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

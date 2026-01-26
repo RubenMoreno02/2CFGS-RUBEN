@@ -29,11 +29,7 @@ body {
     color: #000;
 }
 
-.dropdown-menu {
-    border: none;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    border-radius: 0;
-}
+
 
 .search-input {
     background-color: #f1f3f5;
@@ -72,4 +68,17 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Oferta Limitada Banner */
+ .offer-banner {
+    background-color: #e7f0ff;
+    border-radius: 15px;
+}
+.badge-offer {
+    background-color: #b8d4ff;
+    color: #0d6efd;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-weight: 600;
 }
