@@ -11,8 +11,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg sticky-top">
+   
         <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
             <i class="bi bi-lightbulb-fill text-warning me-2"></i> SELECTIO
         </a>
@@ -59,18 +60,18 @@
 </nav>
     </header>
 
-    <main class="container my-4">
-    
+    <main class="container-fluid my-4">
+
         <section class="hero-section shadow-sm mb-5">
             <div class="row g-0 align-items-center">
-                <div class="col-md-7 p-5">
+                <div class="col-md-6 p-5">
                     <span class="text-primary fw-bold small">Novetats</span>
                     <h1 class="display-4 fw-bold mt-2">El futur de la tecnologia està ací</h1>
                     <p class="text-muted mb-4">Actualitza't hui amb els últims accesoris d'alt rendiment amb dissenys moderns.</p>
                     <button class="btn btn-primary px-4 py-2">Comprar</button>
                 </div>
-                <div class="col-md-5 justify-content-end">
-                    <img src="img/img-1.png" class="img-fluid rounded justify-content-end" alt="Tecnologia">
+                <div class="col-md-6 justify-content-end">
+                    <img src="img/img-1.png" class="img-fluid rounded justify-content-end" alt="Tecnologia" style="width: 650px; padding: 30px 0;">
                 </div>
             </div>
         </section>
@@ -120,12 +121,12 @@
             <div class="row g-0 align-items-center">                
                 <div class="col-md-8">
                 <span class="badge-offer small mb-3 d-inline-block">
-                    <i class="bi bi-clock-fill me-1"></i> OFERTA LIMITADA
+                    <i class="bi bi-clock-fill me-1 align-items-center justify-content-center"></i> OFERTA LIMITADA
                 </span>
                 <div class="card-body">
                     <h5 class="card-title display-6 fw-bold">Ofertes exprés de tecnologia</h5>
-                    <p class="card-text text-muted">Aconsegueix fins un 30% de descompte en dispositius intel·ligents per a casa.<br> Modernitza el teu llar amb la nova IA.</p>
-                    <button type="button" class="btn btn-dark px-4">Explorar ofertes</button>
+                    <p class="card-text text-muted fs-5">Aconsegueix fins un 30% de descompte en dispositius intel·ligents per a casa.<br> Modernitza el teu llar amb la nova IA.</p>
+                    <button type="button" class="btn btn-dark px-3">Explorar ofertes</button>
                 </div>
                 </div>
                 <div class="col-md-4">
@@ -134,13 +135,20 @@
             </div>
         </section>
 
-        <section>     
+        <section>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-bold m-0">Tendències actuals</h3>                
+                <span class="fletxes">
+                    <i class="bi bi-arrow-left"></i>
+                    <i class="bi bi-arrow-right"></i>
+                </span>                
+            </div>     
             <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
                 <div class="card">
                 <img src="img/img-7.png" class="card-img-top" alt="...">
-                <span class="position-absolute top-0 end-0 m-2 fs-7 text-danger">
-                    <button class="btn-wishlist"><i class="bi bi-heart-fill"></i></button>
+                <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3 d-inline-flex align-items-center justify-content-center" >
+                    <i class="bi bi-heart text-white fs-6" ></i>
                 </span>
                 <div class="card-body">
                     <p><i class="bi bi-star-fill text-warning"></i> <a class="text-primary text-decoration-none">4.8</a> (128)</p>
@@ -152,32 +160,40 @@
             <div class="col">
                 <div class="card">
                 <img src="img/img-8.png" class="card-img-top" alt="...">
-            <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3
-                        d-inline-flex align-items-center justify-content-center">
-                <i class="bi bi-heart text-white fs-5"></i>
-            </span>                
+                <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3 d-inline-flex align-items-center justify-content-center" >
+                    <i class="bi bi-heart text-white fs-6" ></i>
+                </span>
                 <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta</h5>
-                    <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                    <p><i class="bi bi-star-fill text-warning"></i> <a class="text-primary text-decoration-none">4.9</a> (85)</p>
+                    <h5 class="card-title">Canono EOS R6</h5>
                 </div>
+                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none">2499€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
                 <img src="img/img-9.png" class="card-img-top" alt="...">
+                <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3 d-inline-flex align-items-center justify-content-center" >
+                    <i class="bi bi-heart text-white fs-6" ></i>
+                </span>
                 <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta</h5>
-                    <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+                    <p><i class="bi bi-star-fill text-warning"></i> <a class="text-primary text-decoration-none">4.7</a> (259)</p>
+                    <h5 class="card-title">Google Nested Àudio</h5>
                 </div>
+                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none">99,99€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card">
                 <img src="img/img-10.png" class="card-img-top" alt="...">
+                <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3 d-inline-flex align-items-center justify-content-center" >
+                    <i class="bi bi-heart text-white fs-6" ></i>
+                </span>
                 <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta</h5>
-                    <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+                    <p><i class="bi bi-star-fill text-warning"></i> <a class="text-primary text-decoration-none">4.8</a> (173)</p>
+                    <h5 class="card-title">Oculus Quest 2</h5>
                 </div>
+                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none">299€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
                 </div>
             </div>
             </div>
