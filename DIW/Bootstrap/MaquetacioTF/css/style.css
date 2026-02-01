@@ -99,3 +99,20 @@ section span.fletxes {
     font-size: 25px;
     cursor: pointer;
 }
+
+
+/* Footer */
+.enllaç-hover {
+    color: #6c757d;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.enllaç-hover:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+    font-weight: 500;
+}
