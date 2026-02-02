@@ -1,98 +1,82 @@
 :root {
+    /* Colors base i fons */
     --bg-body: #f8f9fa;
+    --bg-card-gray: #f1f3f5;
+    --color-blanc: #ffffff;
+    --border-light: #eee;
+    
+    /* Blaus */
     --bg-blue-light: #d0e3ff;
+    --bg-blue-ultra-light: #e7f0ff;
+    --bg-blue-badge: #b8d4ff;
     --text-blue: #0d6efd;
-    --gray-card: #f1f3f5;
+    
+    /* Grisos i Textos */
+    --text-main: #212529;
+    --text-muted: #6c757d;
+    --text-dark: #333;
+    --text-black: #000;
+    --bg-hover-light: #e9ecef;
 }
 
 body {
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--bg-body);
-    color: #212529;
+    color: var(--text-main);
 }
 
-/* Navbar & Sticky setup */
+/* Navbar i Sticky setup */
 .navbar {
-    background-color: white;
-    border-bottom: 1px solid #eee;
+    background-color: var(--color-blanc);
+    border-bottom: 1px solid var(--border-light);
 }
 
 .nav-link {
-    color: #333;
+    color: var(--text-dark);
     font-weight: 500;
     padding: 0.5rem 1rem !important;
     transition: background 0.2s;
 }
 
 .nav-link:hover {
-    background-color: #e9ecef;
-    color: #000;
+    background-color: var(--bg-hover-light);
+    color: var(--text-black);
 }
 
-
-
 .search-input {
-    background-color: #f1f3f5;
+    background-color: var(--bg-card-gray);
     border: none;
     border-radius: 4px;
 }
 
+.imatge-novetat{
+    width: 650px; 
+    padding: 30px 0;
+}
+
 /* Hero Banner */
 .hero-section {
-    background-color: white;
+    background-color: var(--color-blanc);
     border-radius: 12px;
     overflow: hidden;
     margin-top: 2rem;
 }
 
-/* Custom Cards */
-.category-card {
-    background-color: white;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    border: none;
-    height: 100%;
-}
-h5{
-    margin-top: 5;
-}
-
-.category-img-wrapper {
-    background-color: #eee;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-.category-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Oferta Limitada Banner */
- .offer-banner {
-    background-color: #e7f0ff;
+/* Oferta Limitada */
+.offer-banner {
+    background-color: var(--bg-blue-ultra-light);
     border-radius: 15px;
 }
+
 .badge-offer {
-    background-color: #b8d4ff;
-    color: #0d6efd;
+    background-color: var(--bg-blue-badge);
+    color: var(--text-blue);
     border-radius: 50px;
     width: 210px;
     height: 40px;
     text-align: center;
     place-items: center;
     padding-top: 9px;
-}
-span.position-absolute.top-0.end-0{
-    width:40px; 
-    height:40px;
-    cursor: pointer;
 }
 
 section span.fletxes {
@@ -101,14 +85,14 @@ section span.fletxes {
 }
 
 /* Tres emojis */
-.emojis{
+.emojis {
     width: 80px; 
     height: 80px;
 }
 
 /* Footer */
 .enllaç-hover {
-    color: #6c757d;
+    color: var(--text-muted);
     text-decoration: none;
     padding: 8px 12px;
     display: block;
@@ -117,19 +101,17 @@ section span.fletxes {
 }
 
 .enllaç-hover:hover {
-    background-color: #f8f9fa;
-    color: #212529;
+    background-color: var(--bg-body);
+    color: var(--text-main);
     font-weight: 500;
 }
 
-@media (max-width: 768px){
-  .badge-offer {
-    width: 100%;
+@media (max-width: 768px) {
+    .badge-offer {
+        width: 100%;
     }
-    .botonegre{
+    .botonegre {
         margin: 20px;
         height: 50px;
     }
-
-
 }
