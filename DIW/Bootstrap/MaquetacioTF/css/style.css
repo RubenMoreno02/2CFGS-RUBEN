@@ -54,14 +54,6 @@ body {
     padding: 30px 0;
 }
 
-/* Hero Banner */
-.hero-section {
-    background-color: var(--color-blanc);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 2rem;
-}
-
 /* Oferta Limitada */
 .offer-banner {
     background-color: var(--bg-blue-ultra-light);
