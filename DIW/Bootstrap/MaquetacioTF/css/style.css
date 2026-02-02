@@ -122,3 +122,14 @@ section span.fletxes {
     font-weight: 500;
 }
 
+@media (max-width: 768px){
+  .badge-offer {
+    width: 100%;
+    }
+    .botonegre{
+        margin: 20px;
+        height: 50px;
+    }
+
+
+}

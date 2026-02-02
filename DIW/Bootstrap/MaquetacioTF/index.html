@@ -13,57 +13,73 @@
     <header>
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg sticky-top">
-    
-                <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+                <a class="navbar-brand d-flex align-items-center fw-bold order-1 order-lg-1" href="#">
                     <i class="bi bi-lightbulb-fill text-warning me-2"></i> SELECTIO
                 </a>
-                
-                <div class="d-flex order-lg-2 align-items-center">
-                    <div class="input-group d-none d-md-flex me-3">
+
+                <div class="d-none d-lg-flex order-2 flex-grow-1 mx-lg-4">
+                    <div class="input-group">
                         <span class="input-group-text search-input border-0"><i class="bi bi-search"></i></span>
                         <input type="text" class="form-control search-input border-0" placeholder="Cercar producte...">
                     </div>
-                    
                 </div>
 
-                <div class="collapse navbar-collapse order-lg-4 justify-content-end" id="navbarNav">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item"><a class="nav-link" href="#">Portàtils</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Mòbils</a></li>               
-
-                        <!-- Example single danger button -->
-                        <div class="btn-group">
-                        <button type="button" class="btn dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-                            Totes les categories
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Components</a></li>
-                            <li><a class="dropdown-item" href="#">Perifèrics</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Consoles</a></li>
-                            <li><a class="dropdown-item" href="#">Videojocs</a></li>
-                        </ul>
-                        </div>
-                        
-                        <li class="nav-item"><a class="nav-link" href="#">Ofertes</a></li>
-                    </ul>
+                <div class="d-flex align-items-center order-2 order-lg-4 ms-auto">
                     <a href="#" class="nav-link position-relative me-3">
                         <i class="bi bi-cart-fill fs-3"></i>
-                        <span class="position-absolute top-60 end-10 translate-middle badge rounded-pill bg-danger">2</span>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            2
+                        </span>
                     </a>
-                    <a href="#" class="nav-link"><i class="bi bi-person fs-3"></i></a>
-                    <button class="navbar-toggler ms-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <a href="#" class="nav-link me-2">
+                        <i class="bi bi-person fs-3"></i>
+                    </a>
+
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-            </nav>
-        </div>
 
+                <div class="collapse navbar-collapse order-4 order-lg-3 justify-content-lg-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Portàtils</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Mòbils</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Totes les categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Components</a></li>
+                                <li><a class="dropdown-item" href="#">Perifèrics</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Consoles</a></li>
+                                <li><a class="dropdown-item" href="#">Videojocs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ofertes</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="d-lg-none px-3 pb-3">
+                <div class="input-group">
+                    <span class="input-group-text search-input border-0"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control search-input border-0" placeholder="Cercar producte...">
+                </div>
+            </div>
+        </div>
     </header>
+
 
     <main class="container my-4">
         <!--Part Novetats-->
-        <section class="hero-section shadow-lg mb-5">
+        <section class="hero-section shadow-sm mb-5">
             <div class="row g-0 align-items-center">
                 <div class="col-md-6 p-5">
                     <span class="text-primary fw-bold small">Novetats</span>
@@ -72,7 +88,7 @@
                     <button class="btn btn-primary px-4 py-2">Comprar</button>
                 </div>
                 <div class="col-md-6 justify-content-end">
-                    <img src="img/img-1.png" class="img-fluid rounded justify-content-end pe-4" alt="Tecnologia" style="width: 650px; padding: 30px 0;">
+                    <img src="img/img-1.png" class="img-fluid rounded justify-content-end" alt="Tecnologia" style="width: 650px; padding: 30px 0;">
                 </div>
             </div>
         </section>
@@ -83,33 +99,33 @@
                 <h3 class="fw-bold m-0">Comprar per categoria</h3>                
                 <a href="#" class="text-decoration-none small fw-bold">Veure totes <i class="bi bi-arrow-right"></i></a>                
             </div>
-            <div class="row g-2 bg-white shadow-lg rounded-4">
-                <div class="col-6 col-md-3">
-                    <div class="category-card">
+            <div class="row g-4 ">
+                <div class="col-md-6 col-12 col-lg-3">
+                    <div class="category-card shadow-sm">
                         <div class="category-img-wrapper">
                             <img src="img/img-2.png" alt="">
                         </div>
                         <span class="fw-bold small">Portàtils</span>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div class="category-card">
+                <div class="col-md-6 col-12 col-lg-3">
+                    <div class="category-card shadow-sm">
                         <div class="category-img-wrapper">
                             <img src="img/img-3.png" alt="">
                         </div>
                         <span class="fw-bold small">Mòbils</span>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div class="category-card">
+                <div class="col-md-6 col-12 col-lg-3">
+                    <div class="category-card shadow-sm">
                         <div class="category-img-wrapper">
                             <img src="img/img-4.png" alt="">
                         </div>
                         <span class="fw-bold small">Àudio</span>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div class="category-card">
+                <div class="col-md-6 col-12 col-lg-3">
+                    <div class="category-card shadow-sm">
                         <div class="category-img-wrapper">
                             <img src="img/img-5.png" alt="">
                         </div>
@@ -120,7 +136,7 @@
         </section>
 
         <!--Part oferta-->
-        <section class="offer-banner p-4 p-md-5 mb-5 shadow-lg">
+        <section class="offer-banner p-4 p-md-5 mb-5">
             <div class="row g-0 align-items-center">                
                 <div class="col-md-8">
                 <span class="badge-offer small mb-3 d-inline-block">
@@ -129,7 +145,7 @@
                 <div class="card-body">
                     <h5 class="card-title display-6 fw-bold">Ofertes exprés de tecnologia</h5>
                     <p class="card-text text-muted fs-5">Aconsegueix fins un 30% de descompte en dispositius intel·ligents per a casa.<br> Modernitza el teu llar amb la nova IA.</p>
-                    <button type="button" class="btn btn-dark px-3">Explorar ofertes</button>
+                    <button type="button" class="botonegre btn btn-dark px-3 mt-6 ">Explorar ofertes</button>
                 </div>
                 </div>
                 <div class="col-md-4">
@@ -138,7 +154,7 @@
             </div>
         </section>
 
-        <!--Part de 4 tendencies-->
+        <!--Part 3 tendencies-->
         <section>
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h3 class="fw-bold m-0">Tendències actuals</h3>                
@@ -147,9 +163,9 @@
                     <i class="bi bi-arrow-right"></i>
                 </span>                
             </div>     
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card">
+            <div class="row row-cols-1 row-cols-md-4 g-4 ">
+            <div class="col-md-6 col-12 col-lg-3">
+                <div class="card ">
                 <img src="img/img-7.png" class="card-img-top" alt="...">
                 <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3 d-inline-flex align-items-center justify-content-center" >
                     <i class="bi bi-heart text-white fs-6" ></i>
@@ -158,26 +174,23 @@
                     <p><i class="bi bi-star-fill text-warning"></i> <a class="text-primary text-decoration-none">4.8</a> (128)</p>
                     <h5 class="card-title">Sony WH-1000XM5</h5>
                 </div>
-                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none fs-4">348€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
+                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none">348€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-6 col-12 col-lg-3">
                 <div class="card">
                 <img src="img/img-8.png" class="card-img-top" alt="...">
                 <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3 d-inline-flex align-items-center justify-content-center" >
                     <i class="bi bi-heart text-white fs-6" ></i>
                 </span>
-                <span class="position-absolute top-0 m-2">
-                    <button type="button" class="btn btn-primary">Novetat</button>
-                </span>
                 <div class="card-body">
                     <p><i class="bi bi-star-fill text-warning"></i> <a class="text-primary text-decoration-none">4.9</a> (85)</p>
-                    <h5 class="card-title">Canon EOS R6</h5>
+                    <h5 class="card-title">Canon EOS R6 </h5>
                 </div>
-                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none fs-4">2499€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
+                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none">2499€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-6 col-12 col-lg-3">
                 <div class="card">
                 <img src="img/img-9.png" class="card-img-top" alt="...">
                 <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3 d-inline-flex align-items-center justify-content-center" >
@@ -187,10 +200,10 @@
                     <p><i class="bi bi-star-fill text-warning"></i> <a class="text-primary text-decoration-none">4.7</a> (259)</p>
                     <h5 class="card-title">Google Nested Àudio</h5>
                 </div>
-                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none fs-4">99,99€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
+                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none">99,99€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-md-6 col-12 col-lg-3">
                 <div class="card">
                 <img src="img/img-10.png" class="card-img-top" alt="...">
                 <span class="position-absolute top-0 end-0 m-2 bg-danger rounded-circle p-3 d-inline-flex align-items-center justify-content-center" >
@@ -200,30 +213,30 @@
                     <p><i class="bi bi-star-fill text-warning"></i> <a class="text-primary text-decoration-none">4.8</a> (173)</p>
                     <h5 class="card-title">Oculus Quest 2</h5>
                 </div>
-                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none fs-4">299€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
+                <div class="card-footer border-secondary"><a class="text-primary text-decoration-none">299€</a> <button type="button" class="btn btn-primary float-end"><i class="bi bi-cart-plus-fill"></i></button> </div>
                 </div>
             </div>
             </div>
         </section>
 
         <!--Part tres emojis-->
-        <div class="row mt-4 pt-4 g-4">            
+        <div class="row mt-5 pt-4 g-4">            
             <div class="col-md-4 text-center">
-                <div class="emojis d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-circle mb-3">
+                <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-circle mb-3" style="width: 80px; height: 80px;">
                     <i class="bi bi-truck text-dark fs-3"></i>
                 </div>
                 <h5 class="fw-bold mb-2">Enviament gratuït</h5>
                 <p class="text-secondary small m-0">* A partir de 50€</p>
             </div>
             <div class="col-md-4 text-center">
-                <div class="emojis d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-circle mb-3">
-                    <i class="bi bi-shield-lock-fill fs-3"></i>
+                <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-circle mb-3" style="width: 80px; height: 80px;">
+                    <i class="bi bi-shield-check text-dark fs-3"></i>
                 </div>
                 <h5 class="fw-bold mb-2">Pagament segur</h5>
                 <p class="text-secondary small m-0">100% pagament segur amb encriptació SSL</p>
             </div>
             <div class="col-md-4 text-center">
-                <div class="emojis d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-circle mb-3">
+                <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-circle mb-3" style="width: 80px; height: 80px;">
                     <i class="bi bi-headset text-dark fs-3"></i>
                 </div>
                 <h5 class="fw-bold mb-2">Suport 24/7</h5>
@@ -233,71 +246,71 @@
     </main>
 
     <footer class="bg-white pt-5 pb-3 mt-5">
-        <div class="container">
-            <div class="row">
-                
-                <div class="slectio col-lg-3 col-md-6 mb-4 align-items-center">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="bi bi-lightbulb-fill text-warning fs-3 me-2"></i>
-                        <h4 class=" m-0 fs-3">SELECTIO</h4>
-                    </div>
-                    <p class="text-secondary small pe-lg-5">
-                        La teua tenda online per a les últimes novetats en tecnologia. Millora les teues destreses digitals hui.
-                    </p>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-3">
+                    <i class="bi bi-lightbulb-fill text-warning fs-3 me-2"></i>
+                    <h4 class="fw-bold text-secondary text-uppercase m-0">Selectio</h4>
                 </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-dark mb-3 fs-3 ps-2">TENDA</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="enllaç-hover">Portàtils</a></li>
-                        <li><a href="#" class="enllaç-hover">Mòbils</a></li>
-                        <li><a href="#" class="enllaç-hover">Accesoris</a></li>
-                        <li><a href="#" class="enllaç-hover">Ofertes</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-dark mb-3 fs-3 ps-2">POLÍTIQUES</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="enllaç-hover">Condicions generals</a></li>
-                        <li><a href="#" class="enllaç-hover">Politica de privacitat</a></li>
-                        <li><a href="#" class="enllaç-hover">Preferències de cookies</a></li>
-                        <li><a href="#" class="enllaç-hover">Avís legal</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-dark mb-3 fs-3 ps-2">XARXES SOCIALS</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="enllaç-hover d-flex align-items-center">
-                                <i class="bi bi-facebook fs-4 me-2"></i> 
-                                <span class="small">Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="enllaç-hover d-flex align-items-center">
-                                <i class="bi bi-linkedin fs-3 me-2"></i> 
-                                <span class="small">Linkedin</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="enllaç-hover d-flex align-items-center">
-                                <i class="bi bi-instagram fs-4 me-2"></i> 
-                                <span class="small">Instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <p class="text-secondary small pe-0 pe-lg-5">
+                    La teua tenda online per a les últimes novetats en tecnologia. Millora les teues destreses digitals hui.
+                </p>
             </div>
 
-            <hr class="my-4 text-secondary opacity-25">
-            
-            <div class="text-center text-secondary small">
-                @ 2025 Selectio
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5 class="text-uppercase text-dark mb-3 fs-6 ps-0 ps-md-2">Tenda</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="enllaç-hover small">Portàtils</a></li>
+                    <li><a href="#" class="enllaç-hover small">Mòbils</a></li>
+                    <li><a href="#" class="enllaç-hover small">Accesoris</a></li>
+                    <li><a href="#" class="enllaç-hover small">Ofertes</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase text-dark mb-3 fs-6 ps-0 ps-md-2">Polítiques</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="enllaç-hover small">Condicions generals</a></li>
+                    <li><a href="#" class="enllaç-hover small">Politica de privacitat</a></li>
+                    <li><a href="#" class="enllaç-hover small">Preferències de cookies</a></li>
+                    <li><a href="#" class="enllaç-hover small">Avís legal</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="text-uppercase text-dark mb-3 fs-6 ps-0 ps-md-2">Xarxes Socials</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="#" class="enllaç-hover d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="bi bi-facebook fs-4 me-0 me-md-2"></i> 
+                            <span class="small d-none d-md-inline">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="enllaç-hover d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="bi bi-linkedin fs-4 me-0 me-md-2"></i> 
+                            <span class="small d-none d-md-inline">Linkedin</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="enllaç-hover d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="logo bi bi-instagram fs-4 me-0 me-md-2"></i> 
+                            <span class="small d-none d-md-inline">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+
+        <hr class="my-4 text-secondary opacity-25">
+        
+        <div class="text-center text-secondary small">
+            @ 2025 Selectio
+        </div>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
