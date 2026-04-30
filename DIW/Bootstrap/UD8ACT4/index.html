@@ -11,21 +11,58 @@
     
 </head>
 <body>
-    <header class="container-fluid">
-        
-        <nav class="navbar row navbar-expand-lg bg-body-tertiary">
-            <div class="col-8">
-                <a class="navbar-brand" href="#">Centre de control de seguretat activa</a>
 
+    <div class="container-fluid">
+    <div class="row">
+        
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar px-0">
+            <div class="text-center py-4">
+                <img src="img/persona1.png" width="100px" alt="Rosa Risa" class="mb-2">
+                <h5 class="mb-0">Rosa Risa</h5>
+                <small class="text-muted">SecOp Nivell2</small>
             </div>
-            <div class="col-4 text-end">
-                <i class="bi bi-clock text-danger"></i>
-                    <i class="text-danger">10:52:25 +1 GMT</i>  
-                    <i class="bi bi-bug-fill"></i>
-                    <i class="bi bi-box-arrow-right text-end"></i>                   
-            </div>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-journal-text me-2"></i> Inventari actius</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-fingerprint"></i> Anàlisi forense</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="bi bi-bar-chart"></i> Estadístiques</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-file-person"></i> Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-bandaid"></i> Auditoria atacs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-envelope-exclamation"></i> Missatges <span class="badge bg-primary rounded-pill float-end">14</span></a>
+                </li>
+            </ul>
         </nav>
-    </header>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-0">
+            
+            <header class="navbar sticky-top bg-white border-bottom p-3">
+                <div class="container-fluid">
+                    <span class="navbar-brand text-secondary">Centre de control de seguretat activa</span>
+                    
+                    <div class="d-flex align-items-center">
+                        <div class="text-danger me-3">
+                            <i class="bi bi-clock"></i> 10:52:25 +1 GMT
+                        </div>
+                        <div class="vr me-3"></div>
+                        <div class="position-relative me-3">
+                            <i class="bi bi-bug-fill fs-5 text-secondary"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">99+</span>
+                        </div>
+                        <a href="#" class="text-secondary"><i class="bi bi-box-arrow-right fs-5"></i></a>
+                    </div>
+                </div>
+            </header>
 
     <main>
 
