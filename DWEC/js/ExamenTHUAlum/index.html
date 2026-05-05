@@ -11,7 +11,8 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/jquery-ui.js"></script>
-    <script src="js/bbdd.js" type = "application/javascript"></script>
+    <script src="js/bbdd.js" type="application/javascript"></script>
+    <script src="js/index.js" type="application/javascript"></script>
 </head>
 
 <body>
@@ -52,32 +53,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8" id="listado">
-                <!-- <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top" src="img/mclarenSpider650.jpg" alt="..." /></a>
-                    <div class="card-body">
-                        <h2 class="card-title">MCLAREN 650S Spider</h2>
-
-                        <div class="row justify-content-end">
-                            <div class="p-2 mb-1  col-md-3 offset-md-3 bg-warning rounded text-center">
-                                <h2 class="font-weight-bold">159.999 €</h2>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col p-3 text-center border-bottom border-dark">Año</div>
-                            <div class="col p-3 text-center border-bottom border-dark">Kilometros</div>
-                            <div class="col p-3 text-center border-bottom border-dark">Cambio</div>
-                            <div class="col p-3 text-center border-bottom border-dark">Combustible</div>
-                            <div class="w-100"></div>
-                            <div class="col p-3 text-center"><strong>2016</strong></div>
-                            <div class="col p-3 text-center"><strong>19.000 Km.</strong></div>
-                            <div class="col p-3 text-center"><strong>Automático</strong></div>
-                            <div class="col p-3 text-center"><strong>Gasolina</strong></div>
-                        </div>
-                        <a class="btn btn-primary m-3" href="#!">Reservar</a>
-                    </div>
-                </div> -->
-
+                <!-- Los coches se cargan dinámicamente via DOM desde index.js -->
             </div>
             <!-- Side widgets-->
             <div class="col-lg-4">
@@ -101,18 +77,13 @@
                                 <label for="anyoDesde" class="col-sm-4 col-form-label">Año Matriculación</label>
                                 <div class="col-sm-4">
                                     <select id="anyoDesde" class="form-control mb-3">
-                                        
-                                     
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
                                     <select id="anyoHasta" class="form-control mb-3">
-                                        
-                                        
                                     </select>
                                 </div>
                             </div>
-
 
                             <div class="form-group row">
                                 <label for="KmDesde" class="col-sm-4 col-form-label">Kilometros</label>
@@ -137,7 +108,6 @@
                                         <option value="75000">75.000</option>
                                         <option value="100000">100.000</option>
                                         <option value="1000000">+ de 100.000</option>
-                                        
                                     </select>
                                 </div>
                             </div>
@@ -146,7 +116,7 @@
                             <label for="cambio" class="col-sm-2 col-form-label">Cambio</label>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="cambio" value="" checked>
-                                <label class="form-check-label mb-3" for="inlineCheckbox1" cheched>Todos</label>
+                                <label class="form-check-label mb-3" for="inlineCheckbox1">Todos</label>
                               </div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="cambio" value="Automático">
@@ -184,10 +154,6 @@
         </div>
     </div>
     </div>
-
-
-
-
 </body>
 
 </html>
