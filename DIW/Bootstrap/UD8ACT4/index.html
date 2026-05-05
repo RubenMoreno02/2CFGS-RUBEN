@@ -22,39 +22,41 @@
     <div class="container-fluid">
         <div class="row">
 
-            <nav class="col-2  d-md-block sidebar px-0 bg-warning">
+            <nav class="col-2  d-md-block sidebar px-0 fons-menu-lat">
                 <div class="text-center py-4">
                     <img src="img/persona1.png" width="100px" alt="Rosa Risa" class="mb-2 rounded-pill">
                     <h5 class="mb-0">Rosa Risa</h5>
                     <small class="text-muted">SecOp Nivell2</small>
                 </div>
 
-                <ul class="nav flex-column">
+                <ul class="nav flex-column m-2 text-left">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-journal-text me-2"></i> Inventari actius</a>
+                        <a class="nav-link active p-3" href="#"><i class="bi bi-journal-text me-2"></i> Inventari
+                            actius</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-fingerprint"></i> Anàlisi forense</a>
+                        <a class="nav-link active p-3" href="#"><i class="bi bi-fingerprint"></i> Anàlisi forense</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link activat p-3" href="#"><i class="bi bi-bar-chart"></i>
+                            <em>Estadístiques</em></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#"><i class="bi bi-bar-chart"></i> Estadístiques</a>
+                        <a class="nav-link active p-3" href="#"><i class="bi bi-file-person"></i> Clients</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-file-person"></i> Clients</a>
+                        <a class="nav-link active p-3" href="#"><i class="bi bi-bandaid"></i> Auditoria atacs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-bandaid"></i> Auditoria atacs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-envelope-exclamation"></i> Missatges <span
-                                class="badge bg-primary rounded-pill float-end">14</span></a>
+                        <a class="nav-link active p-3" href="#"><i class="bi bi-envelope-exclamation"></i> Missatges
+                            <span class="badge bg-primary rounded-pill float">14</span></a>
                     </li>
                 </ul>
             </nav>
 
-            <main class="col-10">
+            <main class="col-10 blau-clar">
 
-                <header class="navbar sticky-top bg-white border-bottom p-3">
+                <header class="navbar bg-white border-bottom p-3 ">
                     <div class="container-fluid">
                         <span class="navbar-brand text-secondary">Centre de control de seguretat activa</span>
 
@@ -74,93 +76,164 @@
                     </div>
                 </header>
 
-                <div class="row m-4">
+                <div class="row col-12 pt-4 ps-3">
+
                     <div class="col-4">
-                        <div class="card">
-                            <div class="card-header"><i class="bi bi-shield-exclamation"></i> Nº atacs</div>
+                        <div class="card mb-4 shadow">
+                            <div class="card-header"><i class="bi bi-shield-exclamation me-2 fw-bold"></i> Nº atacs
+                            </div>
                             <div class="card-body">
                                 <h2 class="card-title text-center p-4">5/segon</h2>
-                                <a href="#" class="btn btn-primary col-12">Veure detall</a>
+                                <a href="#" class="btn col-12 text-secondary border-dark">Veure detall</a>
+                            </div>
+
+                        </div>
+
+                        <div class="card shadow">
+                            <div class="card-header"><i class="bi bi-activity"></i> Evolució </div>
+                            <div class="card-body">
+                                <img src="img/evolucio2.jpg" alt="" class="img-fluid">
                             </div>
                         </div>
+
                     </div>
 
                     <div class="col-4">
-                        <div class="card">
+                        <div class="card shadow">
                             <div class="card-header"></i><i class="bi bi-compass"></i> Atacs per continent </div>
                             <div class="card-body">
-                                <canvas id="pie-chart" width="200" height="200"></canvas>
+                                <canvas id="pie-chart"></canvas>
 
                             </div>
                         </div>
                     </div>
 
                     <div class="col-4">
-                        <div class="card">
+                        <div class="card shadow">
                             <div class="card-header"><i class="bi bi-speedometer2"></i> % Activitat </div>
                             <div class="card-body">
 
                                 <div class="row align-items-center mb-3">
                                     <div class="col-2 text-end">ssh</div>
-                                    <div class="progress mb-3 col-10</div>">
-                                        <div class="progress-bar bg-success" style="width: 35%">35%</div>
-                                        <div class="progress-bar bg-info" style="width: 30%">30%</div>
-                                    </div>
-                                </div>
-
-
-                                <div class="row align-items-center mb-3">
-                                    <div class="col-2 text-end">ssh</div>
                                     <div class="col-10">
-                                    <div class="progress" style="height: 30px;">
-                                        <div class="progress-bar bg-success" style="width: 35%">35%</div>
-                                        <div class="progress-bar bg-info" style="width: 30%">30%</div>
-                                    </div>
+                                        <div class="progress" style="height: 20px;">
+                                            <div class="progress-bar bg-success " style="width: 35%">35%</div>
+                                            <div class="progress-bar bg-info" style="width: 30%">30%</div>
+                                        </div>
                                     </div>
                                 </div>
-
-
 
                                 <div class="row align-items-center mb-3">
-                                    <div class="mb-2">ftp</div>
-                                        <div class="progress mb-3">
-                                        <div class="progress-bar bg-warning" style="width: 55%">55%</div>
-                                        <div class="progress-bar bg-danger" style="width: 45%">45%</div>
+                                    <div class="col-2 text-end">ftp</div>
+                                    <div class="col-10">
+                                        <div class="progress" style="height: 20px;">
+                                            <div class="progress-bar bg-warning" style="width: 55%">55%</div>
+                                            <div class="progress-bar bg-danger" style="width: 45%">45%</div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="mb-2">ntp</div>
-                                    <div class="progress mb-3">
-                                    <div class="progress-bar bg-secondary" style="width: 15%">15%</div>
-                                    <div class="progress-bar bg-primary" style="width: 10%">10%</div>
+                                <div class="row align-items-center mb-3">
+                                    <div class="col-2 text-end">ntp</div>
+                                    <div class="col-10">
+                                        <div class="progress" style="height: 20px;">
+                                            <div class="progress-bar bg-secondary" style="width: 15%">15%</div>
+                                            <div class="progress-bar bg-primary" style="width: 10%">10%</div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="mb-2">dns</div>
-                                    <div class="progress mb-3">
-                                    <div class="progress-bar bg-danger" style="width: 50%">50%</div>
-                                    <div class="progress-bar bg-primary" style="width: 30%">30%</div>
+                                <div class="row align-items-center mb-3">
+                                    <div class="col-2 text-end">dns</div>
+                                    <div class="col-10">
+                                        <div class="progress" style="height: 20px;">
+                                            <div class="progress-bar bg-danger" style="width: 50%">50%</div>
+                                            <div class="progress-bar bg-primary" style="width: 30%">30%</div>
+                                        </div>
+                                    </div>
                                 </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-header"><i class="bi bi-activity"></i> Evolució </div>
-                            <div class="card-body">
-                                <h2 class="card-title">5/segon</h2>
-                                <a href="#" class="btn btn-primary">Veure detall</a>
+                            </div>
+                            <div class="card-footer text-body-secondary">
+                                Última actualització fa 3 mins
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <main>
 
-                </main>
+                    <div class="col-12 pt-4 p-4">
+                        <div class="card shadow">
+                            <div class="card-header"></i><i class="bi bi-compass"></i> Tràfic </div>
+                            <div class="card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                        <th scope="col">Nº</th>
+                                        <th scope="col">Pais</th>
+                                        <th scope="col">Usuaris</th>
+                                        <th scope="col">Connexions</th>
+                                        <th scope="col">% Intents</th>
+                                        <th scope="col">Mitjana atac (seg)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <th scope="row" >1</th>
+                                        <td>155257</td>
+                                        <td>Xina</td>
+                                        <td>2525</td>
+                                        <td>1560</td>
+                                        <td>2500</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">2</th>
+                                        <td>115776</td>
+                                        <td>USA</td>
+                                        <td>6634</td>
+                                        <td>7887</td>
+                                        <td>3453</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">3</th>
+                                        <td>114889</td>
+                                        <td>Rúsia</td>
+                                        <td>8768</td>
+                                        <td>3288</td>
+                                        <td>934</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">4</th>
+                                        <td>112187</td>
+                                        <td>Indonesia</td>
+                                        <td>45533</td>
+                                        <td>67887</td>
+                                        <td>2234</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">5</th>
+                                        <td>99023</td>
+                                        <td>India</td>
+                                        <td>667675</td>
+                                        <td>3414</td>
+                                        <td>654</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
 
-                <footer>
+                            </div>
+                            <div class="card-footer text-body-secondary">
+                                Mostrant 1 de 8
+                            </div>
+                        </div>
+                    </div>
 
-                </footer>
+
+
+            </main>
+
+            <footer>
+                <p>hola</p>
+            </footer>
 </body>
 
 </html>
