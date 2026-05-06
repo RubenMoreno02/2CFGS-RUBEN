@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1000001,
+        "fecha": "2022-09-26",
+        "concepto": "prova 3",
+        "dh": "D",
+        "importe": 45
+    },
+    {
+        "id": 1000002,
+        "fecha": "2022-09-27",
+        "concepto": "prova 4",
+        "dh": "H",
+        "importe": 100
+    },
+    {
+        "id": 1000003,
+        "fecha": "2022-10-03",
+        "concepto": "prova 123",
+        "dh": "H",
+        "importe": 15
+    },
+    {
+        "id": 1000004,
+        "fecha": "2022-10-05",
+        "concepto": "decimals",
+        "dh": "H",
+        "importe": 45.95
+    },
+    {
+        "id": 1000005,
+        "fecha": "2022-10-03",
+        "concepto": "davi 2",
+        "dh": "H",
+        "importe": 1000
+    },
+    {
+        "id": 1000006,
+        "fecha": "2022-10-07",
+        "concepto": "prova data 3",
+        "dh": "D",
+        "importe": 5
+    },
+    {
+        "id": 1000007,
+        "fecha": "2022-10-07",
+        "concepto": "david 4",
+        "dh": "H",
+        "importe": 15
+    },
+    {
+        "id": 1000008,
+        "fecha": "2022-10-07",
+        "concepto": "david 4",
+        "dh": "H",
+        "importe": 20
+    },
+    {
+        "id": 1000009,
+        "fecha": "2022-10-20",
+        "concepto": "david 5",
+        "dh": "D",
+        "importe": 45
+    }
+]
