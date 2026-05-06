@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba examen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="">
+        <div class="container-fluid bg-secondary">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar bg-secondary text-center">
+                        <div class="container-fluid text-center">
+                            <a class="navbar-brand text-center " href="#">Libro Contable</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <span class="badge-count" id="comptador">0 registres</span>
+                <button class="btn border-secondary sort-btn actiu" id="btnSortAsc" title="Ordenar per data ascendent">
+                    <i class=" bi bi-sort-up"></i> Data Asc
+                </button>
+                <button class="btn border-secondary sort-btn" id="btnSortDesc" title="Ordenar per data descendent">
+                    <i class="bi bi-sort-down"></i> Data Desc
+                </button>
+            </div>
+
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-10">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Borrar</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Concepto</th>
+                        <th scope="col">D/H</th>
+                        <th scope="col">importe</th>
+                        <th scope="col">Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table">
+                            <td>
+                                <button class="btn border-secondary" id="btnGrabar">Grabar</button>
+                            </td>
+                            <td>
+                                <input type="date" class="form-control form-control-sm" id="inpFecha" required>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control form-control-sm" id="inpConcepto" placeholder="Concepto..." required maxlength="80">
+                            </td>
+                            <td>
+                                <select class="form-select form-select-sm" id="inpDH" required>
+                                    <option value="">--</option>
+                                    <option value="D">D</option>
+                                    <option value="H">H</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" class="form-control form-control-sm text-end" id="inpImporte" placeholder="0.00" step="0.01" min="0.01" required>
+                            </td>
+                            <td class="text-end fw-bold" id="saldoTotal">0.00</td>
+                        </tr>
+
+                        <tr>
+                        <tbody id="tbodyApunts">
+
+                        </tbody>
+                        </tr>
+                    </tbody>
+                    </table>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
