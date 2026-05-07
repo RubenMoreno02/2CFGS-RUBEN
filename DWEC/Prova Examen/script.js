@@ -39,10 +39,15 @@ function limpiarNodos(elemento){
     }
 }
 
+//Convierte la fecha
+function fechaADate(fechaStr){
+    const partes = fechaStr.split('/');
+    return new Date(parseInt(partes[2], 10), parseInt(partes[1], 10) - 1, parseInt(partes[0], 10));
+}
+
 //Faltan cosas
 
 //function...
-
 
 
 
