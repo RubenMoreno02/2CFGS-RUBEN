@@ -24,31 +24,30 @@
 
             <nav class="col-2 d-md-block sidebar px-0 fons-menu-lat">
                 <div class="text-center py-4">
-                    <img src="img/persona1.png" width="130px" alt="Rosa Risa" class="mb-1 rounded-pill shadow">
-                    <h5 class="mb-0">Rosa Risa</h5>
-                    <small class="text-muted">SecOp Nivell2</small>
+                    <img src="img/persona1.png" alt="Rosa Risa" class=" img-fluid w-75 mb-1 rounded-pill shadow">
+                    <span class="d-none d-lg-inline"><h5 class="mb-0 ">Rosa Risa</h5></span>
+                    <span class="d-none d-lg-inline"><small class="text-muted">SecOp Nivell2</small></span>
                 </div>
 
-                <ul class="nav flex-column m-3 text-left">
-                    <li class="nav-item">
-                        <a class="nav-link active p-3" href="#"><i class="bi bi-journal-text me-2"></i> Inventari
-                            actius</a>
+                <ul class="nav flex-column m-3 text-center text-lg-start">
+                    <li class="nav-item ">
+                        <a class="nav-link active p-3 " href="#">
+                            <i class="bi bi-journal-text me-2"></i><span class="d-none d-lg-inline ms-2">Inventari actius</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-3" href="#"><i class="bi bi-fingerprint"></i> Anàlisi forense</a>
+                        <a class="nav-link active p-3" href="#"><i class="bi bi-fingerprint"></i><span class="d-none d-lg-inline ms-2">Anàlisi forense</span></a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link activat p-3" href="#"><i class="bi bi-bar-chart"></i>
-                            <em>Estadístiques</em></a>
+                        <a class="nav-link activat p-3" href="#"><i class="bi bi-bar-chart"></i><span class="d-none d-lg-inline ms-2"><em>Estadístiques</em></span> </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-3" href="#"><i class="bi bi-file-person"></i> Clients</a>
+                        <a class="nav-link active p-3" href="#"><i class="bi bi-file-person"></i><span class="d-none d-lg-inline ms-2">Clients</span> </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-3" href="#"><i class="bi bi-bandaid"></i> Auditoria atacs</a>
+                        <a class="nav-link active p-3" href="#"><i class="bi bi-bandaid"></i><span class="d-none d-lg-inline ms-2"> Auditoria atacs</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-3" href="#"><i class="bi bi-envelope-exclamation"></i> Missatges
+                        <a class="nav-link active p-3" href="#"><i class="bi bi-envelope-exclamation"></i><span class="d-none d-lg-inline ms-2"> Missatges</span> 
                             <span class="badge bg-primary rounded-pill float">14</span></a>
                     </li>
                 </ul>
@@ -57,8 +56,8 @@
             <main class="col-10 blau-clar ps-1 pe-0">
 
                 <header class="navbar bg-white border-bottom p-4 pe-0 ">
-                    <div class="container-fluid">
-                        <span class="navbar-brand text-secondary">Centre de control de seguretat activa</span>
+                    <div class="container-fluid d-flex justify-content-center justify-content-md-between align-items-center">
+                        <span class="navbar-brand text-secondary d-none d-md-inline ms-2">Centre de control de seguretat activa</span>
 
                         <div class="d-flex align-items-center">
                             <div class="text-danger me-3">
@@ -76,10 +75,10 @@
                     </div>
                 </header>
 
-                <div class="row col-12 pt-4 ps-5">
+                <div class="row gy-4 col-12 pt-4 ps-5">
 
                     <!-- Card Nº atacs -->
-                    <div class="col-4">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="card mb-4 shadow">
                             <div class="card-header"><i class="bi bi-shield-exclamation me-2 fw-bold"></i> Nº atacs
                             </div>
@@ -101,7 +100,7 @@
                     </div>
 
                     <!-- Card Atacs per continent -->
-                    <div class="col-4">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="card shadow">
                             <div class="card-header"></i><i class="bi bi-compass"></i> Atacs per continent </div>
                             <div class="card-body">
@@ -113,7 +112,7 @@
 
 
                     <!-- Card Activitat -->
-                    <div class="col-4">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="card shadow">
                             <div class="card-header"><i class="bi bi-speedometer2"></i> % Activitat </div>
                             <div class="card-body">
@@ -228,21 +227,20 @@
                             </div>
 
                             <div class="row align-items-center card-footer col-12 m-auto">
-                                <div class="col-6">
-                                    <div class="text-body-secondary ">
-                                        Mostrant 1 de 8
+                                <div class="col-12 col-md-6 text-center text-md-start">
+                                    <div class="text-body-secondary">
+                                        <span class="d-none d-md-inline ms-2">Mostrant 1 de 8</span>
                                     </div>
                                 </div>
 
-                                <div class="col-6 ">
+                                <div class="col-12 col-md-6 mt-2 mt-md-0">
                                     <nav aria-label="Navegación de páginas">
-                                        <ul class="pagination mb-1 justify-content-end">
+                                        <ul class="pagination mb-1 justify-content-center justify-content-md-end">
                                             <li class="page-item disabled">
                                                 <a class="page-link">Anterior</a>
                                             </li>
-                                            <li class="page-item active bg-secondary">
-                                                <a class="page-link bg-secondary border-secondary" href="#"
-                                                    aria-current="page">1</a>
+                                            <li class="page-item active">
+                                                <a class="page-link bg-secondary border-secondary" href="#" aria-current="page">1</a>
                                             </li>
                                             <li class="page-item">
                                                 <a class="page-link" href="#">Següent</a>
