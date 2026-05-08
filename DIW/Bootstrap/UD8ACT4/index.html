@@ -19,8 +19,8 @@
 
 <body>
 
-    <div class="container-fluid blau-clar  ps-4 ">
-        <div class="row ">
+    <div class="container-fluid blau-clar ps-4 ">
+        <div class="row">
 
             <nav class="col-2 d-md-block sidebar px-0 fons-menu-lat">
                 <div class="text-center py-4">
@@ -78,6 +78,7 @@
 
                 <div class="row col-12 pt-4 ps-5">
 
+                    <!-- Card Nº atacs -->
                     <div class="col-4">
                         <div class="card mb-4 shadow">
                             <div class="card-header"><i class="bi bi-shield-exclamation me-2 fw-bold"></i> Nº atacs
@@ -89,6 +90,7 @@
 
                         </div>
 
+                        <!-- Card Evolució -->
                         <div class="card shadow">
                             <div class="card-header"><i class="bi bi-activity"></i> Evolució </div>
                             <div class="card-body">
@@ -98,6 +100,7 @@
 
                     </div>
 
+                    <!-- Card Atacs per continent -->
                     <div class="col-4">
                         <div class="card shadow">
                             <div class="card-header"></i><i class="bi bi-compass"></i> Atacs per continent </div>
@@ -108,6 +111,8 @@
                         </div>
                     </div>
 
+
+                    <!-- Card Activitat -->
                     <div class="col-4">
                         <div class="card shadow">
                             <div class="card-header"><i class="bi bi-speedometer2"></i> % Activitat </div>
@@ -167,73 +172,100 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                        <th scope="col">Nº</th>
-                                        <th scope="col">Pais</th>
-                                        <th scope="col">Usuaris</th>
-                                        <th scope="col">Connexions</th>
-                                        <th scope="col">% Intents</th>
-                                        <th scope="col">Mitjana atac (seg)</th>
+                                            <th scope="col">Nº</th>
+                                            <th scope="col">Pais</th>
+                                            <th scope="col">Usuaris</th>
+                                            <th scope="col">Connexions</th>
+                                            <th scope="col">% Intents</th>
+                                            <th scope="col">Mitjana atac (seg)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                        <th scope="row" >1</th>
-                                        <td>155257</td>
-                                        <td>Xina</td>
-                                        <td>2525</td>
-                                        <td>1560</td>
-                                        <td>2500</td>
+                                            <th scope="row">1</th>
+                                            <td>155257</td>
+                                            <td>Xina</td>
+                                            <td>2525</td>
+                                            <td>1560</td>
+                                            <td>2500</td>
                                         </tr>
                                         <tr>
-                                        <th scope="row">2</th>
-                                        <td>115776</td>
-                                        <td>USA</td>
-                                        <td>6634</td>
-                                        <td>7887</td>
-                                        <td>3453</td>
+                                            <th scope="row">2</th>
+                                            <td>115776</td>
+                                            <td>USA</td>
+                                            <td>6634</td>
+                                            <td>7887</td>
+                                            <td>3453</td>
                                         </tr>
                                         <tr>
-                                        <th scope="row">3</th>
-                                        <td>114889</td>
-                                        <td>Rúsia</td>
-                                        <td>8768</td>
-                                        <td>3288</td>
-                                        <td>934</td>
+                                            <th scope="row">3</th>
+                                            <td>114889</td>
+                                            <td>Rúsia</td>
+                                            <td>8768</td>
+                                            <td>3288</td>
+                                            <td>934</td>
                                         </tr>
                                         <tr>
-                                        <th scope="row">4</th>
-                                        <td>112187</td>
-                                        <td>Indonesia</td>
-                                        <td>45533</td>
-                                        <td>67887</td>
-                                        <td>2234</td>
+                                            <th scope="row">4</th>
+                                            <td>112187</td>
+                                            <td>Indonesia</td>
+                                            <td>45533</td>
+                                            <td>67887</td>
+                                            <td>2234</td>
                                         </tr>
                                         <tr>
-                                        <th scope="row">5</th>
-                                        <td>99023</td>
-                                        <td>India</td>
-                                        <td>667675</td>
-                                        <td>3414</td>
-                                        <td>654</td>
+                                            <th scope="row">5</th>
+                                            <td>99023</td>
+                                            <td>India</td>
+                                            <td>667675</td>
+                                            <td>3414</td>
+                                            <td>654</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                
+
 
                             </div>
-                            <div class="card-footer text-body-secondary">
-                                Mostrant 1 de 8
+
+                            <div class="row align-items-center card-footer col-12 m-auto">
+                                <div class="col-6">
+                                    <div class="text-body-secondary ">
+                                        Mostrant 1 de 8
+                                    </div>
+                                </div>
+
+                                <div class="col-6 ">
+                                    <nav aria-label="Navegación de páginas">
+                                        <ul class="pagination mb-1 justify-content-end">
+                                            <li class="page-item disabled">
+                                                <a class="page-link">Anterior</a>
+                                            </li>
+                                            <li class="page-item active bg-secondary">
+                                                <a class="page-link bg-secondary border-secondary" href="#"
+                                                    aria-current="page">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Següent</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-
-
+                <footer class="col-12">
+                    <nav class="navbar bg-body-tertiary">
+                        <div class="container-fluid d-flex justify-content-center">
+                            <span class="navbar-text">
+                                <em>@202X Disseny Interfícies Web</em>
+                            </span>
+                        </div>
+                    </nav>
+                </footer>
             </main>
 
-            <footer>
-                <p>hola</p>
-            </footer>
 </body>
 
 </html>
