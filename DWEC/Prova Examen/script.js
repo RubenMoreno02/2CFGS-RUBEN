@@ -15,17 +15,29 @@ function main(){
     document.getElementById('btnGrabar').addEventListener('click', grabarApunte);
 
     document.getElementById('cuerpoTabla').addEventListener('click', function (e){
-        if(e.target.classlist.contains('btn-borrar')) {
+        if(e.target.classList.contains('btn-borrar')) {
             const indice = parseInt(e.target.dataset.indice, 10);
             borrarApunte(indice);
         }
     });
 
 
-    //Falta ordenar por fecha
+    //Ordenar por fecha
+    document.getElementById('btnSortAsc').addEventListener('click', function (){
+        document.getElementById('btnSortAsc').classList.add('actiu');
+        document.getElementById('btnSortDesc').classList.remove('actiu');
+        const apuntes = getApuntes().sort((a, b) => compararFechas(a.fecha, b.fecha));
+        setApuntes(apuntes);
+        pintarTodos(apuntes);
+    });
 
-
-
+    document.getElementById('btnSortDesc').addEventListener('click', function(){
+        document.getElementById('btnSortDesc').classList.add('actiu');
+        document.getElementById('btnSortAsc').classList.remove('actiu');
+        const apuntes = getApuntes().sort((a, b) => compararFechas(b.fecha, a.fecha));
+        setApuntes(apuntes);
+        pintarTodos(apuntes);
+    });
 }
 
 
@@ -45,9 +57,9 @@ function fechaADate(fechaStr){
     return new Date(parseInt(partes[2], 10), parseInt(partes[1], 10) - 1, parseInt(partes[0], 10));
 }
 
-//Faltan cosas
-
-//function...
+function compararFechas(fechaA, fechaB){
+    return fechaADate(fechaA) - fechaADate(fechaB);
+}
 
 
 
@@ -79,6 +91,7 @@ function pintarTodos(apuntes) {
     limpiarNodos(comptador);
     comptador.appendChild(document.createTextNode(apuntes.length + ' registres'));
 }
+
 
 //Crear filas en tabla
 function crearFila(apunte, saldo, indice){
@@ -123,8 +136,8 @@ function crearFila(apunte, saldo, indice){
 
     //Saldo
     const tdSaldo = document.createElement('td');
-    tdSaldo.classList.add('text-end');
-    tdSaldo.classList.add('fw-bold');
+    tdSaldo.classList.add('text-end', 'fw-bold');
+    
     if(saldo > 0) tdSaldo.classList.add('saldo-neg');
     else if (saldo < 0) tdSaldo.classList.add('saldo-neg');
     else tdSaldo.classList.add('saldo-zero');
@@ -136,19 +149,82 @@ function crearFila(apunte, saldo, indice){
 
 
 
+//Validaciones
 
 
 
 
 
 
+//Grabar apuntes
+function grabarApunte(){
+    const fechaRaw = document.getElementById('inpFecha').value.trim();
+    const concepto = document.getElementById('inpConcepto').value.trim();
+    const dh = document.getElementById('inpDH').value;
+    const importe = document.getElementById('inpImporte').value;
+
+    if(!validarFecha(fechaRaw)){
+        alert('La fecha no es correcta');
+        return;
+    }
+    if(!validarConcepto(concepto)){
+        alert('Concepto no vacio');
+        return;
+    }
+    if(!validarDH(dh)){
+        alert('seleccionar D o H');
+        return;
+    }
+    if(!validarImporte(importe)){
+        alert('Mayor que 0');
+        return;
+    }
+
+    const partes = fechaRaw.split('-');
+    const fechaFormateada = partes[2] + '/' + partes[1] + '/' + partes[0];
+
+    const nuevoApunte = {
+        fecha: fechaFormateada,
+        concepto: concepto,
+        dh: dh,
+        importe: parseFloat(importe)
+    };
+
+    const apuntes = getApuntes();
+    apuntes.push(nuevoApunte);
+    setApuntes(apuntes);
+    pintarTodos(apuntes);
+
+    //limpiar formulario
+    document.getElementById('inpFecha').value = '';
+    document.getElementById('inpConcepto').value = '';
+    document.getElementById('inpDH').value = '';
+    document.getElementById('inpImporte').value = '';
+}
 
 
+//Cálculo de saldo
+function calcularSaldo(apuntes){
+    return apuntes.reduce(function(acumulado, apunte){
+        if(apunte.dh === 'H'){
+            return acumulado + apunte.importe;
+        } else {
+            return acumulado - apunte.importe;
+        }
+    }, 0);
+}
 
 
+//Borrar apunte
+function borrarApunte(indice){
+    const confirmado = confirm('¿Quieres borrarlo parguela?');
+    if (!confirmado) return;
 
-
-
+    const apuntes = getApuntes();
+    apuntes.splice(indice, 1);
+    setApuntes(apuntes);
+    pintarTodos(apuntes);
+}
 
 
 //LocalStorage
