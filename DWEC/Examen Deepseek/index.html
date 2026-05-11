@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valencia CF - Jugadores</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Nuestro JavaScript -->
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación responsive -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">VCF</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Plantilla</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera con logo y ordenación -->
+    <header class="py-3 bg-light border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-2">
+                <h1 class="fw-bolder">Jugadores del Valencia CF</h1>
+                <p class="lead mb-0">Leyendas y figuras actuales</p>
+            </div>
+            <div class="text-start">
+                <p>Ordenar por:
+                    <button class="btn btn-secondary mx-2" id="relevancia">Relevancia</button>
+                    <button class="btn btn-secondary mx-2" id="precioAlto">Valor más alto</button>
+                    <button class="btn btn-secondary mx-2" id="precioBajo">Valor más bajo</button>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="row">
+            <!-- Listado de jugadores generado dinámicamente -->
+            <div class="col-lg-8" id="listado">
+                <!-- Se llena con tarjetas desde index.js -->
+            </div>
+
+            <!-- Barra lateral: búsqueda y filtros -->
+            <div class="col-lg-4">
+                <!-- Búsqueda por nombre con autocomplete -->
+                <div class="card mb-4">
+                    <div class="card-header">Buscar</div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Nombre del jugador..."
+                                aria-label="Nombre del jugador..." id="nombreBusqueda"/>
+                            <button id="ir" class="btn btn-primary" type="button">Ir!</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtros -->
+                <div class="card mb-4">
+                    <div class="card-header">Filtrar</div>
+                    <div class="card-body">
+                        <form id="formFiltros">
+                            <!-- Edad desde / hasta -->
+                            <div class="form-group row mb-2">
+                                <label for="edadDesde" class="col-sm-4 col-form-label">Edad</label>
+                                <div class="col-sm-4">
+                                    <select id="edadDesde" class="form-control">
+                                        <!-- Se llena con edades de los jugadores -->
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <select id="edadHasta" class="form-control">
+                                        <!-- Se llena con edades de los jugadores -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Partidos jugados desde / hasta -->
+                            <div class="form-group row mb-2">
+                                <label for="partidosDesde" class="col-sm-4 col-form-label">Partidos</label>
+                                <div class="col-sm-4">
+                                    <select id="partidosDesde" class="form-control">
+                                        <option value="0" selected>Desde</option>
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="150">150</option>
+                                        <option value="200">200</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <select id="partidosHasta" class="form-control">
+                                        <option value="500" selected>Hasta</option>
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="150">150</option>
+                                        <option value="200">200</option>
+                                        <option value="500">+200</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Posición (radio) -->
+                            <div class="form-group mb-2">
+                                <label class="col-form-label">Posición</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="posicion" value="" checked>
+                                    <label class="form-check-label">Todas</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="posicion" value="Delantero">
+                                    <label class="form-check-label">Delantero</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="posicion" value="Centrocampista">
+                                    <label class="form-check-label">Centrocampista</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="posicion" value="Defensa">
+                                    <label class="form-check-label">Defensa</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="posicion" value="Portero">
+                                    <label class="form-check-label">Portero</label>
+                                </div>
+                            </div>
+
+                            <!-- Nacionalidad -->
+                            <div class="form-group row mb-3">
+                                <label for="nacionalidad" class="col-sm-5 col-form-label">Nacionalidad</label>
+                                <div class="col-sm-7">
+                                    <select id="nacionalidad" class="form-control">
+                                        <option value="">Todas</option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="España">España</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Mensajes de error -->
+                            <p class="text-danger" id="errorMensaje"></p>
+                            <button type="reset" class="btn btn-primary mx-2" id="eliminarFiltro">Eliminar filtros</button>
+                            <button type="submit" class="btn btn-primary mx-2" id="filtrar">Aplicar</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Widget lateral -->
+                <div class="card mb-4">
+                    <div class="card-header">VCF</div>
+                    <div class="card-body">Sigue la actualidad del Valencia CF. Temporada 2025.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

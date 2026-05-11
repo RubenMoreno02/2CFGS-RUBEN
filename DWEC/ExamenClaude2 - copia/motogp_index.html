@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGP Manager</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="motogp_index.html">MotoGP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="motogp_index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="motogp_formulario.html">Añadir piloto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera -->
+    <header class="py-3 bg-light border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-2">
+                <h1 class="fw-bolder">🏍️ MotoGP Manager</h1>
+            </div>
+            <div class="text-start">
+                <p>Ordenar por:
+                    <button class="btn btn-secondary mx-2" id="btnRelevancia">Relevancia</button>
+                    <button class="btn btn-secondary mx-2" id="btnVictorias">Más victorias</button>
+                    <button class="btn btn-secondary mx-2" id="btnMundiales">Más mundiales</button>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="row">
+
+            <!-- Listado de cards (col izquierda) -->
+            <div class="col-lg-8" id="listado">
+                <!--
+                GUÍA: Estructura de cada card que JS genera aquí dentro:
+
+                <div class="card mb-4">
+                    <img class="card-img-top" src="piloto.imagen" alt="nombre">
+                    <div class="card-body">
+                        <h2 class="card-title">#93 Marc Marquez</h2>
+
+                        <div class="row justify-content-end">
+                            <div class="p-2 mb-1 col-md-3 offset-md-3 bg-warning rounded text-center">
+                                <h5>Ducati Gresini</h5>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col p-3 text-center border-bottom border-dark">Nacionalidad</div>
+                            <div class="col p-3 text-center border-bottom border-dark">Año nac.</div>
+                            <div class="col p-3 text-center border-bottom border-dark">Mundiales</div>
+                            <div class="col p-3 text-center border-bottom border-dark">Victorias</div>
+                            <div class="w-100"></div>
+                            <div class="col p-3 text-center"><strong>ESP</strong></div>
+                            <div class="col p-3 text-center"><strong>1993</strong></div>
+                            <div class="col p-3 text-center"><strong>8</strong></div>
+                            <div class="col p-3 text-center"><strong>59</strong></div>
+                        </div>
+
+                        <div class="mt-3">
+                            <button class="btn btn-danger m-1 btn-ficha"    data-id="1">Ver ficha</button>
+                            <a class="btn btn-primary m-1 btn-editar"       href="motogp_formulario.html?id=1">Editar</a>
+                            <button class="btn btn-secondary m-1 btn-eliminar" data-id="1">Eliminar</button>
+                            <button class="btn btn-warning m-1 btn-fav"     data-id="1">☆</button>
+                        </div>
+                    </div>
+                </div>
+
+                NOTA: btn-editar es un <a> que redirige a motogp_formulario.html?id=X
+                      El resto son <button> con data-id para la delegación de eventos.
+                      Si el piloto es favorito: card tiene clase 'border border-warning'
+                      y el btn-fav muestra ★ en lugar de ☆.
+                -->
+            </div>
+
+            <!-- Sidebar derecha -->
+            <div class="col-lg-4">
+
+                <!-- Buscador con autocomplete -->
+                <div class="card mb-4">
+                    <div class="card-header">Buscar piloto</div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Nombre o equipo..." id="inputBuscar">
+                            <button class="btn btn-primary" id="btnBuscar">Ir!</button>
+                        </div>
+                        <!--
+                        GUÍA JS: iniciarAutocomplete(pilotos)
+                        - Sugerencias: nombre completo + equipo sin repetición
+                        - Al seleccionar → aplicarFiltros()
+                        - Al escribir ('input') → aplicarFiltros()
+                        - Al pulsar btnBuscar → aplicarFiltros()
+                        -->
+                    </div>
+                </div>
+
+                <!-- Filtros -->
+                <div class="card mb-4">
+                    <div class="card-header">Filtrar</div>
+                    <div class="card-body">
+                        <form>
+
+                            <!-- Filtro por año de nacimiento -->
+                            <div class="form-group row mb-3">
+                                <label class="col-sm-4 col-form-label">Año nacimiento</label>
+                                <div class="col-sm-4">
+                                    <select id="anyoDesde" class="form-control">
+                                        <!-- GUÍA JS: opciones generadas dinámicamente
+                                             Primera opción: <option value="">Desde</option>
+                                             El resto: años únicos ordenados ASC -->
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <select id="anyoHasta" class="form-control">
+                                        <!-- GUÍA JS: igual que anyoDesde
+                                             Primera opción: <option value="">Hasta</option> -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Filtro por mundiales -->
+                            <div class="form-group row mb-3">
+                                <label class="col-sm-4 col-form-label">Mundiales</label>
+                                <div class="col-sm-8">
+                                    <select id="selectMundiales" class="form-control">
+                                        <option value="">Todos</option>
+                                        <option value="0">Sin mundial</option>
+                                        <option value="1">1 o más</option>
+                                        <option value="3">3 o más</option>
+                                        <option value="5">5 o más</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Filtro por nacionalidad -->
+                            <div class="form-group row mb-3">
+                                <label class="col-sm-4 col-form-label">Nacionalidad</label>
+                                <div class="col-sm-8">
+                                    <select id="selectNacionalidad" class="form-control">
+                                        <!-- GUÍA JS: opciones generadas dinámicamente
+                                             Primera opción: <option value="">Todas</option>
+                                             El resto: nacionalidades únicas ordenadas A-Z -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <p class="text-danger" id="errorMensaje"></p>
+
+                            <button type="reset" class="btn btn-primary mx-2" id="btnBorrarFiltros">Borrar
+                                filtros</button>
+                            <button type="submit" class="btn btn-primary mx-2" id="btnAplicar">Aplicar</button>
+                            <button type="button" class="btn btn-warning  mx-2 mt-2" id="btnFavoritos">Ver
+                                favoritos</button>
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Ficha lateral del piloto -->
+                <div class="card mb-4" id="sidebar" style="display:none;">
+                    <div class="card-header text-light bg-dark">Ficha del piloto</div>
+                    <div class="card-body" id="contenidoSidebar">
+                        <!--
+                        GUÍA JS: mostrarPanel(piloto) genera aquí:
+
+                        <h5>Marc Marquez</h5>
+                        <img src="piloto.imagen" class="img-fluid rounded mb-2">
+                        <table class="table table-sm">
+                          <tr><td>Equipo</td>      <td>Ducati Gresini</td></tr>
+                          <tr><td>Número</td>       <td>#93</td></tr>
+                          <tr><td>Nacionalidad</td> <td>ESP</td></tr>
+                          <tr><td>Año nac.</td>     <td>1993</td></tr>
+                          <tr><td>Mundiales</td>    <td>8</td></tr>
+                          <tr><td>Victorias</td>    <td>59</td></tr>
+                          <tr><td>Podios</td>       <td>102</td></tr>
+                        </table>
+                        <button class="btn btn-secondary w-100" id="btnCerrarSidebar">Cerrar</button>
+                        -->
+                    </div>
+                </div>
+
+                <!-- Widget info -->
+                <div class="card mb-4">
+                    <div class="card-header">MotoGP Manager</div>
+                    <div class="card-body">Gestión de pilotos del campeonato del mundo de MotoGP.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

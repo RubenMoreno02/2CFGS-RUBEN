@@ -1,0 +1,108 @@
+{
+    "pilotos": [
+        {
+            "id": 1,
+            "nombre": "Marc",
+            "apellidos": "Marquez Alenta",
+            "anyo": 1993,
+            "equipo": "Ducati Gresini",
+            "nacionalidad": "ESP",
+            "numero": 93,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Marc_Marquez_2019_Silverstone_2.jpg/440px-Marc_Marquez_2019_Silverstone_2.jpg",
+            "mundiales": 8,
+            "victorias": 59,
+            "podios": 102
+        },
+        {
+            "id": 2,
+            "nombre": "Francesco",
+            "apellidos": "Bagnaia Bagnaia",
+            "anyo": 1997,
+            "equipo": "Ducati Lenovo",
+            "nacionalidad": "ITA",
+            "numero": 1,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Francesco_Bagnaia_2022_Motegi.jpg/440px-Francesco_Bagnaia_2022_Motegi.jpg",
+            "mundiales": 2,
+            "victorias": 24,
+            "podios": 48
+        },
+        {
+            "id": 3,
+            "nombre": "Jorge",
+            "apellidos": "Martin Almoguera",
+            "anyo": 1998,
+            "equipo": "Aprilia Racing",
+            "nacionalidad": "ESP",
+            "numero": 89,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Jorge_Martin_2023_Sepang.jpg/440px-Jorge_Martin_2023_Sepang.jpg",
+            "mundiales": 1,
+            "victorias": 15,
+            "podios": 35
+        },
+        {
+            "id": 4,
+            "nombre": "Fabio",
+            "apellidos": "Quartararo Quartararo",
+            "anyo": 1999,
+            "equipo": "Yamaha",
+            "nacionalidad": "FRA",
+            "numero": 20,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Fabio_Quartararo_2021_Silverstone.jpg/440px-Fabio_Quartararo_2021_Silverstone.jpg",
+            "mundiales": 1,
+            "victorias": 11,
+            "podios": 30
+        },
+        {
+            "id": 5,
+            "nombre": "Maverick",
+            "apellidos": "Viñales Ruiz",
+            "anyo": 1994,
+            "equipo": "Aprilia Racing",
+            "nacionalidad": "ESP",
+            "numero": 12,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Maverick_Vi%C3%B1ales_2018_Silverstone.jpg/440px-Maverick_Vi%C3%B1ales_2018_Silverstone.jpg",
+            "mundiales": 0,
+            "victorias": 13,
+            "podios": 50
+        },
+        {
+            "id": 6,
+            "nombre": "Enea",
+            "apellidos": "Bastianini Bastianini",
+            "anyo": 1997,
+            "equipo": "KTM",
+            "nacionalidad": "ITA",
+            "numero": 23,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Enea_Bastianini_2022_Mugello.jpg/440px-Enea_Bastianini_2022_Mugello.jpg",
+            "mundiales": 0,
+            "victorias": 8,
+            "podios": 20
+        },
+        {
+            "id": 7,
+            "nombre": "Pedro",
+            "apellidos": "Acosta Gomez",
+            "anyo": 2004,
+            "equipo": "KTM Red Bull",
+            "nacionalidad": "ESP",
+            "numero": 31,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Pedro_Acosta_2024_Portimao.jpg/440px-Pedro_Acosta_2024_Portimao.jpg",
+            "mundiales": 0,
+            "victorias": 1,
+            "podios": 8
+        },
+        {
+            "id": 8,
+            "nombre": "Brad",
+            "apellidos": "Binder Binder",
+            "anyo": 1995,
+            "equipo": "KTM Red Bull",
+            "nacionalidad": "RSA",
+            "numero": 33,
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Brad_Binder_2022_Mugello.jpg/440px-Brad_Binder_2022_Mugello.jpg",
+            "mundiales": 0,
+            "victorias": 5,
+            "podios": 18
+        }
+    ]
+}

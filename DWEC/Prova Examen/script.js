@@ -151,7 +151,34 @@ function crearFila(apunte, saldo, indice){
 
 //Validaciones
 
+// ─── BLOQUE 2: Validaciones ───────────────────────────────────────────────────
 
+function validarFecha(fecha) {
+    // El input type="date" devuelve YYYY-MM-DD, lo convertimos a dd/mm/aaaa para validar
+    const regex = /^\d{4}-\d{2}-\d{2}$/;
+    if (!regex.test(fecha)) return false;
+
+    const partes = fecha.split('-');
+    const anyo = parseInt(partes[0], 10);
+    const mes  = parseInt(partes[1], 10) - 1;
+    const dia  = parseInt(partes[2], 10);
+
+    const d = new Date(anyo, mes, dia);
+    return d.getFullYear() === anyo && d.getMonth() === mes && d.getDate() === dia;
+}
+
+function validarConcepto(concepto) {
+    return concepto.trim().length > 0;
+}
+
+function validarDH(dh) {
+    return dh === 'D' || dh === 'H';
+}
+
+function validarImporte(importe) {
+    const valor = parseFloat(importe);
+    return !isNaN(valor) && valor > 0;
+}
 
 
 

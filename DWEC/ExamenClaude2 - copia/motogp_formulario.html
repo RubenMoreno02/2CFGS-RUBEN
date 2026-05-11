@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGP Manager - Formulario</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/form.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="motogp_index.html">MotoGP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="motogp_index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="motogp_formulario.html">Añadir piloto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera -->
+    <header class="py-3 bg-light border-bottom mb-4">
+        <div class="container text-center my-2">
+            <h1 class="fw-bolder" id="tituloFormulario">Añadir piloto</h1>
+            <!--
+            GUÍA JS: Si URL tiene ?id=X → "Editar piloto"
+                     Si no             → "Añadir piloto"
+            -->
+        </div>
+    </header>
+
+    <!-- Contenido -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+
+                <!--
+                novalidate → desactiva mensajes nativos HTML5.
+                Las validaciones se hacen 100% en JS con checkValidity() + regex.
+                -->
+                <div class="card mb-4">
+                    <div class="card-header text-light bg-dark">Datos del piloto</div>
+                    <div class="card-body">
+
+                        <form id="formularioPiloto" novalidate>
+
+                            <!-- Nombre -->
+                            <div class="form-group mb-3">
+                                <label for="inputNombre" class="m-1">Nombre *</label>
+                                <input type="text" id="inputNombre" class="form-control" placeholder="Ej: Marc" required
+                                    minlength="2" maxlength="30">
+                                <!--
+                                VALIDACIÓN JS:
+                                - required + minlength/maxlength → checkValidity()
+                                - regex: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,30}$/
+                                -->
+                                <p class="text-danger" id="errorNombre"></p>
+                            </div>
+
+                            <!-- Apellidos -->
+                            <div class="form-group mb-3">
+                                <label for="inputApellidos" class="m-1">Apellidos *</label>
+                                <input type="text" id="inputApellidos" class="form-control"
+                                    placeholder="Ej: Marquez Alenta" required minlength="2" maxlength="50">
+                                <!--
+                                VALIDACIÓN JS:
+                                - required + minlength/maxlength → checkValidity()
+                                - regex: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,50}$/
+                                -->
+                                <p class="text-danger" id="errorApellidos"></p>
+                            </div>
+
+                            <!-- Año de nacimiento -->
+                            <div class="form-group mb-3">
+                                <label for="inputAnyo" class="m-1">Año de nacimiento *</label>
+                                <input type="number" id="inputAnyo" class="form-control" placeholder="Ej: 1993" required
+                                    min="1970" max="2010">
+                                <!--
+                                VALIDACIÓN JS:
+                                - required + min/max → checkValidity() lo detecta solo
+                                -->
+                                <p class="text-danger" id="errorAnyo"></p>
+                            </div>
+
+                            <!-- Equipo -->
+                            <div class="form-group mb-3">
+                                <label for="inputEquipo" class="m-1">Equipo *</label>
+                                <input type="text" id="inputEquipo" class="form-control" placeholder="Ej: Ducati Lenovo"
+                                    required minlength="2" maxlength="40">
+                                <p class="text-danger" id="errorEquipo"></p>
+                            </div>
+
+                            <!-- Nacionalidad -->
+                            <div class="form-group mb-3">
+                                <label for="inputNacionalidad" class="m-1">Nacionalidad *</label>
+                                <input type="text" id="inputNacionalidad" class="form-control" placeholder="Ej: ESP"
+                                    required maxlength="3">
+                                <!--
+                                VALIDACIÓN JS:
+                                - regex: /^[A-Z]{3}$/ exactamente 3 letras mayúsculas
+                                -->
+                                <p class="text-danger" id="errorNacionalidad"></p>
+                            </div>
+
+                            <!-- Número de dorsal -->
+                            <div class="form-group mb-3">
+                                <label for="inputNumero" class="m-1">Número de dorsal *</label>
+                                <input type="number" id="inputNumero" class="form-control" placeholder="Ej: 93" required
+                                    min="1" max="99">
+                                <p class="text-danger" id="errorNumero"></p>
+                            </div>
+
+                            <!-- Estadísticas -->
+                            <div class="form-group row mb-3">
+                                <label class="col-form-label m-1">Estadísticas</label>
+                                <div class="col-sm-4">
+                                    <label for="inputMundiales" class="m-1">Mundiales</label>
+                                    <input type="number" id="inputMundiales" class="form-control" value="0" min="0"
+                                        max="15">
+                                    <p class="text-danger" id="errorMundiales"></p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="inputVictorias" class="m-1">Victorias</label>
+                                    <input type="number" id="inputVictorias" class="form-control" value="0" min="0"
+                                        max="200">
+                                    <p class="text-danger" id="errorVictorias"></p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="inputPodios" class="m-1">Podios</label>
+                                    <input type="number" id="inputPodios" class="form-control" value="0" min="0"
+                                        max="400">
+                                    <p class="text-danger" id="errorPodios"></p>
+                                </div>
+                            </div>
+
+                            <!-- URL imagen -->
+                            <div class="form-group mb-4">
+                                <label for="inputImagen" class="m-1">URL de imagen *</label>
+                                <input type="url" id="inputImagen" class="form-control"
+                                    placeholder="https://...imagen.jpg">
+                                <!--
+                                VALIDACIÓN JS:
+                                - regex: /^https?:\/\/.+\.(jpg|jpeg|png|webp|gif)(\?.*)?$/i
+                                -->
+                                <p class="text-danger" id="errorImagen"></p>
+                            </div>
+
+                            <p class="text-danger" id="errorGeneral"></p>
+
+                            <button type="submit" class="btn btn-primary mx-2" id="btnGuardar">Guardar</button>
+                            <a href="motogp_index.html" class="btn btn-secondary mx-2">Cancelar</a>
+
+                            <!--
+                            GUÍA JS (form.js):
+                            1. Leer ?id de la URL → modo alta o edición
+                            2. submit → e.preventDefault()
+                            3. Para cada campo:
+                                 a) input.setCustomValidity('error') si falla regex
+                                 b) input.setCustomValidity('') si pasa
+                                 c) input.checkValidity() → si false → mostrar p.text-danger
+                            4. Si todo válido → construir objeto → push/replace en localStorage → redirect index.html
+                            -->
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
