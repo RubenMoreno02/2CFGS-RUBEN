@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Coches Usados</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- jQuery UI CSS (necesario para Autocomplete) -->
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+    <!-- Nuestro pequeño CSS (opcional) -->
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+    <!-- Barra de navegación igual que en tu examen -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">THU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <!-- Enlace a la nueva página de contabilidad -->
+                    <li class="nav-item"><a class="nav-link" href="contable.html">Contable</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Cabecera con título y botones de ordenación -->
+    <header class="py-3 bg-light border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-2">
+                <h1 class="fw-bolder">Tienda de hipercoches Usados</h1>
+                <p class="lead mb-0"></p>
+            </div>
+            <div class="text-start">
+                <p>Ordenar por:
+                    <button class="btn btn-secondary mx-2" id="relevancia">Relevancia</button>
+                    <button class="btn btn-secondary mx-2" id="precioAlto">Precio más alto</button>
+                    <button class="btn btn-secondary mx-2" id="precioBajo">Precio más bajo</button>
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="row">
+            <!-- Columna del listado de coches (se llena con JS) -->
+            <div class="col-lg-8" id="listado">
+                <!-- Aquí JS generará dinámicamente las tarjetas de los coches -->
+            </div>
+            <!-- Columna lateral con búsqueda y filtros -->
+            <div class="col-lg-4">
+                <!-- Widget búsqueda -->
+                <div class="card mb-4">
+                    <div class="card-header">Buscar</div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Introduce marca o modelo..."
+                                id="marcaModelo"/>
+                            <button id="ir" class="btn btn-primary" type="button">Ir!</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Widget filtros -->
+                <div class="card mb-4">
+                    <div class="card-header">Filtrar</div>
+                    <div class="card-body">
+                        <form>
+                            <!-- Filtro año -->
+                            <div class="form-group row">
+                                <label for="anyoDesde" class="col-sm-4 col-form-label">Año Matriculación</label>
+                                <div class="col-sm-4">
+                                    <select id="anyoDesde" class="form-control mb-3"></select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <select id="anyoHasta" class="form-control mb-3"></select>
+                                </div>
+                            </div>
+                            <!-- Filtro kilómetros -->
+                            <div class="form-group row">
+                                <label for="KmDesde" class="col-sm-4 col-form-label">Kilometros</label>
+                                <div class="col-sm-4">
+                                    <select id="kmDesde" class="form-control mb-3">
+                                        <option value="0" selected>Desde</option>
+                                        <option value="5000">5.000</option>
+                                        <option value="15000">15.000</option>
+                                        <option value="30000">30.000</option>
+                                        <option value="50000">50.000</option>
+                                        <option value="75000">75.000</option>
+                                        <option value="100000">100.000</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <select id="kmHasta" class="form-control mb-3">
+                                        <option value="1000000" selected>Hasta</option>
+                                        <option value="5000">5.000</option>
+                                        <option value="15000">15.000</option>
+                                        <option value="30000">30.000</option>
+                                        <option value="50000">50.000</option>
+                                        <option value="75000">75.000</option>
+                                        <option value="100000">100.000</option>
+                                        <option value="1000000">+ de 100.000</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Filtro cambio (radio) -->
+                            <div class="form-group">
+                                <label for="cambio" class="col-sm-2 col-form-label">Cambio</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cambio" value="" checked>
+                                    <label class="form-check-label mb-3">Todos</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cambio" value="Automático">
+                                    <label class="form-check-label mb-3">Automático</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cambio" value="Manual">
+                                    <label class="form-check-label mb-3">Manual</label>
+                                </div>
+                            </div>
+                            <!-- Filtro combustible -->
+                            <div class="form-group row">
+                                <label for="combustible" class="col-sm-5 col-form-label">Combustible</label>
+                                <div class="col-sm-7">
+                                    <select id="combustible" class="form-control mb-2">
+                                        <option selected value="">todos</option>
+                                        <option value="Gasolina">Gasolina</option>
+                                        <option value="Diesel">Diesel</option>
+                                        <option value="Hibrido">Hibrido</option>
+                                        <option value="Eléctrico">Eléctrico</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p class="text-danger" id="errorMensaje"></p>
+                            <button type="reset" class="btn btn-primary mx-2" id="eliminarFiltro">Eliminar filtros</button>
+                            <button type="submit" class="btn btn-primary mx-2" id="filtrar">Aplicar</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Widget informativo -->
+                <div class="card mb-4">
+                    <div class="card-header">THU</div>
+                    <div class="card-body">Tienda especializada en la venta exclusiva de supercoches 2025</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carga de dependencias JavaScript -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <!-- Nuestros datos -->
+    <script src="./js/bbdd.js" type="application/javascript"></script>
+    <!-- Script principal de index -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
