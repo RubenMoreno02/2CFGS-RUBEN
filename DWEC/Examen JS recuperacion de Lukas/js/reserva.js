@@ -1,23 +1,29 @@
-document.addEventListener('DOMContentLoaded', mainReserva);
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Primero pedimos los datos
+    fetch('js/bbdd.json')
+        .then(response => response.json())
+        .then(jsonData => {
+            // 2. Una vez que los tenemos, los guardamos en una variable global
+            // para que mainReserva pueda verlos
+            window.data = jsonData; 
+            
+            // 3. Y SOLO ENTONCES ejecutamos la lógica de la página
+            mainReserva();
+        })
+        .catch(error => {
+            console.error('Error al cargar el JSON:', error);
+            // Si hay error, podrías redirigir al index
+            // window.location.href = 'index.html';
+        });
+});
+
 
 function mainReserva() {
-
-    // =============================================
-    // UTILIDAD — limpiar nodos hijos de un elemento
-    // =============================================
-    function limpiarNodos(elemento) {
-        while (elemento.firstChild) {
-            elemento.removeChild(elemento.firstChild);
-        }
-    }
-
-
-    // =============================================
-    // BLOQUE 6 — Cargar datos del coche en reserva.html
-    // =============================================
-
+    // Solo declaramos estas variables UNA VEZ
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get('id'));
+    
+    // Accedemos a data.cars (que viene del fetch global)
     const coche = data.cars[id];
 
     if (!coche) {
@@ -25,6 +31,7 @@ function mainReserva() {
         return;
     }
 
+    // --- A partir de aquí, el resto del código para pintar los datos ---
     const precioFormateado = parseInt(coche.precio).toLocaleString('es-ES');
     const kmFormateado     = parseInt(coche.km).toLocaleString('es-ES');
 
@@ -33,16 +40,19 @@ function mainReserva() {
     img.alt = coche.marca + ' ' + coche.modelo;
 
     const titulo = document.querySelector('.card-title');
+    titulo.innerHTML = ''; // Limpiamos antes de añadir
     titulo.appendChild(document.createTextNode(coche.marca + ' ' + coche.modelo));
 
     const precio = document.querySelector('.font-weight-bold');
+    precio.innerHTML = ''; // Limpiamos antes de añadir
     precio.appendChild(document.createTextNode(precioFormateado + ' €'));
 
     const strongs = document.querySelectorAll('strong');
-    strongs[0].appendChild(document.createTextNode(coche.anyo));
-    strongs[1].appendChild(document.createTextNode(kmFormateado + ' Km.'));
-    strongs[2].appendChild(document.createTextNode(coche.cambio));
-    strongs[3].appendChild(document.createTextNode(coche.combustible));
+    // Asegúrate de limpiar o asignar directamente para no duplicar texto si recargas
+    strongs[0].textContent = coche.anyo;
+    strongs[1].textContent = kmFormateado + ' Km.';
+    strongs[2].textContent = coche.cambio;
+    strongs[3].textContent = coche.combustible;
 
 
     // =============================================

@@ -1,6 +1,16 @@
 //Bloque 1
 /**Patron de inicio de sesion*/
-document.addEventListener('DOMContentLoaded', main);
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('js/bbdd.json')
+        .then(response => response.json())
+        .then(jsonData => {
+            data = jsonData; // Guardamos los datos en la variable global
+            main();          // Arrancamos la lógica
+        })
+        .catch(error => console.error('Error cargando el JSON:', error));
+});
+
+
 function main() {
     // =============================================
     // ESTADO — copia de trabajo del array
