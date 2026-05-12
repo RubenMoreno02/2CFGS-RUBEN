@@ -64,12 +64,43 @@
                                 <i class="bi bi-clock"></i> 10:52:25 +1 GMT
                             </div>
                             <div class="vr me-3"></div>
-                            <div class="position-relative me-3">
-                                <i class="bi bi-bug-fill fs-4 text-secondary pe-2"></i>
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger "
-                                    style="font-size: 0.7rem;">99+</span>
-                            </div>
+                            <div class="position-relative me-3 dropdown"> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.7rem; z-index: 1050;">
+                                99+
+                            </span>
+
+                            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="text-secondary text-decoration-none">
+                                <i class="bi bi-bug-fill fs-4 pe-2"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <div class="card-group">
+                                    <div class="card">
+                                        <img src="img/ssh.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h6 class="card-title">SSH força bruta</h6>
+                                        </div>
+                                        <div class="card-footer">
+                                        <small class="text-body-secondary">28/01/20XX 11:28:12</small>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-group">
+                                    <div class="card">
+                                        <img src="img/ddos.jpeg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h6 class="card-title">DDoS</h6>
+                                        </div>
+                                        <div class="card-footer">
+                                        <small class="text-body-secondary">28/01/20XX 11:28:12</small>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                             <a href="#" class="text-secondary"><i class="bi bi-box-arrow-right fs-4"></i></a>
                         </div>
                     </div>
@@ -174,9 +205,9 @@
                                             <th scope="col">Nº</th>
                                             <th scope="col">Pais</th>
                                             <th scope="col">Usuaris</th>
-                                            <th scope="col">Connexions</th>
-                                            <th scope="col">% Intents</th>
-                                            <th scope="col">Mitjana atac (seg)</th>
+                                            <th scope="col" class="d-none d-md-table-cell">Connexions</th>
+                                            <th scope="col" class="d-none d-md-table-cell">% Intents</th>
+                                            <th scope="col" class="d-none d-md-table-cell">Mitjana atac (seg)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -184,41 +215,41 @@
                                             <th scope="row">1</th>
                                             <td>155257</td>
                                             <td>Xina</td>
-                                            <td>2525</td>
-                                            <td>1560</td>
-                                            <td>2500</td>
+                                            <td class="d-none d-md-table-cell">2525</td>
+                                            <td class="d-none d-md-table-cell">1560</td>
+                                            <td class="d-none d-md-table-cell">2500</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
                                             <td>115776</td>
                                             <td>USA</td>
-                                            <td>6634</td>
-                                            <td>7887</td>
-                                            <td>3453</td>
+                                            <td class="d-none d-md-table-cell">6634</td>
+                                            <td class="d-none d-md-table-cell">7887</td>
+                                            <td class="d-none d-md-table-cell">3453</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
                                             <td>114889</td>
                                             <td>Rúsia</td>
-                                            <td>8768</td>
-                                            <td>3288</td>
-                                            <td>934</td>
+                                            <td class="d-none d-md-table-cell">8768</td>
+                                            <td class="d-none d-md-table-cell">3288</td>
+                                            <td class="d-none d-md-table-cell">934</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">4</th>
                                             <td>112187</td>
                                             <td>Indonesia</td>
-                                            <td>45533</td>
-                                            <td>67887</td>
-                                            <td>2234</td>
+                                            <td class="d-none d-md-table-cell">45533</td>
+                                            <td class="d-none d-md-table-cell">67887</td>
+                                            <td class="d-none d-md-table-cell">2234</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">5</th>
                                             <td>99023</td>
                                             <td>India</td>
-                                            <td>667675</td>
-                                            <td>3414</td>
-                                            <td>654</td>
+                                            <td class="d-none d-md-table-cell">667675</td>
+                                            <td class="d-none d-md-table-cell">3414</td>
+                                            <td class="d-none d-md-table-cell">654</td>
                                         </tr>
                                     </tbody>
                                 </table>
