@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Coches Usados - Reserva</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">THU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contable.html">Contable</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Cabecera -->
+    <header class="py-3 bg-light border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-2">
+                <h1 class="fw-bolder">Tienda de hipercoches Usados</h1>
+            </div>
+        </div>
+    </header>
+    <!-- Contenido -->
+    <div class="container">
+        <h1 class="text-center text-light bg-dark mb-3 rounded">RESERVAR COCHE</h1>
+        <div class="row">
+            <!-- Detalle del coche (se rellena con JS) -->
+            <div class="col-lg-8" id="listado">
+                <div class="card mb-4">
+                    <a href="#!"><img class="card-img-top" src="" alt="..." id="imagenCoche"/></a>
+                    <div class="card-body">
+                        <h2 class="card-title" id="tituloCoche"></h2>
+                        <div class="row justify-content-end">
+                            <div class="p-2 mb-1 col-md-3 offset-md-3 bg-warning rounded text-center">
+                                <h2 class="font-weight-bold" id="precioCoche"></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col p-3 text-center border-bottom border-dark">Año</div>
+                            <div class="col p-3 text-center border-bottom border-dark">Kilometros</div>
+                            <div class="col p-3 text-center border-bottom border-dark">Cambio</div>
+                            <div class="col p-3 text-center border-bottom border-dark">Combustible</div>
+                            <div class="w-100"></div>
+                            <div class="col p-3 text-center"><strong id="anyoCoche"></strong></div>
+                            <div class="col p-3 text-center"><strong id="kmCoche"></strong></div>
+                            <div class="col p-3 text-center"><strong id="cambioCoche"></strong></div>
+                            <div class="col p-3 text-center"><strong id="combustibleCoche"></strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Formulario de cliente -->
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-header text-light bg-dark">Cliente</div>
+                    <div class="card-body">
+                        <form id="formReserva">
+                            <div class="form-group">
+                                <label for="nombreApellidos" class="m-2">Nombre y Apellidos</label>
+                                <input type="text" id="nombreApellidos" name="nombreApellidos" class="form-control" required pattern="^[\w ]{4,40}$">
+                            </div>
+                            <div class="form-group">
+                                <label for="dniCifNia" class="m-2">DNI, CIF o NIA</label>
+                                <input type="text" id="dniCifNia" name="dniCifNia" class="form-control" required pattern='^(\d{9}[A-Z])|([A-Z]\d{8})|(X\d{7}[A-Z])$'>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="m-2">email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="ejemplo@dominio.com" required pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono" class="m-2">telefono</label>
+                                <input type="text" id="telefono" name="telefono" class="form-control" placeholder="(999) 666-333" required pattern="^\(\d{3}\)\s\d{3}-\d{3}$">
+                            </div>
+                            <div class="form-group">
+                                <label for="nota" class="m-2">Nota</label>
+                                <textarea id="nota" class="form-control"></textarea>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input mt-3" type="checkbox" id="aceptar" name="aceptar">
+                                <label class="form-check-label mt-3" for="aceptar">
+                                    Aceptar las condiciones de uso de este sitio.
+                                </label>
+                            </div>
+                            <p class="text-danger" id="errorMensaje"></p>
+                            <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/bbdd.js"></script>
+    <script src="./js/reserva.js"></script>
+</body>
+</html>
