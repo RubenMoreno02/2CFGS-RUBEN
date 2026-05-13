@@ -96,7 +96,7 @@ function main() {
 
         //Boton reservar
         const btnReservar = document.createElement('a');
-        btnReservar.classList.add('btn', 'btn-primary', 'm-3');
+        btnReservar.classList.add('btn', 'btn-text-primary', 'm-3');
         btnReservar.href = `reserva.html?id=${index}`;
         btnReservar.appendChild(document.createTextNode('Reservar'));
 
