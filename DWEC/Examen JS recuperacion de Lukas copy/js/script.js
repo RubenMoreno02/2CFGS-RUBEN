@@ -117,6 +117,12 @@ function main() {
     renderizarCoches(cochesActuales);
 
 
+    //Filtros
+    const anyos = [... new Set(data.cars.map(function (c){
+        return c.anyo;
+    }))].sort();
+
+
 
 
 
