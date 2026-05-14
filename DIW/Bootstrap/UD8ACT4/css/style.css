@@ -1,46 +1,77 @@
-body{
-    font-family: 'Hind Vadorada', sans-serif;
+/* VARIABLES GLOBALS */
+:root {
+    --font-principal: 'Hind Vadorada', sans-serif;
+
+    --color-fons-pagina:    #e3f2fd;
+    --color-fons-menu:      #ffffff;
+    --color-nav-link-fons:  #2c3136;
+    --color-nav-link-text:  #ffffff;
+    --color-nav-actiu-fons: #e9ecef;
+    --color-nav-actiu-text: #2c3136;
+
+    --transicio: 0.7s;
+
+    --dropdown-amplada-min:   200px;
+    --opacitat-grafica:       0.5;
+    --play-circle-mida:       80px;
+    --play-circle-mida-hover: 120px;
+    --play-circle-opacitat:   0.9;
+    --play-circle-color-hover: red;
 }
 
-.blau-clar{
-    background-color: #e3f2fd !important;
+
+/* BASE */
+body {
+    font-family: var(--font-principal);
 }
 
-.fons-menu-lat{
-    background-color: white !important;
+
+/* FONS */
+.blau-clar {
+    background-color: var(--color-fons-pagina) !important;
 }
 
-.nav-link{
-    background-color: #2c3136 !important;
-    color: white !important;
+.fons-menu-lat {
+    background-color: var(--color-fons-menu) !important;
+}
+
+
+/* NAVEGACIÓ LATERAL */
+.nav-link {
+    background-color: var(--color-nav-link-fons) !important;
+    color: var(--color-nav-link-text) !important;
 }
 
 .nav-link.activat {
-    background-color:  #e9ecef !important;
-    color: #2c3136 !important;
+    background-color: var(--color-nav-actiu-fons) !important;
+    color: var(--color-nav-actiu-text) !important;
 }
 
-.nav-link:hover{
-    background-color: #e9ecef !important;
-    color: #2c3136 !important;
-    transition: 0.5s;
+.nav-link:hover {
+    background-color: var(--color-nav-actiu-fons) !important;
+    color: var(--color-nav-actiu-text) !important;
+    transition: var(--transicio);
 }
 
-.dropdown-fotos{
-    min-width: 200px;
+
+/* DROPDOWN ALERTES */
+.dropdown-fotos {
+    min-width: var(--dropdown-amplada-min);
 }
 
-.img-grafica{
-    opacity: 0.5;
+
+/* GRÀFICA EVOLUCIÓ */
+.img-grafica {
+    opacity: var(--opacitat-grafica);
 }
 
-.play-circle{
-    font-size: 80px;
-    opacity: 0.9;
+.play-circle {
+    font-size: var(--play-circle-mida);
+    opacity: var(--play-circle-opacitat);
 }
 
-.play-circle:hover{
-    color: red !important;
-    font-size: 120px; 
-    transition: 0.5s;
+.play-circle:hover {
+    color: var(--play-circle-color-hover) !important;
+    font-size: var(--play-circle-mida-hover);
+    transition: var(--transicio);
 }

@@ -1,136 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UD8ACT4</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/grafics.js"></script>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">  
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <div class="container-fluid blau-clar ps-4 ">
+    <div class="container-fluid blau-clar ps-4">
         <div class="row">
 
+            <!-- SIDEBAR -->
             <nav class="col-2 d-md-block sidebar px-0 fons-menu-lat">
+
+                <!-- Perfil Rosa Risa -->
                 <div class="text-center py-3">
-                    <img src="img/persona1.png" alt="Rosa Risa" class=" img-fluid w-50 mb-3 rounded-pill shadow">
-                    <span class="d-none d-lg-inline"><h5 class="mb-1 fw-bold">Rosa Risa</h5></span>
-                    <span class="d-none d-lg-inline"><small class="text-muted">SecOp Nivell2</small></span>
+                    <img
+                        src="img/persona1.png"
+                        alt="Rosa Risa"
+                        class="img-fluid w-50 mb-3 rounded-pill shadow">
+                    <span class="d-none d-lg-inline">
+                        <h5 class="mb-1 fw-bold">Rosa Risa</h5>
+                    </span>
+                    <span class="d-none d-lg-inline">
+                        <small class="text-muted">SecOp Nivell2</small>
+                    </span>
                 </div>
 
+                <!-- Menú navegació -->
                 <ul class="nav flex-column mx-3 text-center text-lg-start">
-                    <li class="nav-item ">
-                        <a class="nav-link active p-3 " href="#"><i class="bi bi-journal-text"></i><span class="d-none d-lg-inline ms-1">Inventari actius</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link active p-3" href="#">
+                            <i class="bi bi-journal-text"></i>
+                            <span class="d-none d-lg-inline ms-1">Inventari actius</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-3" href="#"><i class="bi bi-fingerprint"></i><span class="d-none d-lg-inline ms-1">Anàlisi forense</span></a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link activat p-3" href="#"><i class="bi bi-bar-chart"></i><span class="d-none d-lg-inline ms-1"><em>Estadístiques</em></span> </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active p-3" href="#"><i class="bi bi-file-person"></i><span class="d-none d-lg-inline ms-1">Clients</span> </a>
+                        <a class="nav-link active p-3" href="#">
+                            <i class="bi bi-fingerprint"></i>
+                            <span class="d-none d-lg-inline ms-1">Anàlisi forense</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-3" href="#"><i class="bi bi-bandaid"></i><span class="d-none d-lg-inline ms-1"> Auditoria atacs</span></a>
+                        <a class="nav-link activat p-3" href="#">
+                            <i class="bi bi-bar-chart"></i>
+                            <span class="d-none d-lg-inline ms-1"><em>Estadístiques</em></span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-3" href="#"><i class="bi bi-envelope-exclamation"></i><span class="d-none d-lg-inline ms-1"> Missatges</span> 
-                            <span class="badge bg-primary rounded-pill float d-none d-sm-inline">14</span></a>
+                        <a class="nav-link active p-3" href="#">
+                            <i class="bi bi-file-person"></i>
+                            <span class="d-none d-lg-inline ms-1">Clients</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active p-3" href="#">
+                            <i class="bi bi-bandaid"></i>
+                            <span class="d-none d-lg-inline ms-1">Auditoria atacs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active p-3" href="#">
+                            <i class="bi bi-envelope-exclamation"></i>
+                            <span class="d-none d-lg-inline ms-1">Missatges</span>
+                            <span class="badge bg-primary rounded-pill d-none d-sm-inline">14</span>
+                        </a>
                     </li>
                 </ul>
+
             </nav>
 
             <main class="col-10 blau-clar ps-1 pe-0">
 
-                <header class="navbar bg-white border-bottom p-4 pe-0 ">
+                <!-- ---- HEADER ---- -->
+                <header class="navbar bg-white border-bottom p-4 pe-0">
                     <div class="container-fluid d-flex justify-content-center justify-content-md-between align-items-center">
-                        <span class="navbar-brand text-secondary d-none d-md-inline fs-5">Centre de control de seguretat activa</span>
+
+                        <span class="navbar-brand text-secondary d-none d-md-inline fs-5">
+                            Centre de control de seguretat activa
+                        </span>
 
                         <div class="d-flex align-items-center">
+
+                            <!-- Rellotge -->
                             <div class="text-danger me-3">
                                 <i class="bi bi-clock"></i> 10:52:25 +1 GMT
                             </div>
-                            <div class="vr me-3"></div>
-                            <div class="position-relative me-3 dropdown"> <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.7rem; z-index: 1050;">
-                                99+
-                            </span>
 
-                            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="text-secondary text-decoration-none">
-                                <i class="bi bi-bug-fill fs-4 pe-2"></i>
+                            <div class="vr me-3"></div>
+
+                            <!-- Dropdown alertes -->
+                            <div class="position-relative me-3 dropdown">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                    style="font-size: 0.7rem; z-index: 1050;">
+                                    99+
+                                </span>
+                                <a
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    class="text-secondary text-decoration-none">
+                                    <i class="bi bi-bug-fill fs-4 pe-2"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-end shadow p-2 dropdown-fotos">
+                                    <li class="mb-2">
+                                        <div class="card h-100">
+                                            <img src="img/ssh.jpg" class="card-img-top" alt="SSH">
+                                            <div class="card-body py-3">
+                                                <h6 class="card-title mb-0 fw-bold py-2">SSH força bruta</h6>
+                                            </div>
+                                            <div class="card-footer py-1 text-center">
+                                                <small class="text-muted"><em>28/01/20XX 11:28:12</em></small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-2">
+                                        <div class="card h-100">
+                                            <img src="img/ddos.jpeg" class="card-img-top" alt="DDoS">
+                                            <div class="card-body py-3">
+                                                <h6 class="card-title mb-0 fw-bold py-2">DDoS</h6>
+                                            </div>
+                                            <div class="card-footer py-1 text-center">
+                                                <small class="text-muted"><em>28/01/20XX 11:28:42</em></small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr>
+                                        <a class="dropdown-item text-primary text-end" href="#">Veure més</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Logout -->
+                            <a href="#" class="text-secondary">
+                                <i class="bi bi-box-arrow-right fs-4"></i>
                             </a>
 
-                            <ul class="dropdown-menu dropdown-menu-end shadow p-2 dropdown-fotos">
-                                <li class="mb-2">
-                                    <div class="card h-100">
-                                        <img src="img/ssh.jpg" class="card-img-top" alt="SSH">
-                                        <div class="card-body py-3">
-                                            <h6 class="card-title mb-0 fw-bold py-2">SSH força bruta</h6>
-                                        </div>
-                                        <div class="card-footer py-1 text-center">
-                                            <small class="text-muted"><em>28/01/20XX 11:28:12</em></small>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="mb-2">
-                                    <div class="card h-100">
-                                        <img src="img/ddos.jpeg" class="card-img-top" alt="DDoS">
-                                        <div class="card-body py-3">
-                                            <h6 class="card-title mb-0 fw-bold py-2">DDoS</h6>
-                                        </div>
-                                        <div class="card-footer py-1 text-center">
-                                            <small class="text-muted"><em>28/01/20XX 11:28:42</em></small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <hr>
-                                    <a class="dropdown-item text-primary text-end" href="#">Veure més</a>
-                                </li>
-                            </ul>
-                        </div>
-                            <a href="#" class="text-secondary"><i class="bi bi-box-arrow-right fs-4"></i></a>
                         </div>
                     </div>
                 </header>
 
                 <div class="row gy-4 col-12 pt-4 ps-5">
 
-                    <!-- Card Nº atacs -->
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <!-- Card Nº atacs + Evolució -->
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+
+                        <!-- Card Nº atacs -->
                         <div class="card mb-4 shadow">
-                            <div class="card-header fs-4"><i class="bi bi-shield-exclamation me-2 fw-bold"></i> Nº atacs
+                            <div class="card-header fs-4">
+                                <i class="bi bi-shield-exclamation me-2 fw-bold"></i> Nº atacs
                             </div>
                             <div class="card-body">
                                 <h2 class="card-title text-center p-4"><b>5</b>/segon</h2>
                                 <a href="#" class="btn col-12 text-secondary border-dark">Veure detall</a>
                             </div>
-
                         </div>
 
                         <!-- Card Evolució -->
                         <div class="card shadow">
-                            <div class="card-header fs-4"><i class="bi bi-activity"></i> Evolució </div>
+                            <div class="card-header fs-4">
+                                <i class="bi bi-activity"></i> Evolució
+                            </div>
                             <div class="card-body">
                                 <div class="position-relative d-inline-block">
-                                    <img src="img/evolucio2.jpg" alt="Imatge gràfica d'evolució" class="img-fluid w-100 img-grafica">
+                                    <img
+                                        src="img/evolucio2.jpg"
+                                        alt="Imatge gràfica d'evolució"
+                                        class="img-fluid w-100 img-grafica">
                                     <div class="position-absolute top-50 start-50 translate-middle text-center">
                                         <h4 class="fw-bold text-secondary mb-0">Detall</h4>
                                         <i class="bi bi-play-circle text-secondary play-circle"></i>
                                     </div>
-                                    </i>                                
                                 </div>
                             </div>
                         </div>
@@ -138,28 +196,30 @@
                     </div>
 
                     <!-- Card Atacs per continent -->
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                         <div class="card shadow">
-                            <div class="card-header fs-4"></i><i class="bi bi-compass"></i> Atacs per continent </div>
+                            <div class="card-header fs-4">
+                                <i class="bi bi-compass"></i> Atacs per continent
+                            </div>
                             <div class="card-body">
                                 <canvas id="pie-chart"></canvas>
-
                             </div>
                         </div>
                     </div>
 
-
-                    <!-- Card Activitat -->
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <!-- Card % Activitat -->
+                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
                         <div class="card shadow">
-                            <div class="card-header fs-4"><i class="bi bi-speedometer2"></i> % Activitat </div>
+                            <div class="card-header fs-4">
+                                <i class="bi bi-speedometer2"></i> % Activitat
+                            </div>
                             <div class="card-body">
 
                                 <div class="row align-items-center mb-3">
                                     <div class="col-2 text-end">ssh</div>
                                     <div class="col-10">
                                         <div class="progress" style="height: 20px;">
-                                            <div class="progress-bar bg-success " style="width: 35%">35%</div>
+                                            <div class="progress-bar bg-success" style="width: 35%">35%</div>
                                             <div class="progress-bar bg-info" style="width: 30%">30%</div>
                                         </div>
                                     </div>
@@ -194,6 +254,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                             <div class="card-footer text-body-secondary">
                                 Última actualització fa 3 mins
@@ -201,10 +262,12 @@
                         </div>
                     </div>
 
-
+                    <!-- Card Tràfic taula -->
                     <div class="col-12 pt-6 pb-3">
                         <div class="card shadow">
-                            <div class="card-header fs-4"></i><i class="bi bi-clipboard-data"></i> Tràfic </div>
+                            <div class="card-header fs-4">
+                                <i class="bi bi-clipboard-data"></i> Tràfic
+                            </div>
                             <div class="card-body">
                                 <table class="table table-striped">
                                     <thead>
@@ -260,19 +323,16 @@
                                         </tr>
                                     </tbody>
                                 </table>
-
-
                             </div>
 
                             <div class="row align-items-center card-footer col-12 m-auto">
                                 <div class="col-12 col-md-6 text-center text-md-start">
-                                    <div class="text-body-secondary">
-                                        <span class="d-none d-md-inline ms-2">Mostrant 1 de 8</span>
-                                    </div>
+                                    <span class="text-body-secondary d-none d-md-inline ms-2">
+                                        Mostrant 1 de 8
+                                    </span>
                                 </div>
-
                                 <div class="col-12 col-md-6 mt-2 mt-md-0">
-                                    <nav aria-label="Navegación de páginas">
+                                    <nav aria-label="Navegació de pàgines">
                                         <ul class="pagination mb-1 justify-content-center justify-content-md-end">
                                             <li class="page-item disabled">
                                                 <a class="page-link">Anterior</a>
@@ -287,10 +347,14 @@
                                     </nav>
                                 </div>
                             </div>
+
                         </div>
                     </div>
+
                 </div>
 
+
+                <!-- ---- FOOTER ---- -->
                 <footer class="col-12">
                     <nav class="navbar bg-body-tertiary">
                         <div class="container-fluid d-flex justify-content-center">
@@ -300,7 +364,19 @@
                         </div>
                     </nav>
                 </footer>
+
             </main>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="js/grafics.js"></script>
 
 </body>
 
