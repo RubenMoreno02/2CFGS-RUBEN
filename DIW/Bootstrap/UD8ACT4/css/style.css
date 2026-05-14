@@ -25,3 +25,22 @@ body{
     color: #2c3136 !important;
     transition: 0.5s;
 }
+
+.dropdown-fotos{
+    min-width: 200px;
+}
+
+.img-grafica{
+    opacity: 0.5;
+}
+
+.play-circle{
+    font-size: 80px;
+    opacity: 0.9;
+}
+
+.play-circle:hover{
+    color: red !important;
+    font-size: 120px; 
+    transition: 0.5s;
+}
